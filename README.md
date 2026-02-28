@@ -58,3 +58,4 @@ Agent 输出：
 - 若 CMC 历史数据不可用，会自动回退使用 CoinGecko 的总市值/成交量序列。
 - BTC 统治力的月度序列依赖 CMC 历史数据；若不可用，会仅展示最新值。
 - 若 CoinGecko Pro 访问失败，会自动回退到公开 API（可能限频或受限）。
+# xprepo
