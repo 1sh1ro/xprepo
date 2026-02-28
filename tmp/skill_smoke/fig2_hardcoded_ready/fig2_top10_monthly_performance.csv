@@ -1,0 +1,4 @@
+id,symbol,name,start_price_usd,end_price_usd,monthly_change_pct
+bitcoin,btc,Bitcoin,88465.00840913161,65990.0,-25.40553470044285
+ethereum,eth,Ethereum,2988.4566537427377,1930.85,-35.38972708264626
+tether,usdt,Tether,0.9986173030689254,1.0,0.13846114290482603

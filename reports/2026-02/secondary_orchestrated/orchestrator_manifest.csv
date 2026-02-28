@@ -1,0 +1,7 @@
+task,status,package_dir,notes
+fig2,ok,/Users/my/xp/reports/2026-02/secondary_orchestrated/packages/fig2,
+fig3,ok,/Users/my/xp/reports/2026-02/secondary_orchestrated/packages/fig3,
+fig4,ok,/Users/my/xp/reports/2026-02/secondary_orchestrated/packages/fig4,
+fig6,ok,/Users/my/xp/reports/2026-02/secondary_orchestrated/packages/fig6,
+deribit,ok,/Users/my/xp/reports/2026-02/secondary_orchestrated/packages/deribit,
+core_report,ok,/Users/my/xp/reports/2026-02/secondary_orchestrated/packages/core_report,

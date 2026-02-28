@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='zh'>
+<head>
+<meta charset='utf-8' />
+<title>CEX 每日市场脉搏</title>
+<style>
+body { font-family: -apple-system, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif; margin: 40px; color: #111; }
+h1 { margin-bottom: 4px; }
+h2 { margin-top: 28px; border-bottom: 1px solid #e3e5e8; padding-bottom: 6px; }
+.meta { color: #666; font-size: 13px; }
+.gap { color: #b11; }
+table { border-collapse: collapse; width: 100%; margin-top: 12px; }
+th, td { border: 1px solid #ddd; padding: 8px; font-size: 13px; }
+th { background: #f5f6f8; text-align: left; }
+.chart { margin: 16px 0; }
+.chart img { max-width: 100%; border-radius: 6px; }
+</style>
+</head>
+<body>
+<h1>CEX 每日市场脉搏</h1>
+<div class='meta'>区间：2026-02-16 至 2026-02-16 ｜ 生成时间：2026-02-23 09:48:52Z</div>
+<h2>数据可用性说明</h2>
+<ul>
+<li class='gap'>CMC 历史全局指标获取失败：HTTP 403: {
+    "status": {
+        "timestamp": "2026-02-23T09:48:44.616Z",
+        "error_code": 1006,
+        "error_message": "Your API Key subscription plan doesn't support this endpoint.",
+        "elapsed": 0,
+        "credit_count": 0
+    }
+}</li>
+<li class='gap'>CoinGecko 市值/成交量时间序列获取失败：HTTP 401: {"status":{"timestamp":"2026-02-23T09:48:46.148+00:00","error_code":10005,"error_message":"This request is limited to PRO API subscribers. Please visit https://www.coingecko.com/en/api/pricing to subscribe to our API plan to access exclusive endpoints."}}</li>
+</ul>
+<h2>关键结论</h2>
+<ul>
+<li>隐含波动率（DVOL）走高，变动 +29.73%。</li>
+</ul>
+<h2>市场结构</h2>
+<p>本期总市值、成交量与 BTC 统治力如下。</p>
+<table>
+<tr><th>指标</th><th>起点</th><th>终点</th><th>变化</th></tr>
+<tr><td>总市值</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
+<tr><td>24h 成交量</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
+<tr><td>BTC 统治力</td><td>N/A</td><td>58.21%</td><td>当前值</td></tr>
+</table>
+<h2>衍生品（Deribit）</h2>
+<p>永续合约 24h 成交量、OI 与资金费率概览。</p>
+<table>
+<tr><th>品种</th><th>24h 成交量</th><th>未平仓量(OI)</th><th>当前资金费率</th></tr>
+<tr><td>BTC 永续</td><td>$441.60M</td><td>$1.21B</td><td>0.00%</td></tr>
+<tr><td>ETH 永续</td><td>$125.94M</td><td>$378.72M</td><td>0.00%</td></tr>
+</table>
+<div class='chart'>
+<div class='meta'>Deribit DVOL</div>
+<img src='charts/dvol_2026-02-16.png' alt='Deribit DVOL' />
+</div>
+<h2>指标模板（可扩展）</h2>
+<p>与 PDF 版式一致的 CEX 市场脉搏监测模板，可按数据源补齐。</p>
+<table>
+<tr><th>指标维度</th><th>核心监测数据</th><th>数据源</th><th>业务关联解读</th></tr>
+<tr><td>市场结构</td><td>总市值变动 / 24h 成交量 / BTC 统治力</td><td>CMC / CG</td><td>成交量决定手续费收入预期，统治力反映资金集中度</td></tr>
+<tr><td>衍生品</td><td>OI / 资金费率 / DVOL</td><td>Deribit</td><td>高 OI + 正费率可能积累拥挤风险</td></tr>
+<tr><td>链上资金</td><td>交易所净流入 / 稳定币供给</td><td>N/A</td><td>净流入通常对应抛压</td></tr>
+<tr><td>情绪指标</td><td>恐惧与贪婪 / 社交主导率</td><td>N/A</td><td>极端贪婪常是短期顶部信号</td></tr>
+<tr><td>叙事热点</td><td>板块涨幅 / 热门叙事</td><td>CoinGecko</td><td>指引资金偏好与潜在热点</td></tr>
+</table>
+<h2>资金与稳定币</h2>
+<p>稳定币与衍生品成交量的最新值（如可用）。</p>
+<table>
+<tr><th>指标</th><th>当前值</th></tr>
+<tr><td>稳定币市值</td><td>$285.33B</td></tr>
+<tr><td>稳定币 24h 成交量</td><td>$83.02B</td></tr>
+<tr><td>衍生品 24h 成交量</td><td>$756.17B</td></tr>
+</table>
+</body>
+</html>

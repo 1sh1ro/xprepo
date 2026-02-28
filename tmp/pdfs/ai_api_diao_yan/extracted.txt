@@ -1,0 +1,208 @@
+# Extracted text
+# Source: /Users/my/xp/ai api 调研.pdf
+# Pages: 8
+
+
+
+---
+
+## Page 1
+
+ai api 调研
+选项一：Tok
+en Metrics AI
+选项二：ChainGPT ($CGPT)
+coinfeeds
+m
+essari ai:
+ascn.ai
+Kaito AI：InfoFi
+方案 优点缺点 / 风险
+ 更适合的用法 / 备注
+Token Metrics AI
+文档里记录“找不到文
+档/官网没有 API/疑
+似
+跑路”，且出现连接超
+时，稳定性与可用
+性需
+要重点核验。
+ChainGPT ($CGPT)
+ 有 SDK + API，并有明
+确文档入口。
+覆盖面广（Web3 AI
+基础设施：新闻、审
+计、NFT、聊天机器人
+等）。
+重心偏分散，核
+心更偏
+General Chat / News
+API。
+更适合“通用 Web3 问
+答/新闻摘要”，不适合
+直接产出交易级结构化
+指标。
+Trading Assistant 更
+像官网面板，API 更偏
+通用 Web3 知识或实
+时新闻。
+只有 demo，等他给我
+邮箱发 key
+Coinfeeds
+ 定位清晰：实时加密新
+闻 + 价格 API，覆盖上
+百
+币种。
+Messari AI（best
+choice）
+完全兼容 OpenAI API
+规范。
+适合“想最小改动接
+OpenAI 调用方式”的
+场景，但能力需补测。
+1
+
+---
+
+## Page 2
+
+ascn.ai
+（recommend）
+Kaito AI / InfoFi /
+altFINS（mcp 能用
+到）
+比较符合要求
+有清晰订阅分层/能力
+矩阵（请求量、情绪、
+市场数据、链上分析、
+Agent、API credits
+等）。
+调研提到可作为 MCP
+可用方向，并有“150+
+indicators & AI Agent
+Data”等指标数据线
+索。
+新闻较弱，支撑位的材
+料不足
+更像“可直接采购的能
+力套餐”，适合快速落
+地但要先对齐配额与计
+费。
+这份材料里未展开具体
+API、定价、样
+例与限
+制，目前属于线索级备
+选。
+适合列入“下一轮补调
+研/补验证清单”。
+选项一：Token Metrics AI
+找不到文档，官网没有 api
+疑
+似跑路
+简介：
+2
+
+---
+
+## Page 3
+
+Token Metrics 是一家老牌
+的加密货币投资研究公司，利
+用机器学习来评估加密货币。他们的 AI 并非只
+会“聊天”，而是基于底层的量化模型（Trader Grade, Investor Grade）。
+API 能力与二次开发：
+提供了一套完整的 Data & AI API。
+●
+●
+核
+心接口： /agent-chat﻿ 和 ﻿ /indices﻿。
+工作流： 用
+户在平台输入“BTC”，我们调用 API，它不仅返回价格，还会返回一个结构化的“AI 观
+点”。
+●
+RAG 支持： 明
+确支持作为上下文（Context）喂给 LLM。
+适用场景演示：
+●
+●
+户动
+用
+作： 在 K 线下点击“AI 分析”。
+后台逻辑： 调用 Token Metrics API 获取 BTC 的 sistance Level﻿。
+﻿ Trader Grade﻿ (如：Bearish, 73%) 和 ﻿ Re
+●
+前端展示： “AI 建议：当前 BTC 评分为 73（看涨），上方
+阻
+时内增持。”
+力位 68,000。鲸鱼钱包在过去 24 小
+选项二：ChainGPT ($CGPT)
+简介：
+ChainGPT 是一个 Web3 AI 基础设施项目，发币（$CGPT）且生态很全。他们有 AI 新闻、智能合约审
+计、AI NFT 生成器和 AI 聊天机器人。
+key:0eaf9079-3b00-4f79-a631-cc463ac01cba
+文档：
+无标题
+-
+api参考：https://docs.chaingpt.org/dev-docs-b2b-saas-api-and-sdk/web3-ai-chatbot-and-
+llm-api-and-sdk/javascript/api-reference
+API 能力与二次开发：
+ChainGPT 提供 SDK 和 API 接入，但它的重心比较分散。
+3
+
+---
+
+## Page 4
+
+●
+●
+核
+心接口： 主要是 ﻿ General Chat API﻿ 和 ﻿ News API﻿。
+局限性
+： 他们的“AI Trading Assistant”更多是他们官网上的一个可视化面板工具。通过 API 直接
+获取“交易策略”的能力不如 Token Metrics 直接。API 更多是返回通用的 Web3 知识或实时新闻。
+新闻较弱
+pricing：
+coinfeeds
+Coinfeeds Crypto News Feed API
+API documentation for live cryptocurrency news and prices covering hundreds of coins, and stre…
+https://www.coinfeeds.ai/api-documentation
+等他给我的邮箱发key
+4
+
+---
+
+## Page 5
+
+messari ai:
+https://docs.messari.io/api-reference/endpoints/ai/post-openai-chat-completions
+完全兼容OpenAI的API规范
+5
+
+---
+
+## Page 6
+
+比较符合要求：
+ascn.ai
+https://ascn.ai/ai-agent-crypto
+6
+
+---
+
+## Page 7
+
+定价：
+7
+
+---
+
+## Page 8
+
+mcp能用到的：
+Best Crypto Trading Analytics API | 150+ Indicators & AI Agent Data
+Crypto Analytics API for trading platform, AI agents and trading bots. Access 150+ technical indi…
+altFINS
+无标题
+-
+Kaito AI：InfoFi
+8
