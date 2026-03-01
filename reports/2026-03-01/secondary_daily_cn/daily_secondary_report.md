@@ -1,38 +1,51 @@
 # 二级市场日报（2026-03-01）
 
 ## 关键结论
-- 全市场市值：$2.30T（+1.41%） | 24h 成交额：$102.41B（+5.23%）
-- 资产广度（Top10）：上涨 7 / 下跌 3 | BTC 主导率：58.15%（+0.17pct）
-- 衍生品：BTC/ETH funding_8h -0.000040 / +0.000000；DVOL 54.71 / 72.39
-- 结构特征：Top10 平均涨跌幅 +2.56%，最大分化 7.02pct。
+- 全市场市值 $2.30T（24h +1.41%），成交额 $102.41B（24h +5.23%）。
+- BTC 主导率 58.15%（+0.17pct），Top10 外占比 8.22% 。
+- Top10 资产上涨 8 / 下跌 2，平均涨跌幅 +2.91%，首尾分化 7.79pct。
+- 衍生品：BTC/ETH funding 分别为 -0.39bps / +0.00bps，DVOL 收盘 54.69 / 72.42。
 
-## 当日脉冲
-统计日期：2026-03-01。全市场总市值 $2.30T，24h 成交额 $102.41B，BTC 主导率 58.15%。价格与成交同步走高，风险偏好边际修复。
+## 市场脉冲
+![全市场当日水平](charts/chart_market_snapshot_levels.png)
+截至 2026-03-01，全市场市值 $2.30T，24h 成交额 $102.41B，BTC 主导率 58.15%。
+数据来源：CMC `global-metrics/quotes/historical`
 
-### 交易所成交变化
-![前排交易所24h变化](charts/chart_exchange_24h_change.png)
-前排样本中，上涨 2 家、下跌 8 家，均值 -6.66%。KuCoin 24h 成交额增速领先（+2.13%），MEXC 表现偏弱（-20.06%），说明流量仍处于分化而非普涨状态。
-数据来源：CMC `exchange/quotes/latest`（前排交易所样本）
+![全市场当日变化](charts/chart_market_daily_change.png)
+相对前日，市值 +1.41%、成交 +5.23%、BTC.D +0.17pct。
+数据来源：CMC `global-metrics/quotes/historical`
 
-### Top10 资产表现
+## 主导率与市场广度
+![市场广度快照](charts/chart_market_breadth_snapshot.png)
+当前结构为 BTC 58.15% / Top2-10 33.64% / Top10 外 8.22%。长尾占比仍偏低，广度修复还未形成持续趋势。
+数据来源：CMC 全市场 + CoinGecko Top10 市值聚合
+
+## 资产与交易所资金流
 ![Top10资产24h表现](charts/chart_top10_assets_24h.png)
-Top10 资产中上涨 7 个、下跌 3 个，平均涨跌幅 +2.56%。领涨资产为 SOL（+6.10%），尾部为 FIGR_HELOC（-0.92%），首尾分化 7.02pct，表明市场仍以结构性机会为主。
-数据来源：CoinGecko `coins/markets`（按市值前10）
+Top10 中领涨 SOL（+6.87%），尾部 FIGR_HELOC（-0.92%），均值 +2.91%。分化 7.79pct，结构性交易仍是主导。
+数据来源：CoinGecko `coins/markets`
 
-## 衍生品与风险
+![前排交易所24h变化](charts/chart_exchange_24h_change.png)
+前排样本上涨 1 家、下跌 9 家，均值 -8.07%。KuCoin 最强（+2.56%），MEXC 最弱（-20.93%）。
+数据来源：CMC `exchange/quotes/latest`
+
+![交易所现货衍生品结构](charts/chart_exchange_spot_deriv_structure.png)
+样本内衍生品成交占比 84.65%。若该占比继续走高且 funding 不同步回落，短线波动脉冲通常会增强。
+数据来源：CMC `exchange/quotes/latest`（spotVolumeUsd / derivativeVolumeUsd）
+
+## 衍生品与情绪
 ![衍生品快照](charts/chart_derivatives_snapshot.png)
-BTC/ETH funding 8h 分别为 -0.40bps 与 +0.00bps，杠杆方向并未出现单边拥挤。DVOL 收盘分别为 BTC 54.71、ETH 72.39，处于 Neutral（中性波动定价） / Panic（高波动溢价） 阶段，显示期权端对尾部波动仍保留一定风险溢价。
+Funding 仍在中性附近，BTC/ETH 分别 -0.39bps / +0.00bps；Perp OI 为 $1.06B / $343.37M；DVOL 位于 Neutral（中性波动定价） / Panic（高波动溢价）。
 数据来源：Deribit `public/ticker`、`public/get_volatility_index_data`
 
-## 情绪与风险偏好
-恐惧贪婪指数为 14，较前日 +3。
-情绪仍在恐惧区，短线反弹更容易受事件扰动。
-数据来源：Alternative.me `/fng/`
+![情绪与波动当日快照](charts/chart_sentiment_snapshot.png)
+F&G 当日 14（较前日 +3）；配合 BTC/ETH DVOL 54.69/72.42，当前更像情绪修复中的高波动区。
+数据来源：Alternative.me `/fng/` + Deribit DVOL
 
 ## 未来24小时观察点
-- 交易所样本中负增长平台数量是否继续上升，验证流量是否进一步向头部集中。
-- Top10 首尾分化是否收敛，判断行情是否从结构性反弹转向普涨。
-- DVOL 是否从当前阶段继续抬升或回落，决定波动率策略应偏防守还是偏交易。
+- 若 Top10 外占比持续抬升且 BTC.D 回落，说明风险偏好开始从核心资产外溢。
+- 若交易所衍生品占比继续升高但 funding 仍中性，行情更可能表现为高波动震荡。
+- 若 F&G 反弹而 DVOL 不降，需警惕情绪修复与波动定价背离。
 
 ## 数据来源
 - CMC global metrics historical (data-api)
