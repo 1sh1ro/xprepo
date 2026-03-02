@@ -12,5 +12,17 @@
   "counts": {
     "top_assets": 10,
     "exchanges": 10
+  },
+  "coingecko": {
+    "status": "ok",
+    "configured_tier": "demo",
+    "attempted": [
+      "demo"
+    ],
+    "used": "demo",
+    "endpoint": "/coins/markets",
+    "key_required": true,
+    "key_present": true,
+    "errors": []
   }
 }
