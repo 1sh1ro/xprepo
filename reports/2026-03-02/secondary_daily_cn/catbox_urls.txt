@@ -1,0 +1,9 @@
+chart_btc_eth_24h_trend.png https://files.catbox.moe/rgm6vu.png
+chart_derivatives_snapshot.png https://files.catbox.moe/qtherx.png
+chart_exchange_24h_change.png https://files.catbox.moe/78v0ko.png
+chart_exchange_spot_deriv_structure.png https://files.catbox.moe/bnrsq2.png
+chart_market_breadth_snapshot.png https://files.catbox.moe/ec2byx.png
+chart_market_daily_change.png https://files.catbox.moe/blpk67.png
+chart_market_snapshot_levels.png https://files.catbox.moe/apsncp.png
+chart_sentiment_snapshot.png https://files.catbox.moe/yr1hia.png
+chart_top10_assets_24h.png https://files.catbox.moe/nxfql8.png
