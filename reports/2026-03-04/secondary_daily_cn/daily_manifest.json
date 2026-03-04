@@ -1,0 +1,56 @@
+{
+  "date": "2026-03-04",
+  "data_gaps": [
+    "Deribit ticker ETH-PERPETUAL 获取失败: <urlopen error [Errno 54] Connection reset by peer>"
+  ],
+  "market": {
+    "market_cap": 2333680512743.56,
+    "prev_market_cap": 2353233659996.14,
+    "volume_24h": 113100447428.66,
+    "prev_volume_24h": 127249408045.28,
+    "btc_dom": 58.5303,
+    "prev_btc_dom": 58.4597
+  },
+  "counts": {
+    "top_assets": 10,
+    "exchanges": 10
+  },
+  "top2_trend": {
+    "BTC": {
+      "symbol": "BTCUSDT",
+      "price": 71328.4,
+      "open": 67127.52,
+      "high": 71893.0,
+      "low": 66158.0,
+      "change_pct": 6.258,
+      "range_pos_pct": 90.15518744550992,
+      "trend": "偏强，上行主导"
+    },
+    "ETH": {
+      "symbol": "ETHUSDT",
+      "price": 2059.35,
+      "open": 1957.76,
+      "high": 2092.9,
+      "low": 1929.56,
+      "change_pct": 5.189,
+      "range_pos_pct": 79.46002203991665,
+      "trend": "偏强，上行主导"
+    }
+  },
+  "top2_intraday_points": {
+    "BTC": 23,
+    "ETH": 23
+  },
+  "coingecko": {
+    "status": "ok",
+    "configured_tier": "demo",
+    "attempted": [
+      "demo"
+    ],
+    "used": "demo",
+    "endpoint": "/coins/markets",
+    "key_required": true,
+    "key_present": true,
+    "errors": []
+  }
+}
