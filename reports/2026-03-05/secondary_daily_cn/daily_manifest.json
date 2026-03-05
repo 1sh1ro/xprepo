@@ -1,0 +1,51 @@
+{
+  "date": "2026-03-05",
+  "data_gaps": [
+    "CMC 全市场历史数据获取失败: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "CoinGecko Top资产数据获取失败（已按 key 尝试 demo）: demo: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "CMC 交易所报价数据获取失败: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Deribit ticker BTC-PERPETUAL 获取失败: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Deribit ticker ETH-PERPETUAL 获取失败: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Deribit DVOL BTC 获取失败: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Deribit DVOL ETH 获取失败: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Alternative.me F&G 获取失败: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Binance BTC/ETH 24h 批量数据获取失败，转单币重试: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Binance 24h 单币数据获取失败 BTCUSDT: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Binance 24h 未返回 BTCUSDT 数据。",
+    "Binance 24h 单币数据获取失败 ETHUSDT: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Binance 24h 未返回 ETHUSDT 数据。",
+    "Binance BTCUSDT 1h K线获取失败: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "Binance ETHUSDT 1h K线获取失败: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  ],
+  "market": {
+    "market_cap": null,
+    "prev_market_cap": null,
+    "volume_24h": null,
+    "prev_volume_24h": null,
+    "btc_dom": null,
+    "prev_btc_dom": null
+  },
+  "counts": {
+    "top_assets": 0,
+    "exchanges": 0
+  },
+  "top2_trend": {},
+  "top2_intraday_points": {
+    "BTC": 0,
+    "ETH": 0
+  },
+  "coingecko": {
+    "status": "failed",
+    "configured_tier": "demo",
+    "attempted": [
+      "demo"
+    ],
+    "used": null,
+    "endpoint": "/coins/markets",
+    "key_required": true,
+    "key_present": true,
+    "errors": [
+      "demo: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    ]
+  }
+}
