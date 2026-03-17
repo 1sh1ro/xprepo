@@ -1,0 +1,41 @@
+{
+  "date": "2026-03-17",
+  "data_gaps": [
+    "Binance BTC/ETH 24h 批量数据获取失败，转单币重试: HTTP Error 451: ",
+    "Binance 24h 单币数据获取失败 BTCUSDT: HTTP Error 451: ",
+    "Binance 24h 未返回 BTCUSDT 数据。",
+    "Binance 24h 单币数据获取失败 ETHUSDT: HTTP Error 451: ",
+    "Binance 24h 未返回 ETHUSDT 数据。",
+    "Binance BTCUSDT 1h K线获取失败: HTTP Error 451: ",
+    "Binance ETHUSDT 1h K线获取失败: HTTP Error 451: "
+  ],
+  "market": {
+    "market_cap": 2556327401344.12,
+    "prev_market_cap": 2475733149082.16,
+    "volume_24h": 141022295063.7,
+    "prev_volume_24h": 71747227317.25,
+    "btc_dom": 58.5796,
+    "prev_btc_dom": 58.826
+  },
+  "counts": {
+    "top_assets": 10,
+    "exchanges": 10
+  },
+  "top2_trend": {},
+  "top2_intraday_points": {
+    "BTC": 0,
+    "ETH": 0
+  },
+  "coingecko": {
+    "status": "ok",
+    "configured_tier": "demo",
+    "attempted": [
+      "demo"
+    ],
+    "used": "demo",
+    "endpoint": "/coins/markets",
+    "key_required": true,
+    "key_present": true,
+    "errors": []
+  }
+}
