@@ -16,22 +16,22 @@
   "top2_trend": {
     "BTC": {
       "symbol": "BTCUSDT",
-      "price": 70909.1,
-      "open": 70066.69,
+      "price": 70890.97,
+      "open": 70121.48,
       "high": 71367.0,
       "low": 68793.35,
-      "change_pct": 1.202,
-      "range_pos_pct": 82.20814796106716,
+      "change_pct": 1.097,
+      "range_pos_pct": 81.5037009694403,
       "trend": "偏强震荡"
     },
     "ETH": {
       "symbol": "ETHUSDT",
-      "price": 2154.95,
-      "open": 2164.33,
+      "price": 2158.13,
+      "open": 2167.38,
       "high": 2192.07,
       "low": 2099.38,
-      "change_pct": -0.433,
-      "range_pos_pct": 59.95252993850434,
+      "change_pct": -0.427,
+      "range_pos_pct": 63.38332074657457,
       "trend": "区间震荡"
     }
   },
