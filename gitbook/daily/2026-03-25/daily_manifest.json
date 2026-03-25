@@ -12,34 +12,89 @@
   "counts": {
     "top_assets": 10,
     "exchanges": 10,
+    "nondefi_carry": 4,
     "stablecoin_yields": 24
   },
   "top2_trend": {
     "BTC": {
       "symbol": "BTCUSDT",
-      "price": 71626.83,
-      "open": 70654.83,
+      "price": 71771.46,
+      "open": 70378.28,
       "high": 72026.09,
       "low": 68923.07,
-      "change_pct": 1.376,
-      "range_pos_pct": 87.13317993438663,
+      "change_pct": 1.98,
+      "range_pos_pct": 91.7941231445498,
       "trend": "偏强震荡"
     },
     "ETH": {
       "symbol": "ETHUSDT",
-      "price": 2182.62,
-      "open": 2151.62,
+      "price": 2191.38,
+      "open": 2140.3,
       "high": 2199.02,
       "low": 2103.02,
-      "change_pct": 1.441,
-      "range_pos_pct": 82.91666666666657,
-      "trend": "偏强震荡"
+      "change_pct": 2.387,
+      "range_pos_pct": 92.0416666666668,
+      "trend": "偏强，上行主导"
     }
   },
   "top2_intraday_points": {
     "BTC": 23,
     "ETH": 23
   },
+  "nondefi_carry": [
+    {
+      "exchange": "Binance",
+      "asset": "BTC",
+      "spot_price": 71771.47,
+      "index_price": 71787.21434783,
+      "mark_price": 71739.3,
+      "funding_rate_pct": 0.0030849999999999996,
+      "funding_interval_hours": 8.0,
+      "annual_funding_pct": 3.378075,
+      "basis_pct": -0.06674496045749412,
+      "open_interest_contracts": 87895.685,
+      "quote_ccy": "USDT"
+    },
+    {
+      "exchange": "Binance",
+      "asset": "ETH",
+      "spot_price": 2191.0,
+      "index_price": 2191.74232558,
+      "mark_price": 2190.24251938,
+      "funding_rate_pct": -0.0030700000000000002,
+      "funding_interval_hours": 8.0,
+      "annual_funding_pct": -3.36165,
+      "basis_pct": -0.06842985977391632,
+      "open_interest_contracts": 2218190.214,
+      "quote_ccy": "USDT"
+    },
+    {
+      "exchange": "OKX",
+      "asset": "BTC",
+      "spot_price": 71763.2,
+      "index_price": null,
+      "mark_price": 71740.3,
+      "funding_rate_pct": -0.0041396491279700005,
+      "funding_interval_hours": 8.0,
+      "annual_funding_pct": -4.53291579512715,
+      "basis_pct": null,
+      "open_interest_contracts": 29725.690500000237,
+      "quote_ccy": "USDT"
+    },
+    {
+      "exchange": "OKX",
+      "asset": "ETH",
+      "spot_price": 2191.8,
+      "index_price": null,
+      "mark_price": 2190.8,
+      "funding_rate_pct": -0.01064854585756,
+      "funding_interval_hours": 8.0,
+      "annual_funding_pct": -11.6601577140282,
+      "basis_pct": null,
+      "open_interest_contracts": 757679.1540000014,
+      "quote_ccy": "USDT"
+    }
+  ],
   "coingecko": {
     "status": "ok",
     "configured_tier": "demo",
@@ -58,22 +113,22 @@
       "protocol_key": "aave-v3",
       "chain": "Ethereum",
       "asset": "USDT",
-      "supply_apy": 1.9262890621677922,
-      "borrow_apy": 3.0825519620453856,
+      "supply_apy": 1.9240727792505248,
+      "borrow_apy": 3.0807681514642393,
       "rewards_apy": null,
       "total_apy": 1.90041,
       "tvl_usd": 1533675671.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 69.827880704551,
+      "utilization_pct": 69.78807917310633,
       "data_completeness": 6,
       "pool_id": "f981a304-bb6c-45b8-b0c5-fd2f515ad23a",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-25T13:25:21.643114+00:00",
+      "updated_at": "2026-03-25T13:43:44.468561+00:00",
       "safety_rank": 1,
       "supply_cap_usd": 9495691180.0,
       "borrow_cap_usd": 8796008672.0,
-      "available_liquidity_usd": 1523326119.5565646,
+      "available_liquidity_usd": 1526230883.0013332,
       "can_be_collateral": true,
       "is_paused": false,
       "is_frozen": false
@@ -83,22 +138,22 @@
       "protocol_key": "aave-v3",
       "chain": "Ethereum",
       "asset": "USDC",
-      "supply_apy": 2.2564600011507894,
-      "borrow_apy": 3.3377492503444786,
+      "supply_apy": 2.256818529989411,
+      "borrow_apy": 3.338015800074232,
       "rewards_apy": null,
       "total_apy": 2.23126,
       "tvl_usd": 838046233.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 75.51473980372815,
+      "utilization_pct": 75.52067244510442,
       "data_completeness": 6,
       "pool_id": "aa70268e-4b52-42bf-a116-608b370f9501",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-25T13:25:21.643236+00:00",
+      "updated_at": "2026-03-25T13:43:44.468618+00:00",
       "safety_rank": 1,
       "supply_cap_usd": 7499175000.0,
       "borrow_cap_usd": 6999230000.0,
-      "available_liquidity_usd": 837993880.4133301,
+      "available_liquidity_usd": 837756085.7173662,
       "can_be_collateral": true,
       "is_paused": false,
       "is_frozen": false
@@ -115,11 +170,11 @@
       "tvl_usd": 134160401.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 61.024719677290975,
+      "utilization_pct": 61.024748962762686,
       "data_completeness": 6,
       "pool_id": "d118f505-e75f-4152-bad3-49a2dc7482bf",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-25T13:25:21.643347+00:00",
+      "updated_at": "2026-03-25T13:43:44.468747+00:00",
       "safety_rank": 1,
       "supply_cap_usd": 499977175.0,
       "borrow_cap_usd": 299986305.0,
@@ -133,22 +188,22 @@
       "protocol_key": "aave-v3",
       "chain": "Ethereum",
       "asset": "USDS",
-      "supply_apy": 0.08045765049161428,
-      "borrow_apy": 5.67080754156819,
+      "supply_apy": 0.08045643221081115,
+      "borrow_apy": 5.670807288809012,
       "rewards_apy": null,
       "total_apy": 0.08042,
       "tvl_usd": 55532995.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 1.9441051431105634,
+      "utilization_pct": 1.9440759285261031,
       "data_completeness": 6,
       "pool_id": "e65588a1-27ad-4e20-9232-68a6cfaccf63",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-25T13:25:21.643491+00:00",
+      "updated_at": "2026-03-25T13:43:44.468926+00:00",
       "safety_rank": 1,
       "supply_cap_usd": 79966320.0,
       "borrow_cap_usd": 75968004.0,
-      "available_liquidity_usd": 55508400.14291363,
+      "available_liquidity_usd": 55509352.38867232,
       "can_be_collateral": false,
       "is_paused": false,
       "is_frozen": false
@@ -165,11 +220,11 @@
       "tvl_usd": 38514476.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 72.73551099876119,
+      "utilization_pct": 72.73553700020622,
       "data_completeness": 6,
       "pool_id": "3665ee7e-6c5d-49d9-abb7-c47ab5d9d4ac",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-25T13:25:21.643556+00:00",
+      "updated_at": "2026-03-25T13:43:44.469043+00:00",
       "safety_rank": 1,
       "supply_cap_usd": 199984696.0,
       "borrow_cap_usd": 179986226.4,
@@ -183,22 +238,22 @@
       "protocol_key": "aave-v3",
       "chain": "Arbitrum",
       "asset": "USDC",
-      "supply_apy": 1.4794648484998472,
-      "borrow_apy": 2.7296357338948427,
+      "supply_apy": 1.479343222734822,
+      "borrow_apy": 2.729522844130662,
       "rewards_apy": null,
       "total_apy": 1.47268,
       "tvl_usd": 105170842.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 60.59351631579055,
+      "utilization_pct": 60.59104421475611,
       "data_completeness": 6,
       "pool_id": "d9fa8e14-0447-4207-9ae8-7810199dfa1f",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-25T13:25:21.643391+00:00",
+      "updated_at": "2026-03-25T13:43:44.468800+00:00",
       "safety_rank": 2,
       "supply_cap_usd": 512248770.0,
       "borrow_cap_usd": 386861310.0,
-      "available_liquidity_usd": 105393913.43283418,
+      "available_liquidity_usd": 105405984.31033371,
       "can_be_collateral": true,
       "is_paused": false,
       "is_frozen": false
@@ -208,22 +263,22 @@
       "protocol_key": "aave-v3",
       "chain": "Base",
       "asset": "USDC",
-      "supply_apy": 2.348229015074934,
-      "borrow_apy": 3.6562005494179566,
+      "supply_apy": 2.3354572334351635,
+      "borrow_apy": 3.646181050863277,
       "rewards_apy": null,
       "total_apy": 2.31963,
       "tvl_usd": 104616896.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 71.81890241295818,
+      "utilization_pct": 71.62557163672082,
       "data_completeness": 6,
       "pool_id": "7e0661bf-8cf3-45e6-9424-31916d4c7b84",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-25T13:25:21.643398+00:00",
+      "updated_at": "2026-03-25T13:43:44.468808+00:00",
       "safety_rank": 2,
       "supply_cap_usd": 685135337.676,
       "borrow_cap_usd": 484954230.55,
-      "available_liquidity_usd": 104539278.74844451,
+      "available_liquidity_usd": 105270106.94199374,
       "can_be_collateral": true,
       "is_paused": false,
       "is_frozen": false
@@ -240,11 +295,11 @@
       "tvl_usd": 1744465.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 64.22828865874908,
+      "utilization_pct": 64.22831538302643,
       "data_completeness": 6,
       "pool_id": "a8e3d841-2788-4647-ad54-5a36fac451b1",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-25T13:25:21.644730+00:00",
+      "updated_at": "2026-03-25T13:43:44.470735+00:00",
       "safety_rank": 2,
       "supply_cap_usd": 9812707.8049,
       "borrow_cap_usd": 7479252.88726,
@@ -269,7 +324,7 @@
       "data_completeness": 2,
       "pool_id": "a5d67f7e-5b51-4a9d-969d-caf051a7f5a4",
       "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-25T13:25:21.643251+00:00",
+      "updated_at": "2026-03-25T13:43:44.468637+00:00",
       "safety_rank": 2
     },
     {
@@ -288,7 +343,7 @@
       "data_completeness": 2,
       "pool_id": "c5c74dd1-995c-4445-9d84-3e710bad7d52",
       "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-25T13:25:21.643275+00:00",
+      "updated_at": "2026-03-25T13:43:44.468664+00:00",
       "safety_rank": 2
     },
     {
@@ -307,7 +362,7 @@
       "data_completeness": 2,
       "pool_id": "8fbe28b8-140d-4e37-8804-5d2aba4daded",
       "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-25T13:25:21.643365+00:00",
+      "updated_at": "2026-03-25T13:43:44.468772+00:00",
       "safety_rank": 2
     },
     {
@@ -326,7 +381,7 @@
       "data_completeness": 2,
       "pool_id": "995b269a-8409-4c55-b97e-868f443b432e",
       "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-25T13:25:21.643432+00:00",
+      "updated_at": "2026-03-25T13:43:44.468854+00:00",
       "safety_rank": 2
     },
     {
@@ -345,7 +400,7 @@
       "data_completeness": 2,
       "pool_id": "0ed981dc-b49d-426d-ade5-6014728b1ef9",
       "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-25T13:25:21.643584+00:00",
+      "updated_at": "2026-03-25T13:43:44.469080+00:00",
       "safety_rank": 2
     },
     {
@@ -364,7 +419,7 @@
       "data_completeness": 2,
       "pool_id": "d3694b72-5bc4-44c9-8ab6-1fc7941d216a",
       "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-25T13:25:21.644369+00:00",
+      "updated_at": "2026-03-25T13:43:44.469856+00:00",
       "safety_rank": 2
     },
     {
@@ -383,7 +438,7 @@
       "data_completeness": 2,
       "pool_id": "65ce8276-b4d9-41ba-9f6f-21fc374cf9bc",
       "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-25T13:25:21.644702+00:00",
+      "updated_at": "2026-03-25T13:43:44.470687+00:00",
       "safety_rank": 2
     },
     {
@@ -402,7 +457,7 @@
       "data_completeness": 2,
       "pool_id": "4d33c615-a969-4c55-9acf-49d8d14a1063",
       "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-25T13:25:21.645487+00:00",
+      "updated_at": "2026-03-25T13:43:44.471784+00:00",
       "safety_rank": 2
     },
     {
@@ -421,7 +476,7 @@
       "data_completeness": 3,
       "pool_id": "7da72d09-56ca-4ec5-a45f-59114353e487",
       "risk_note": "成熟协议/资金利用率驱动",
-      "updated_at": "2026-03-25T13:25:21.643374+00:00",
+      "updated_at": "2026-03-25T13:43:44.468781+00:00",
       "safety_rank": 4
     },
     {
@@ -440,7 +495,7 @@
       "data_completeness": 3,
       "pool_id": "f4d5b566-e815-4ca2-bb07-7bcd8bc797f1",
       "risk_note": "成熟协议/资金利用率驱动",
-      "updated_at": "2026-03-25T13:25:21.643473+00:00",
+      "updated_at": "2026-03-25T13:43:44.468908+00:00",
       "safety_rank": 4
     },
     {
@@ -459,7 +514,7 @@
       "data_completeness": 3,
       "pool_id": "d9c395b9-00d0-4426-a6b3-572a6dd68e54",
       "risk_note": "成熟协议/资金利用率驱动",
-      "updated_at": "2026-03-25T13:25:21.644056+00:00",
+      "updated_at": "2026-03-25T13:43:44.469503+00:00",
       "safety_rank": 4
     },
     {
@@ -478,7 +533,7 @@
       "data_completeness": 3,
       "pool_id": "85247b13-8180-44e7-b38c-4d324cc68a92",
       "risk_note": "成熟协议/资金利用率驱动",
-      "updated_at": "2026-03-25T13:25:21.644086+00:00",
+      "updated_at": "2026-03-25T13:43:44.469526+00:00",
       "safety_rank": 4
     },
     {
@@ -497,7 +552,7 @@
       "data_completeness": 3,
       "pool_id": "0c8567f8-ba5b-41ad-80de-00a71895eb19",
       "risk_note": "成熟协议/资金利用率驱动",
-      "updated_at": "2026-03-25T13:25:21.644664+00:00",
+      "updated_at": "2026-03-25T13:43:44.470620+00:00",
       "safety_rank": 4
     },
     {
@@ -516,7 +571,7 @@
       "data_completeness": 0,
       "pool_id": "9469cde6-65d8-4bbb-ade6-8a89f1728403",
       "risk_note": "需关注金库与奖励口径差异",
-      "updated_at": "2026-03-25T13:25:21.643310+00:00",
+      "updated_at": "2026-03-25T13:43:44.468702+00:00",
       "safety_rank": 4
     },
     {
@@ -535,7 +590,7 @@
       "data_completeness": 0,
       "pool_id": "0fd780bc-de70-42bc-b2db-6afa5f9ad56c",
       "risk_note": "需关注金库与奖励口径差异",
-      "updated_at": "2026-03-25T13:25:21.643793+00:00",
+      "updated_at": "2026-03-25T13:43:44.469281+00:00",
       "safety_rank": 5
     },
     {
@@ -554,7 +609,7 @@
       "data_completeness": 0,
       "pool_id": "7e930fdf-5a52-4982-9ce3-0323fede4918",
       "risk_note": "需关注金库与奖励口径差异",
-      "updated_at": "2026-03-25T13:25:21.649839+00:00",
+      "updated_at": "2026-03-25T13:43:44.478439+00:00",
       "safety_rank": 5
     }
   ]
