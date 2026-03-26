@@ -35,7 +35,7 @@
 
 数据覆盖：Aave API(8)，Compound API(7)，DefiLlama(21)，Morpho API(7)。
 
-稳定币收益对照表（安全优先）
+稳定币收益对照表
 | 协议 | 链 | 币种 | Supply | Borrow | Rewards | Total | Utilization | TVL | 数据源 |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|
 | Aave | Ethereum | USDT | 1.91% | 3.07% | N/A | 1.89% | 69.45% | $1.55B | DefiLlama+Aave API |
@@ -49,7 +49,7 @@
 | Aave | Arbitrum | USDC | 1.47% | 2.72% | N/A | 1.46% | 60.33% | $106.42M | DefiLlama+Aave API |
 | Aave | Base | USDC | 2.37% | 3.67% | N/A | 2.34% | 72.12% | $103.00M | DefiLlama+Aave API |
 
-稳定币收益对比（扩展样本，TVL≥$1M，共 29 条）
+稳定币收益对比（TVL≥$1M）
 | 币种 | 协议 | 链 | Supply | Borrow | Rewards | Total | Utilization | TVL | 数据源 |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|
 | USDC | Aave | Ethereum | 2.15% | 3.26% | N/A | 2.13% | 73.77% | $899.71M | DefiLlama+Aave API |
@@ -82,11 +82,6 @@
 | PYUSD | Spark | Ethereum | 0.83% | N/A | N/A | 0.83% | N/A | $77.67M | DefiLlama |
 | PYUSD | Morpho | Ethereum | 0.00% | 0.00% | 0.27% | 0.27% | 0.00% | $145.17M | Morpho API |
 
-跨源补充（比 taoli 更全）
-- 新增对比源：DefiLlama 全量稳定币池 + Bitcompare CeFi 利率；并与现有 Aave/Compound/Morpho 快照交叉核对。
-- 覆盖规模：原链上精表 29 条；DefiLlama 扩展样本 35 条（筛选后，展示 Top20）；Bitcompare 稳定币利率样本 5 条。
-- 覆盖维度：扩展样本覆盖 23 个协议、8 条链、12 类稳定币。
-- 口径说明：Bitcompare 为平台展示的最高 APY，taoli 为 Binance 借币年化，两者用于横向参考，不等价于无风险套利收益。
 
 稳定币收益补充表（DefiLlama 扩展，TVL≥$30M，去重后 Top20）
 | 币种 | 协议 | 链 | Base | Rewards | Total | TVL | 数据源 |
