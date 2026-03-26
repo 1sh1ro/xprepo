@@ -35,60 +35,52 @@
 
 数据覆盖：Aave API(8)，Compound API(7)，DefiLlama(21)，Morpho API(7)。
 
-外链索引（稳定币收益复核）
-- 聚合看板（类似 Taoli）：[Taoli Tools](https://taoli.tools/)
-- Yield 聚合： [DefiLlama Yields](https://defillama.com/yields)
-- Aave： [Aave App](https://app.aave.com/) / [Aave API Docs](https://aave.com/docs/developers/apis)
-- Spark： [Spark App](https://app.spark.fi/) / [Spark Docs](https://docs.spark.fi/)
-- Compound： [Compound App](https://app.compound.finance/) / [Compound Docs](https://docs.compound.finance/)
-- Morpho： [Morpho App](https://app.morpho.org/) / [Morpho Docs](https://docs.morpho.org/)
-
 稳定币收益对照表（安全优先）
 | 协议 | 链 | 币种 | Supply | Borrow | Rewards | Total | Utilization | TVL | 数据源 |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|
-| Aave | Ethereum | USDT | 1.91% | 3.07% | N/A | 1.89% | 69.45% | $1.55B | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| Spark | Ethereum | USDT | 3.42% | N/A | N/A | 3.42% | N/A | $656.82M | [DefiLlama](https://defillama.com/yields) |
-| Compound | Ethereum | USDC | 2.48% | 3.41% | 0.10% | 2.58% | 68.78% | $374.51M | [DefiLlama](https://defillama.com/yields)+[Compound API](https://docs.compound.finance/) |
-| Morpho | Ethereum | USDS | 5.64% | 6.17% | N/A | 5.64% | 91.67% | $5.39M | [Morpho API](https://docs.morpho.org/) |
-| Aave | Ethereum | USDC | 2.15% | 3.26% | N/A | 2.13% | 73.77% | $899.71M | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| Aave | Ethereum | PYUSD | 2.09% | 3.81% | N/A | 2.07% | 61.56% | $130.35M | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| Aave | Ethereum | USDS | 0.08% | 5.67% | N/A | 0.08% | 1.94% | $55.52M | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| Aave | Ethereum | DAI | 2.19% | 4.04% | N/A | 2.16% | 72.85% | $38.30M | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| Aave | Arbitrum | USDC | 1.47% | 2.72% | N/A | 1.46% | 60.33% | $106.42M | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| Aave | Base | USDC | 2.37% | 3.67% | N/A | 2.34% | 72.12% | $103.00M | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
+| Aave | Ethereum | USDT | 1.91% | 3.07% | N/A | 1.89% | 69.45% | $1.55B | DefiLlama+Aave API |
+| Spark | Ethereum | USDT | 3.42% | N/A | N/A | 3.42% | N/A | $656.82M | DefiLlama |
+| Compound | Ethereum | USDC | 2.48% | 3.41% | 0.10% | 2.58% | 68.78% | $374.51M | DefiLlama+Compound API |
+| Morpho | Ethereum | USDS | 5.64% | 6.17% | N/A | 5.64% | 91.67% | $5.39M | Morpho API |
+| Aave | Ethereum | USDC | 2.15% | 3.26% | N/A | 2.13% | 73.77% | $899.71M | DefiLlama+Aave API |
+| Aave | Ethereum | PYUSD | 2.09% | 3.81% | N/A | 2.07% | 61.56% | $130.35M | DefiLlama+Aave API |
+| Aave | Ethereum | USDS | 0.08% | 5.67% | N/A | 0.08% | 1.94% | $55.52M | DefiLlama+Aave API |
+| Aave | Ethereum | DAI | 2.19% | 4.04% | N/A | 2.16% | 72.85% | $38.30M | DefiLlama+Aave API |
+| Aave | Arbitrum | USDC | 1.47% | 2.72% | N/A | 1.46% | 60.33% | $106.42M | DefiLlama+Aave API |
+| Aave | Base | USDC | 2.37% | 3.67% | N/A | 2.34% | 72.12% | $103.00M | DefiLlama+Aave API |
 
 稳定币收益对比（扩展样本，TVL≥$1M，共 29 条）
 | 币种 | 协议 | 链 | Supply | Borrow | Rewards | Total | Utilization | TVL | 数据源 |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|
-| USDC | Aave | Ethereum | 2.15% | 3.26% | N/A | 2.13% | 73.77% | $899.71M | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| USDC | Aave | Arbitrum | 1.47% | 2.72% | N/A | 1.46% | 60.33% | $106.42M | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| USDC | Aave | Base | 2.37% | 3.67% | N/A | 2.34% | 72.12% | $103.00M | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| USDC | Spark | Ethereum | 3.75% | N/A | N/A | 3.75% | N/A | $402.17M | [DefiLlama](https://defillama.com/yields) |
-| USDC | Compound | Ethereum | 2.48% | 3.41% | 0.10% | 2.58% | 68.78% | $374.51M | [DefiLlama](https://defillama.com/yields)+[Compound API](https://docs.compound.finance/) |
-| USDC | Compound | Arbitrum | 2.36% | 3.32% | 0.00% | 2.36% | 65.66% | $21.11M | [DefiLlama](https://defillama.com/yields)+[Compound API](https://docs.compound.finance/) |
-| USDC | Compound | Base | 3.08% | 3.87% | 0.00% | 3.08% | 85.44% | $10.15M | [DefiLlama](https://defillama.com/yields)+[Compound API](https://docs.compound.finance/) |
-| USDC | Morpho | Ethereum | 2.64% | 3.12% | 0.21% | 2.85% | 84.64% | $418.11M | [Morpho API](https://docs.morpho.org/) |
-| USDC | Morpho | Arbitrum | 2.18% | 2.80% | N/A | 2.18% | 78.11% | $15.95M | [Morpho API](https://docs.morpho.org/) |
-| USDC | Morpho | Base | 5.29% | 5.98% | 3.74% | 9.03% | 88.87% | $3.26M | [DefiLlama](https://defillama.com/yields)+[Morpho API](https://docs.morpho.org/) |
-| USDT | Aave | Ethereum | 1.91% | 3.07% | N/A | 1.89% | 69.45% | $1.55B | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| USDT | Spark | Ethereum | 3.42% | N/A | N/A | 3.42% | N/A | $656.82M | [DefiLlama](https://defillama.com/yields) |
-| USDT | Compound | Ethereum | 2.52% | 3.44% | 0.10% | 2.62% | 69.90% | $201.25M | [DefiLlama](https://defillama.com/yields)+[Compound API](https://docs.compound.finance/) |
-| USDT | Compound | Arbitrum | 2.43% | 3.38% | 0.00% | 2.43% | 67.57% | $20.34M | [DefiLlama](https://defillama.com/yields)+[Compound API](https://docs.compound.finance/) |
-| USDT | Morpho | Ethereum | 2.65% | 3.07% | 0.30% | 2.95% | 86.71% | $241.19M | [Morpho API](https://docs.morpho.org/) |
-| DAI | Aave | Ethereum | 2.19% | 4.04% | N/A | 2.16% | 72.85% | $38.30M | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| DAI | Aave | Arbitrum | 1.73% | 3.63% | N/A | 1.72% | 64.21% | $1.74M | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| DAI | Morpho | Ethereum | 5.83% | 6.40% | N/A | 5.83% | 91.30% | $2.61M | [Morpho API](https://docs.morpho.org/) |
-| USDS | Aave | Ethereum | 0.08% | 5.67% | N/A | 0.08% | 1.94% | $55.52M | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| USDS | Spark | Ethereum | 2.55% | N/A | N/A | 2.55% | N/A | $30.70M | [DefiLlama](https://defillama.com/yields) |
-| USDS | Compound | Ethereum | 3.03% | 3.84% | 1.51% | 4.54% | 84.28% | $5.81M | [Compound API](https://docs.compound.finance/) |
-| USDS | Compound | Base | 1.96% | 3.31% | 0.00% | 1.96% | 36.29% | $1.18M | [Compound API](https://docs.compound.finance/) |
-| USDS | Morpho | Ethereum | 5.64% | 6.17% | N/A | 5.64% | 91.67% | $5.39M | [Morpho API](https://docs.morpho.org/) |
-| SUSDS | Spark | Ethereum | 0.00% | N/A | N/A | 0.00% | N/A | $3.43M | [DefiLlama](https://defillama.com/yields) |
-| SUSDS | Morpho | Ethereum | N/A | N/A | N/A | 0.00% | N/A | $228.34M | [DefiLlama](https://defillama.com/yields) |
-| SUSDS | Morpho | Arbitrum | N/A | N/A | N/A | 0.00% | N/A | $13.47M | [DefiLlama](https://defillama.com/yields) |
-| PYUSD | Aave | Ethereum | 2.09% | 3.81% | N/A | 2.07% | 61.56% | $130.35M | [DefiLlama](https://defillama.com/yields)+[Aave API](https://aave.com/docs/developers/apis) |
-| PYUSD | Spark | Ethereum | 0.83% | N/A | N/A | 0.83% | N/A | $77.67M | [DefiLlama](https://defillama.com/yields) |
-| PYUSD | Morpho | Ethereum | 0.00% | 0.00% | 0.27% | 0.27% | 0.00% | $145.17M | [Morpho API](https://docs.morpho.org/) |
+| USDC | Aave | Ethereum | 2.15% | 3.26% | N/A | 2.13% | 73.77% | $899.71M | DefiLlama+Aave API |
+| USDC | Aave | Arbitrum | 1.47% | 2.72% | N/A | 1.46% | 60.33% | $106.42M | DefiLlama+Aave API |
+| USDC | Aave | Base | 2.37% | 3.67% | N/A | 2.34% | 72.12% | $103.00M | DefiLlama+Aave API |
+| USDC | Spark | Ethereum | 3.75% | N/A | N/A | 3.75% | N/A | $402.17M | DefiLlama |
+| USDC | Compound | Ethereum | 2.48% | 3.41% | 0.10% | 2.58% | 68.78% | $374.51M | DefiLlama+Compound API |
+| USDC | Compound | Arbitrum | 2.36% | 3.32% | 0.00% | 2.36% | 65.66% | $21.11M | DefiLlama+Compound API |
+| USDC | Compound | Base | 3.08% | 3.87% | 0.00% | 3.08% | 85.44% | $10.15M | DefiLlama+Compound API |
+| USDC | Morpho | Ethereum | 2.64% | 3.12% | 0.21% | 2.85% | 84.64% | $418.11M | Morpho API |
+| USDC | Morpho | Arbitrum | 2.18% | 2.80% | N/A | 2.18% | 78.11% | $15.95M | Morpho API |
+| USDC | Morpho | Base | 5.29% | 5.98% | 3.74% | 9.03% | 88.87% | $3.26M | DefiLlama+Morpho API |
+| USDT | Aave | Ethereum | 1.91% | 3.07% | N/A | 1.89% | 69.45% | $1.55B | DefiLlama+Aave API |
+| USDT | Spark | Ethereum | 3.42% | N/A | N/A | 3.42% | N/A | $656.82M | DefiLlama |
+| USDT | Compound | Ethereum | 2.52% | 3.44% | 0.10% | 2.62% | 69.90% | $201.25M | DefiLlama+Compound API |
+| USDT | Compound | Arbitrum | 2.43% | 3.38% | 0.00% | 2.43% | 67.57% | $20.34M | DefiLlama+Compound API |
+| USDT | Morpho | Ethereum | 2.65% | 3.07% | 0.30% | 2.95% | 86.71% | $241.19M | Morpho API |
+| DAI | Aave | Ethereum | 2.19% | 4.04% | N/A | 2.16% | 72.85% | $38.30M | DefiLlama+Aave API |
+| DAI | Aave | Arbitrum | 1.73% | 3.63% | N/A | 1.72% | 64.21% | $1.74M | DefiLlama+Aave API |
+| DAI | Morpho | Ethereum | 5.83% | 6.40% | N/A | 5.83% | 91.30% | $2.61M | Morpho API |
+| USDS | Aave | Ethereum | 0.08% | 5.67% | N/A | 0.08% | 1.94% | $55.52M | DefiLlama+Aave API |
+| USDS | Spark | Ethereum | 2.55% | N/A | N/A | 2.55% | N/A | $30.70M | DefiLlama |
+| USDS | Compound | Ethereum | 3.03% | 3.84% | 1.51% | 4.54% | 84.28% | $5.81M | Compound API |
+| USDS | Compound | Base | 1.96% | 3.31% | 0.00% | 1.96% | 36.29% | $1.18M | Compound API |
+| USDS | Morpho | Ethereum | 5.64% | 6.17% | N/A | 5.64% | 91.67% | $5.39M | Morpho API |
+| SUSDS | Spark | Ethereum | 0.00% | N/A | N/A | 0.00% | N/A | $3.43M | DefiLlama |
+| SUSDS | Morpho | Ethereum | N/A | N/A | N/A | 0.00% | N/A | $228.34M | DefiLlama |
+| SUSDS | Morpho | Arbitrum | N/A | N/A | N/A | 0.00% | N/A | $13.47M | DefiLlama |
+| PYUSD | Aave | Ethereum | 2.09% | 3.81% | N/A | 2.07% | 61.56% | $130.35M | DefiLlama+Aave API |
+| PYUSD | Spark | Ethereum | 0.83% | N/A | N/A | 0.83% | N/A | $77.67M | DefiLlama |
+| PYUSD | Morpho | Ethereum | 0.00% | 0.00% | 0.27% | 0.27% | 0.00% | $145.17M | Morpho API |
 
 交易含义：当前稳定币收益更偏“头部池中等收益 + 局部高利用率”结构，策略上优先流动性与透明度，再考虑收益增强。
 部分池的 Borrow 与 Utilization 暂未返回，表内仅展示已获取字段。
@@ -100,12 +92,6 @@
 - Funding 最高样本：OKX-BTC，年化约 10.95%。
 - Funding 最低样本：Binance-BTC，年化约 0.15%。
 - Basis 偏离最大：Binance-ETH，相对指数约 -0.04%。
-
-外链索引（期现/借币复核）
-- Binance 永续： [BTCUSDT](https://www.binance.com/en/futures/BTCUSDT) / [ETHUSDT](https://www.binance.com/en/futures/ETHUSDT)
-- OKX 永续： [BTC-USDT-SWAP](https://www.okx.com/trade-swap/btc-usdt-swap) / [ETH-USDT-SWAP](https://www.okx.com/trade-swap/eth-usdt-swap)
-- 借币入口： [Binance Loans](https://www.binance.com/en/crypto-loans) / [OKX Loan](https://www.okx.com/earn/loan) / [Bybit Crypto Loans](https://www.bybit.com/en-US/crypto-loan)
-- 聚合看板（参考）： [Taoli Tools](https://taoli.tools/)
 
 借币成本多源对比表
 | 资产 | Binance(日/年) | OKX(日/年) | Bybit(日/年) | Backpack(日/年) | KuCoin(日/年) | 最低日利率 |
@@ -173,3 +159,4 @@ Top10 中领涨 TRX（+2.48%），尾部 XRP（-1.20%），均值 -0.21%。分�
 - 仓位管理优先级高于方向押注，建议保持核心仓位稳定、战术仓位滚动。
 - 若交易所衍生品占比继续上升，建议同步收紧杠杆和止损参数。
 - 关注情绪改善与广度扩散是否同步发生，二者背离时避免追逐单边。
+
