@@ -1,8 +1,6 @@
 {
   "date": "2026-03-26",
-  "data_gaps": [
-    "Compound API 获取失败: HTTP Error 500: Internal Server Error"
-  ],
+  "data_gaps": [],
   "market": {
     "market_cap": 2441585324140.87,
     "prev_market_cap": 2417642258268.2,
@@ -16,27 +14,27 @@
     "exchanges": 10,
     "nondefi_carry": 4,
     "borrow_rates": 18,
-    "stablecoin_yields": 30
+    "stablecoin_yields": 29
   },
   "top2_trend": {
     "BTC": {
       "symbol": "BTCUSDT",
-      "price": 70744.09,
-      "open": 70844.79,
+      "price": 70814.08,
+      "open": 70816.54,
       "high": 72026.09,
       "low": 70530.47,
-      "change_pct": -0.142,
-      "range_pos_pct": 14.283039809577033,
+      "change_pct": -0.003,
+      "range_pos_pct": 18.96270443026982,
       "trend": "区间震荡"
     },
     "ETH": {
       "symbol": "ETHUSDT",
-      "price": 2148.67,
-      "open": 2162.62,
+      "price": 2151.23,
+      "open": 2161.39,
       "high": 2199.02,
       "low": 2144.05,
-      "change_pct": -0.645,
-      "range_pos_pct": 8.404584318719134,
+      "change_pct": -0.47,
+      "range_pos_pct": 13.061670001818923,
       "trend": "区间震荡"
     }
   },
@@ -48,53 +46,53 @@
     {
       "exchange": "Binance",
       "asset": "BTC",
-      "spot_price": 70744.09,
-      "index_price": 70755.50521739,
-      "mark_price": 70710.06974638,
-      "funding_rate_pct": 0.00037299999999999996,
+      "spot_price": 70814.08,
+      "index_price": 70805.96,
+      "mark_price": 70779.76837681,
+      "funding_rate_pct": 0.000139,
       "funding_interval_hours": 8.0,
-      "annual_funding_pct": 0.40843499999999994,
-      "basis_pct": -0.06421475031575995,
-      "open_interest_contracts": 86783.623,
+      "annual_funding_pct": 0.152205,
+      "basis_pct": -0.03699070415825226,
+      "open_interest_contracts": 86794.503,
       "quote_ccy": "USDT"
     },
     {
       "exchange": "Binance",
       "asset": "ETH",
-      "spot_price": 2148.75,
-      "index_price": 2148.87744186,
-      "mark_price": 2147.64,
-      "funding_rate_pct": 0.00331,
+      "spot_price": 2151.24,
+      "index_price": 2150.92488372,
+      "mark_price": 2150.06744961,
+      "funding_rate_pct": 0.0030889999999999997,
       "funding_interval_hours": 8.0,
-      "annual_funding_pct": 3.62445,
-      "basis_pct": -0.0575855018948464,
-      "open_interest_contracts": 2161791.933,
+      "annual_funding_pct": 3.3824549999999993,
+      "basis_pct": -0.03986350785606403,
+      "open_interest_contracts": 2163682.242,
       "quote_ccy": "USDT"
     },
     {
       "exchange": "OKX",
       "asset": "BTC",
-      "spot_price": 70748.2,
+      "spot_price": 70813.0,
       "index_price": null,
-      "mark_price": 70717.9,
+      "mark_price": 70786.9,
       "funding_rate_pct": 0.01,
       "funding_interval_hours": 8.0,
       "annual_funding_pct": 10.950000000000001,
       "basis_pct": null,
-      "open_interest_contracts": 29690.455300000238,
+      "open_interest_contracts": 29711.999200000246,
       "quote_ccy": "USDT"
     },
     {
       "exchange": "OKX",
       "asset": "ETH",
-      "spot_price": 2148.91,
+      "spot_price": 2151.35,
       "index_price": null,
-      "mark_price": 2147.8,
+      "mark_price": 2150.16,
       "funding_rate_pct": 0.01,
       "funding_interval_hours": 8.0,
       "annual_funding_pct": 10.950000000000001,
       "basis_pct": null,
-      "open_interest_contracts": 693404.0280000014,
+      "open_interest_contracts": 693171.9300000013,
       "quote_ccy": "USDT"
     }
   ],
@@ -107,7 +105,7 @@
       "borrow_limit": 100000.0,
       "tier": "VIP0",
       "rate_basis": "daily",
-      "updated_at": "2026-03-26T04:15:15.138392+00:00"
+      "updated_at": "2026-03-26T04:22:56.142724+00:00"
     },
     {
       "source": "OKX",
@@ -117,7 +115,7 @@
       "borrow_limit": 5000000.0,
       "tier": "Public",
       "rate_basis": "daily",
-      "updated_at": "2026-03-26T04:15:15.827082+00:00"
+      "updated_at": "2026-03-26T04:22:56.696968+00:00"
     },
     {
       "source": "Bybit",
@@ -127,17 +125,17 @@
       "borrow_limit": 8000000.0,
       "tier": "No VIP",
       "rate_basis": "hourly",
-      "updated_at": "2026-03-26T04:15:16.314643+00:00"
+      "updated_at": "2026-03-26T04:22:57.035753+00:00"
     },
     {
       "source": "Backpack",
       "asset": "USDT",
-      "daily_rate_pct": 0.006732493139985271,
-      "annual_rate_pct": 2.4573599960946235,
+      "daily_rate_pct": 0.006795355892785398,
+      "annual_rate_pct": 2.4803049008666704,
       "borrow_limit": 50000000.0,
       "tier": "Public",
       "rate_basis": "annual",
-      "updated_at": "2026-03-26T04:15:16.802221+00:00"
+      "updated_at": "2026-03-26T04:22:57.456541+00:00"
     },
     {
       "source": "Binance",
@@ -147,7 +145,7 @@
       "borrow_limit": 100000.0,
       "tier": "VIP0",
       "rate_basis": "daily",
-      "updated_at": "2026-03-26T04:15:15.138626+00:00"
+      "updated_at": "2026-03-26T04:22:56.143007+00:00"
     },
     {
       "source": "OKX",
@@ -157,7 +155,7 @@
       "borrow_limit": 1000000.0,
       "tier": "Public",
       "rate_basis": "daily",
-      "updated_at": "2026-03-26T04:15:15.827111+00:00"
+      "updated_at": "2026-03-26T04:22:56.696997+00:00"
     },
     {
       "source": "Bybit",
@@ -167,17 +165,17 @@
       "borrow_limit": 3500000.0,
       "tier": "No VIP",
       "rate_basis": "hourly",
-      "updated_at": "2026-03-26T04:15:16.314693+00:00"
+      "updated_at": "2026-03-26T04:22:57.035784+00:00"
     },
     {
       "source": "Backpack",
       "asset": "USDC",
-      "daily_rate_pct": 0.00376732562047794,
-      "annual_rate_pct": 1.3750738514744483,
+      "daily_rate_pct": 0.0037681533290130297,
+      "annual_rate_pct": 1.375375965089756,
       "borrow_limit": 300000000.0,
       "tier": "Public",
       "rate_basis": "annual",
-      "updated_at": "2026-03-26T04:15:16.802282+00:00"
+      "updated_at": "2026-03-26T04:22:57.456585+00:00"
     },
     {
       "source": "Bybit",
@@ -187,7 +185,7 @@
       "borrow_limit": 481800.0,
       "tier": "No VIP",
       "rate_basis": "hourly",
-      "updated_at": "2026-03-26T04:15:16.314708+00:00"
+      "updated_at": "2026-03-26T04:22:57.035796+00:00"
     },
     {
       "source": "Bybit",
@@ -197,7 +195,7 @@
       "borrow_limit": 1013200.0,
       "tier": "No VIP",
       "rate_basis": "hourly",
-      "updated_at": "2026-03-26T04:15:16.314719+00:00"
+      "updated_at": "2026-03-26T04:22:57.035805+00:00"
     },
     {
       "source": "Binance",
@@ -207,7 +205,7 @@
       "borrow_limit": 60.0,
       "tier": "VIP0",
       "rate_basis": "daily",
-      "updated_at": "2026-03-26T04:15:15.138947+00:00"
+      "updated_at": "2026-03-26T04:22:56.143557+00:00"
     },
     {
       "source": "OKX",
@@ -217,7 +215,7 @@
       "borrow_limit": 175.0,
       "tier": "Public",
       "rate_basis": "daily",
-      "updated_at": "2026-03-26T04:15:15.827319+00:00"
+      "updated_at": "2026-03-26T04:22:56.697159+00:00"
     },
     {
       "source": "Bybit",
@@ -227,17 +225,17 @@
       "borrow_limit": 300.0,
       "tier": "No VIP",
       "rate_basis": "hourly",
-      "updated_at": "2026-03-26T04:15:16.314727+00:00"
+      "updated_at": "2026-03-26T04:22:57.035811+00:00"
     },
     {
       "source": "Backpack",
       "asset": "BTC",
-      "daily_rate_pct": 0.0008332623315143472,
-      "annual_rate_pct": 0.3041407510027367,
+      "daily_rate_pct": 0.0008101445608962196,
+      "annual_rate_pct": 0.29570276472712015,
       "borrow_limit": 3000.0,
       "tier": "Public",
       "rate_basis": "annual",
-      "updated_at": "2026-03-26T04:15:16.802312+00:00"
+      "updated_at": "2026-03-26T04:22:57.456616+00:00"
     },
     {
       "source": "Binance",
@@ -247,7 +245,7 @@
       "borrow_limit": 400.0,
       "tier": "VIP0",
       "rate_basis": "daily",
-      "updated_at": "2026-03-26T04:15:15.139026+00:00"
+      "updated_at": "2026-03-26T04:22:56.143638+00:00"
     },
     {
       "source": "OKX",
@@ -257,7 +255,7 @@
       "borrow_limit": 7000.0,
       "tier": "Public",
       "rate_basis": "daily",
-      "updated_at": "2026-03-26T04:15:15.827328+00:00"
+      "updated_at": "2026-03-26T04:22:56.697166+00:00"
     },
     {
       "source": "Bybit",
@@ -267,17 +265,17 @@
       "borrow_limit": 2000.0,
       "tier": "No VIP",
       "rate_basis": "hourly",
-      "updated_at": "2026-03-26T04:15:16.314736+00:00"
+      "updated_at": "2026-03-26T04:22:57.035818+00:00"
     },
     {
       "source": "Backpack",
       "asset": "ETH",
-      "daily_rate_pct": 0.008287573305320657,
-      "annual_rate_pct": 3.02496425644204,
+      "daily_rate_pct": 0.008286747844487102,
+      "annual_rate_pct": 3.024662963237792,
       "borrow_limit": 20000.0,
       "tier": "Public",
       "rate_basis": "annual",
-      "updated_at": "2026-03-26T04:15:16.802320+00:00"
+      "updated_at": "2026-03-26T04:22:57.456626+00:00"
     }
   ],
   "coingecko": {
@@ -298,18 +296,18 @@
       "protocol_key": "aave-v3",
       "chain": "Ethereum",
       "asset": "USDT",
-      "supply_apy": 1.905367781912035,
-      "borrow_apy": 3.065672094388637,
+      "supply_apy": 1.9053891766433098,
+      "borrow_apy": 3.0656894033479625,
       "rewards_apy": null,
-      "total_apy": 1.8848,
-      "tvl_usd": 1554861350.0,
+      "total_apy": 1.88799,
+      "tvl_usd": 1551994236.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 69.45122678206161,
+      "utilization_pct": 69.45161050698545,
       "data_completeness": 6,
       "pool_id": "f981a304-bb6c-45b8-b0c5-fd2f515ad23a",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-26T04:15:17.939322+00:00",
+      "updated_at": "2026-03-26T04:23:01.004108+00:00",
       "source_tags": [
         "DefiLlama",
         "Aave API"
@@ -317,7 +315,7 @@
       "source_primary": "DefiLlama+Aave API",
       "supply_cap_usd": 9496879060.0,
       "borrow_cap_usd": 8797109024.0,
-      "available_liquidity_usd": 1552907786.8926444,
+      "available_liquidity_usd": 1552887864.373943,
       "can_be_collateral": true,
       "is_paused": false,
       "is_frozen": false,
@@ -328,18 +326,18 @@
       "protocol_key": "aave-v3",
       "chain": "Ethereum",
       "asset": "USDC",
-      "supply_apy": 2.1519859508183985,
-      "borrow_apy": 3.2591539503205604,
+      "supply_apy": 2.152123952213565,
+      "borrow_apy": 3.259259012317662,
       "rewards_apy": null,
-      "total_apy": 2.12318,
-      "tvl_usd": 903840384.0,
+      "total_apy": 2.12825,
+      "tvl_usd": 899714487.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 73.7647725033506,
+      "utilization_pct": 73.76711798350803,
       "data_completeness": 6,
       "pool_id": "aa70268e-4b52-42bf-a116-608b370f9501",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-26T04:15:17.939349+00:00",
+      "updated_at": "2026-03-26T04:23:01.004298+00:00",
       "source_tags": [
         "DefiLlama",
         "Aave API"
@@ -347,7 +345,7 @@
       "source_primary": "DefiLlama+Aave API",
       "supply_cap_usd": 7498477350.0,
       "borrow_cap_usd": 6998578860.0,
-      "available_liquidity_usd": 899038936.7984145,
+      "available_liquidity_usd": 898930401.2076995,
       "can_be_collateral": true,
       "is_paused": false,
       "is_frozen": false,
@@ -361,15 +359,15 @@
       "supply_apy": 2.091691569941824,
       "borrow_apy": 3.806842090140833,
       "rewards_apy": null,
-      "total_apy": 2.07015,
-      "tvl_usd": 130346748.0,
+      "total_apy": 2.07012,
+      "tvl_usd": 130345289.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 61.563854588653314,
+      "utilization_pct": 61.56386756841148,
       "data_completeness": 6,
       "pool_id": "d118f505-e75f-4152-bad3-49a2dc7482bf",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-26T04:15:17.939444+00:00",
+      "updated_at": "2026-03-26T04:23:01.004436+00:00",
       "source_tags": [
         "DefiLlama",
         "Aave API"
@@ -392,14 +390,14 @@
       "borrow_apy": 5.670808804149715,
       "rewards_apy": null,
       "total_apy": 0.08043,
-      "tvl_usd": 55519981.0,
+      "tvl_usd": 55520932.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 1.9442580708088317,
+      "utilization_pct": 1.94425961469021,
       "data_completeness": 6,
       "pool_id": "e65588a1-27ad-4e20-9232-68a6cfaccf63",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-26T04:15:17.939568+00:00",
+      "updated_at": "2026-03-26T04:23:01.004589+00:00",
       "source_tags": [
         "DefiLlama",
         "Aave API"
@@ -422,14 +420,14 @@
       "borrow_apy": 4.038833887856982,
       "rewards_apy": null,
       "total_apy": 2.16337,
-      "tvl_usd": 38300858.0,
+      "tvl_usd": 38297544.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 72.85314189030426,
+      "utilization_pct": 72.85315338697441,
       "data_completeness": 6,
       "pool_id": "3665ee7e-6c5d-49d9-abb7-c47ab5d9d4ac",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-26T04:15:17.939619+00:00",
+      "updated_at": "2026-03-26T04:23:01.004670+00:00",
       "source_tags": [
         "DefiLlama",
         "Aave API"
@@ -448,18 +446,18 @@
       "protocol_key": "aave-v3",
       "chain": "Arbitrum",
       "asset": "USDC",
-      "supply_apy": 1.4665210856464412,
-      "borrow_apy": 2.7175956695732753,
+      "supply_apy": 1.4667542802778841,
+      "borrow_apy": 2.7178130498105033,
       "rewards_apy": null,
-      "total_apy": 1.46005,
-      "tvl_usd": 106075165.0,
+      "total_apy": 1.45619,
+      "tvl_usd": 106420454.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 60.32979865692667,
+      "utilization_pct": 60.334559794865605,
       "data_completeness": 6,
       "pool_id": "d9fa8e14-0447-4207-9ae8-7810199dfa1f",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-26T04:15:17.939478+00:00",
+      "updated_at": "2026-03-26T04:23:01.004481+00:00",
       "source_tags": [
         "DefiLlama",
         "Aave API"
@@ -467,7 +465,7 @@
       "source_primary": "DefiLlama+Aave API",
       "supply_cap_usd": 512199169.114,
       "borrow_cap_usd": 386823850.342,
-      "available_liquidity_usd": 106437895.1400847,
+      "available_liquidity_usd": 106418657.273422,
       "can_be_collateral": true,
       "is_paused": false,
       "is_frozen": false,
@@ -478,18 +476,18 @@
       "protocol_key": "aave-v3",
       "chain": "Base",
       "asset": "USDC",
-      "supply_apy": 2.367250850117318,
-      "borrow_apy": 3.671072912995184,
+      "supply_apy": 2.3680234071553765,
+      "borrow_apy": 3.6716756787273983,
       "rewards_apy": null,
-      "total_apy": 2.33798,
-      "tvl_usd": 103141801.0,
+      "total_apy": 2.3395,
+      "tvl_usd": 102999632.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 72.10583711857053,
+      "utilization_pct": 72.11746621701462,
       "data_completeness": 6,
       "pool_id": "7e0661bf-8cf3-45e6-9424-31916d4c7b84",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-26T04:15:17.939485+00:00",
+      "updated_at": "2026-03-26T04:23:01.004488+00:00",
       "source_tags": [
         "DefiLlama",
         "Aave API"
@@ -497,7 +495,7 @@
       "source_primary": "DefiLlama+Aave API",
       "supply_cap_usd": 685076664.0,
       "borrow_cap_usd": 484912700.0,
-      "available_liquidity_usd": 102989498.83013307,
+      "available_liquidity_usd": 102946577.8604845,
       "can_be_collateral": true,
       "is_paused": false,
       "is_frozen": false,
@@ -512,14 +510,14 @@
       "borrow_apy": 3.6316821152354106,
       "rewards_apy": null,
       "total_apy": 1.71787,
-      "tvl_usd": 1739706.0,
+      "tvl_usd": 1739382.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
-      "utilization_pct": 64.21147272295582,
+      "utilization_pct": 64.2114847585999,
       "data_completeness": 6,
       "pool_id": "a8e3d841-2788-4647-ad54-5a36fac451b1",
       "risk_note": "审计成熟/头部流动性",
-      "updated_at": "2026-03-26T04:15:17.941020+00:00",
+      "updated_at": "2026-03-26T04:23:01.005738+00:00",
       "source_tags": [
         "DefiLlama",
         "Aave API"
@@ -542,14 +540,14 @@
       "borrow_apy": null,
       "rewards_apy": null,
       "total_apy": 3.42,
-      "tvl_usd": 656372802.0,
+      "tvl_usd": 656820750.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
       "utilization_pct": null,
       "data_completeness": 2,
       "pool_id": "a5d67f7e-5b51-4a9d-969d-caf051a7f5a4",
       "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-26T04:15:17.939360+00:00",
+      "updated_at": "2026-03-26T04:23:01.004313+00:00",
       "source_tags": [
         "DefiLlama"
       ],
@@ -565,37 +563,14 @@
       "borrow_apy": null,
       "rewards_apy": null,
       "total_apy": 3.75,
-      "tvl_usd": 402213459.0,
+      "tvl_usd": 402172735.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
       "utilization_pct": null,
       "data_completeness": 2,
       "pool_id": "c5c74dd1-995c-4445-9d84-3e710bad7d52",
       "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-26T04:15:17.939385+00:00",
-      "source_tags": [
-        "DefiLlama"
-      ],
-      "source_primary": "DefiLlama",
-      "safety_rank": 2
-    },
-    {
-      "protocol": "Spark",
-      "protocol_key": "sparklend",
-      "chain": "Ethereum",
-      "asset": "USDT",
-      "supply_apy": 1.86618,
-      "borrow_apy": null,
-      "rewards_apy": null,
-      "total_apy": 1.86618,
-      "tvl_usd": 126263812.0,
-      "total_supply_usd": null,
-      "total_borrow_usd": null,
-      "utilization_pct": null,
-      "data_completeness": 2,
-      "pool_id": "8fbe28b8-140d-4e37-8804-5d2aba4daded",
-      "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-26T04:15:17.939455+00:00",
+      "updated_at": "2026-03-26T04:23:01.004343+00:00",
       "source_tags": [
         "DefiLlama"
       ],
@@ -607,18 +582,18 @@
       "protocol_key": "sparklend",
       "chain": "Ethereum",
       "asset": "PYUSD",
-      "supply_apy": 0.83393,
+      "supply_apy": 0.83396,
       "borrow_apy": null,
       "rewards_apy": null,
-      "total_apy": 0.83393,
-      "tvl_usd": 77672192.0,
+      "total_apy": 0.83396,
+      "tvl_usd": 77667435.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
       "utilization_pct": null,
       "data_completeness": 2,
       "pool_id": "995b269a-8409-4c55-b97e-868f443b432e",
       "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-26T04:15:17.939522+00:00",
+      "updated_at": "2026-03-26T04:23:01.004531+00:00",
       "source_tags": [
         "DefiLlama"
       ],
@@ -634,14 +609,14 @@
       "borrow_apy": null,
       "rewards_apy": null,
       "total_apy": 2.55142,
-      "tvl_usd": 30696098.0,
+      "tvl_usd": 30696640.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
       "utilization_pct": null,
       "data_completeness": 2,
       "pool_id": "0ed981dc-b49d-426d-ade5-6014728b1ef9",
       "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-26T04:15:17.939652+00:00",
+      "updated_at": "2026-03-26T04:23:01.004723+00:00",
       "source_tags": [
         "DefiLlama"
       ],
@@ -657,14 +632,14 @@
       "borrow_apy": null,
       "rewards_apy": null,
       "total_apy": 0.0,
-      "tvl_usd": 3430957.0,
+      "tvl_usd": 3431811.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
       "utilization_pct": null,
       "data_completeness": 2,
       "pool_id": "d3694b72-5bc4-44c9-8ab6-1fc7941d216a",
       "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-26T04:15:17.940462+00:00",
+      "updated_at": "2026-03-26T04:23:01.005395+00:00",
       "source_tags": [
         "DefiLlama"
       ],
@@ -672,50 +647,170 @@
       "safety_rank": 2
     },
     {
-      "protocol": "Spark",
-      "protocol_key": "sparklend",
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
       "chain": "Ethereum",
       "asset": "USDC",
-      "supply_apy": 4.13836,
-      "borrow_apy": null,
-      "rewards_apy": null,
-      "total_apy": 4.13836,
-      "tvl_usd": 1862881.0,
-      "total_supply_usd": null,
-      "total_borrow_usd": null,
-      "utilization_pct": null,
-      "data_completeness": 2,
-      "pool_id": "65ce8276-b4d9-41ba-9f6f-21fc374cf9bc",
-      "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-26T04:15:17.940980+00:00",
+      "supply_apy": 2.4759726188112,
+      "borrow_apy": 3.4104879797183996,
+      "rewards_apy": 0.10302071359480688,
+      "total_apy": 2.578993332406007,
+      "tvl_usd": 374510235.3284455,
+      "total_supply_usd": 374510235.3284455,
+      "total_borrow_usd": 257577451.05812758,
+      "utilization_pct": 68.77701728204434,
+      "data_completeness": 9,
+      "pool_id": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-03-26T04:23:13.963537+00:00",
       "source_tags": [
-        "DefiLlama"
+        "DefiLlama",
+        "Compound API"
       ],
-      "source_primary": "DefiLlama",
-      "safety_rank": 2
+      "source_primary": "DefiLlama+Compound API",
+      "safety_rank": 4
     },
     {
-      "protocol": "Spark",
-      "protocol_key": "spark-savings",
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
       "chain": "Ethereum",
-      "asset": "PYUSD",
-      "supply_apy": 3.75,
-      "borrow_apy": null,
-      "rewards_apy": null,
-      "total_apy": 3.75,
-      "tvl_usd": 465952.0,
-      "total_supply_usd": null,
-      "total_borrow_usd": null,
-      "utilization_pct": null,
-      "data_completeness": 2,
-      "pool_id": "4d33c615-a969-4c55-9acf-49d8d14a1063",
-      "risk_note": "Aave系改造/审计覆盖",
-      "updated_at": "2026-03-26T04:15:17.941841+00:00",
+      "asset": "USDT",
+      "supply_apy": 2.5163808340608,
+      "borrow_apy": 3.4416674084735996,
+      "rewards_apy": 0.10456939058083549,
+      "total_apy": 2.620950224641635,
+      "tvl_usd": 201252939.98264387,
+      "total_supply_usd": 201252939.98264387,
+      "total_borrow_usd": 140674860.0376119,
+      "utilization_pct": 69.89946767929851,
+      "data_completeness": 9,
+      "pool_id": "0x3afdc9bca9213a35503b077a6072f3d0d5ab0840",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-03-26T04:23:13.963610+00:00",
       "source_tags": [
-        "DefiLlama"
+        "DefiLlama",
+        "Compound API"
       ],
-      "source_primary": "DefiLlama",
-      "safety_rank": 2
+      "source_primary": "DefiLlama+Compound API",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Arbitrum",
+      "asset": "USDC",
+      "supply_apy": 2.3638261783103998,
+      "borrow_apy": 3.3239545423056,
+      "rewards_apy": 0.0,
+      "total_apy": 2.3638261783103998,
+      "tvl_usd": 21109388.74625311,
+      "total_supply_usd": 21109388.74625311,
+      "total_borrow_usd": 13860817.501290787,
+      "utilization_pct": 65.66183839276933,
+      "data_completeness": 9,
+      "pool_id": "0x9c4ec768c28520b50860ea7a15bd7213a9ff58bf",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-03-26T04:23:13.963652+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Compound API"
+      ],
+      "source_primary": "DefiLlama+Compound API",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Arbitrum",
+      "asset": "USDT",
+      "supply_apy": 2.4324881046047997,
+      "borrow_apy": 3.376934845704,
+      "rewards_apy": 0.0,
+      "total_apy": 2.4324881046047997,
+      "tvl_usd": 20338400.4583998,
+      "total_supply_usd": 20338400.4583998,
+      "total_borrow_usd": 13742480.362611484,
+      "utilization_pct": 67.56911410316494,
+      "data_completeness": 9,
+      "pool_id": "0xd98be00b5d27fc98112bde293e487f8d4ca57d07",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-03-26T04:23:13.963667+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Compound API"
+      ],
+      "source_primary": "DefiLlama+Compound API",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Base",
+      "asset": "USDC",
+      "supply_apy": 3.0756695203152,
+      "borrow_apy": 3.8732207724000003,
+      "rewards_apy": 0.0,
+      "total_apy": 3.0756695203152,
+      "tvl_usd": 10145691.265599614,
+      "total_supply_usd": 10145691.265599614,
+      "total_borrow_usd": 8668000.466539247,
+      "utilization_pct": 85.43526451031612,
+      "data_completeness": 9,
+      "pool_id": "0xb125e6687d4313864e53df431d5425969c15eb2f",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-03-26T04:23:13.963687+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Compound API"
+      ],
+      "source_primary": "DefiLlama+Compound API",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Ethereum",
+      "asset": "USDS",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-03-26T04:23:13.963630+00:00",
+      "supply_apy": 3.0341429912016,
+      "borrow_apy": 3.8411784398448,
+      "rewards_apy": 1.5103985663021098,
+      "total_apy": 4.54454155750371,
+      "tvl_usd": 5805558.478622102,
+      "total_supply_usd": 5805558.478622102,
+      "total_borrow_usd": 4893068.916427409,
+      "utilization_pct": 84.28174984225008,
+      "pool_id": "0x5d409e56d886231adaf00c8775665ad0f9897b56",
+      "source_tags": [
+        "Compound API"
+      ],
+      "source_primary": "Compound API",
+      "data_completeness": 9,
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Base",
+      "asset": "USDS",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-03-26T04:23:13.963705+00:00",
+      "supply_apy": 1.959672599928,
+      "borrow_apy": 3.3145116642144,
+      "rewards_apy": 0.0,
+      "total_apy": 1.959672599928,
+      "tvl_usd": 1177428.0298837055,
+      "total_supply_usd": 1177428.0298837055,
+      "total_borrow_usd": 427302.12196553923,
+      "utilization_pct": 36.29023336523971,
+      "pool_id": "0x2c776041ccfe903071af44aa147368a9c8eea518",
+      "source_tags": [
+        "Compound API"
+      ],
+      "source_primary": "Compound API",
+      "data_completeness": 9,
+      "safety_rank": 4
     },
     {
       "protocol": "Morpho",
@@ -723,7 +818,7 @@
       "chain": "Ethereum",
       "asset": "USDS",
       "risk_note": "需关注金库与奖励口径差异",
-      "updated_at": "2026-03-26T04:15:55.377985+00:00",
+      "updated_at": "2026-03-26T04:23:45.441939+00:00",
       "supply_apy": 5.637763497658038,
       "borrow_apy": 6.1653700714358495,
       "total_apy": 5.637763497658038,
@@ -745,7 +840,7 @@
       "chain": "Ethereum",
       "asset": "DAI",
       "risk_note": "需关注金库与奖励口径差异",
-      "updated_at": "2026-03-26T04:16:09.872092+00:00",
+      "updated_at": "2026-03-26T04:23:56.683110+00:00",
       "supply_apy": 5.828485924038644,
       "borrow_apy": 6.401595010133852,
       "total_apy": 5.828485924038644,
@@ -762,121 +857,6 @@
       "safety_rank": 4
     },
     {
-      "protocol": "Compound",
-      "protocol_key": "compound-v3",
-      "chain": "Ethereum",
-      "asset": "USDC",
-      "supply_apy": 2.47597,
-      "borrow_apy": null,
-      "rewards_apy": 0.10347,
-      "total_apy": 2.57944,
-      "tvl_usd": 116923626.0,
-      "total_supply_usd": null,
-      "total_borrow_usd": null,
-      "utilization_pct": null,
-      "data_completeness": 3,
-      "pool_id": "7da72d09-56ca-4ec5-a45f-59114353e487",
-      "risk_note": "成熟协议/资金利用率驱动",
-      "updated_at": "2026-03-26T04:15:17.939465+00:00",
-      "source_tags": [
-        "DefiLlama"
-      ],
-      "source_primary": "DefiLlama",
-      "safety_rank": 4
-    },
-    {
-      "protocol": "Compound",
-      "protocol_key": "compound-v3",
-      "chain": "Ethereum",
-      "asset": "USDT",
-      "supply_apy": 2.51262,
-      "borrow_apy": null,
-      "rewards_apy": 0.10487,
-      "total_apy": 2.6175,
-      "tvl_usd": 60871235.0,
-      "total_supply_usd": null,
-      "total_borrow_usd": null,
-      "utilization_pct": null,
-      "data_completeness": 3,
-      "pool_id": "f4d5b566-e815-4ca2-bb07-7bcd8bc797f1",
-      "risk_note": "成熟协议/资金利用率驱动",
-      "updated_at": "2026-03-26T04:15:17.939553+00:00",
-      "source_tags": [
-        "DefiLlama"
-      ],
-      "source_primary": "DefiLlama",
-      "safety_rank": 4
-    },
-    {
-      "protocol": "Compound",
-      "protocol_key": "compound-v3",
-      "chain": "Arbitrum",
-      "asset": "USDC",
-      "supply_apy": 2.3687,
-      "borrow_apy": null,
-      "rewards_apy": 0.0,
-      "total_apy": 2.3687,
-      "tvl_usd": 7205111.0,
-      "total_supply_usd": null,
-      "total_borrow_usd": null,
-      "utilization_pct": null,
-      "data_completeness": 3,
-      "pool_id": "d9c395b9-00d0-4426-a6b3-572a6dd68e54",
-      "risk_note": "成熟协议/资金利用率驱动",
-      "updated_at": "2026-03-26T04:15:17.940008+00:00",
-      "source_tags": [
-        "DefiLlama"
-      ],
-      "source_primary": "DefiLlama",
-      "safety_rank": 4
-    },
-    {
-      "protocol": "Compound",
-      "protocol_key": "compound-v3",
-      "chain": "Arbitrum",
-      "asset": "USDT",
-      "supply_apy": 2.43248,
-      "borrow_apy": null,
-      "rewards_apy": 0.0,
-      "total_apy": 2.43248,
-      "tvl_usd": 6596607.0,
-      "total_supply_usd": null,
-      "total_borrow_usd": null,
-      "utilization_pct": null,
-      "data_completeness": 3,
-      "pool_id": "85247b13-8180-44e7-b38c-4d324cc68a92",
-      "risk_note": "成熟协议/资金利用率驱动",
-      "updated_at": "2026-03-26T04:15:17.940068+00:00",
-      "source_tags": [
-        "DefiLlama"
-      ],
-      "source_primary": "DefiLlama",
-      "safety_rank": 4
-    },
-    {
-      "protocol": "Compound",
-      "protocol_key": "compound-v3",
-      "chain": "Base",
-      "asset": "USDC",
-      "supply_apy": 3.08275,
-      "borrow_apy": null,
-      "rewards_apy": 0.0,
-      "total_apy": 3.08275,
-      "tvl_usd": 1454369.0,
-      "total_supply_usd": null,
-      "total_borrow_usd": null,
-      "utilization_pct": null,
-      "data_completeness": 3,
-      "pool_id": "0c8567f8-ba5b-41ad-80de-00a71895eb19",
-      "risk_note": "成熟协议/资金利用率驱动",
-      "updated_at": "2026-03-26T04:15:17.941148+00:00",
-      "source_tags": [
-        "DefiLlama"
-      ],
-      "source_primary": "DefiLlama",
-      "safety_rank": 4
-    },
-    {
       "protocol": "Morpho",
       "protocol_key": "morpho-v1",
       "chain": "Ethereum",
@@ -885,14 +865,14 @@
       "borrow_apy": null,
       "rewards_apy": null,
       "total_apy": 0.0,
-      "tvl_usd": 228384891.0,
+      "tvl_usd": 228340471.0,
       "total_supply_usd": null,
       "total_borrow_usd": null,
       "utilization_pct": null,
       "data_completeness": 0,
       "pool_id": "9469cde6-65d8-4bbb-ade6-8a89f1728403",
       "risk_note": "需关注金库与奖励口径差异",
-      "updated_at": "2026-03-26T04:15:17.939411+00:00",
+      "updated_at": "2026-03-26T04:23:01.004383+00:00",
       "source_tags": [
         "DefiLlama"
       ],
@@ -905,15 +885,15 @@
       "chain": "Ethereum",
       "asset": "USDC",
       "risk_note": "需关注金库与奖励口径差异",
-      "updated_at": "2026-03-26T04:15:57.593340+00:00",
-      "supply_apy": 2.639961792576507,
-      "borrow_apy": 3.123907614070348,
+      "updated_at": "2026-03-26T04:23:50.850354+00:00",
+      "supply_apy": 2.6360199726430515,
+      "borrow_apy": 3.1218653675172194,
       "rewards_apy": 0.21158945375075489,
-      "total_apy": 2.851551246327262,
-      "tvl_usd": 417761776.7939397,
-      "total_supply_usd": 417761776.7939397,
-      "total_borrow_usd": 353878711.7086553,
-      "utilization_pct": 84.70825512675023,
+      "total_apy": 2.8476094263938063,
+      "tvl_usd": 418109195.1743611,
+      "total_supply_usd": 418109195.1743611,
+      "total_borrow_usd": 353878823.5060261,
+      "utilization_pct": 84.63789545658054,
       "pool_id": "0x64d65c9a2d91c36d56fbc42d69e979335320169b3df63bf92789e2c8883fcc64",
       "source_tags": [
         "Morpho API"
@@ -928,7 +908,7 @@
       "chain": "Ethereum",
       "asset": "USDT",
       "risk_note": "需关注金库与奖励口径差异",
-      "updated_at": "2026-03-26T04:16:10.713861+00:00",
+      "updated_at": "2026-03-26T04:23:57.745316+00:00",
       "supply_apy": 2.654451892325689,
       "borrow_apy": 3.0676448056654952,
       "rewards_apy": 0.2961496080575731,
@@ -951,7 +931,7 @@
       "chain": "Ethereum",
       "asset": "PYUSD",
       "risk_note": "需关注金库与奖励口径差异",
-      "updated_at": "2026-03-26T04:15:30.038638+00:00",
+      "updated_at": "2026-03-26T04:23:15.150599+00:00",
       "supply_apy": 0.0,
       "borrow_apy": 0.0,
       "rewards_apy": 0.2722022943040441,
@@ -974,14 +954,14 @@
       "chain": "Arbitrum",
       "asset": "USDC",
       "risk_note": "需关注金库与奖励口径差异",
-      "updated_at": "2026-03-26T04:16:10.713311+00:00",
-      "supply_apy": 2.185315180876962,
-      "borrow_apy": 2.8045806672928326,
-      "total_apy": 2.185315180876962,
-      "tvl_usd": 15951292.561531136,
-      "total_supply_usd": 15951292.561531136,
-      "total_borrow_usd": 12466927.35222335,
-      "utilization_pct": 78.1562202820426,
+      "updated_at": "2026-03-26T04:23:57.744932+00:00",
+      "supply_apy": 2.1827865198936602,
+      "borrow_apy": 2.8029681385019547,
+      "total_apy": 2.1827865198936602,
+      "tvl_usd": 15951350.248849675,
+      "total_supply_usd": 15951350.248849675,
+      "total_borrow_usd": 12459766.550066723,
+      "utilization_pct": 78.11104612266448,
       "pool_id": "0x33e0c8ab132390822b07e5dc95033cf250c963153320b7ffca73220664da2ea0",
       "source_tags": [
         "Morpho API"
@@ -1006,7 +986,7 @@
       "data_completeness": 0,
       "pool_id": "0fd780bc-de70-42bc-b2db-6afa5f9ad56c",
       "risk_note": "需关注金库与奖励口径差异",
-      "updated_at": "2026-03-26T04:15:17.939811+00:00",
+      "updated_at": "2026-03-26T04:23:01.004975+00:00",
       "source_tags": [
         "DefiLlama"
       ],
@@ -1029,7 +1009,7 @@
       "data_completeness": 9,
       "pool_id": "0x1a3e69d0109bb1be42b80e11034bb6ee98fc466721f26845dc83b2aa8d979137",
       "risk_note": "需关注金库与奖励口径差异",
-      "updated_at": "2026-03-26T04:16:17.745280+00:00",
+      "updated_at": "2026-03-26T04:24:00.705051+00:00",
       "source_tags": [
         "DefiLlama",
         "Morpho API"
