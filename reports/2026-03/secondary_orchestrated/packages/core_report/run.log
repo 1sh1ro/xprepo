@@ -1,0 +1,10 @@
+Report: /Users/my/xp/reports/2026-03/secondary_orchestrated/packages/core_report/yuque_style_report.md
+CSV:    /Users/my/xp/reports/2026-03/secondary_orchestrated/packages/core_report/yuque_style_exchange_data.csv
+Chart[marketcap]: /Users/my/xp/reports/2026-03/secondary_orchestrated/packages/core_report/charts/chart_1_marketcap.png
+Chart[btc_dom]: /Users/my/xp/reports/2026-03/secondary_orchestrated/packages/core_report/charts/chart_2_btc_dom.png
+Chart[ex_30d]: /Users/my/xp/reports/2026-03/secondary_orchestrated/packages/core_report/charts/chart_3_exchange_30d_change.png
+Chart[fng]: /Users/my/xp/reports/2026-03/secondary_orchestrated/packages/core_report/charts/chart_4_fng.png
+Chart[rv]: /Users/my/xp/reports/2026-03/secondary_orchestrated/packages/core_report/charts/chart_5_realized_vol.png
+CoinGecko: plan=demo, key=yes
+
+--- STDERR ---
