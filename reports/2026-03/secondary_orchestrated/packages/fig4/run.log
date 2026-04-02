@@ -1,5 +1,5 @@
-[ok] png: /Users/my/xp/reports/2026-03/secondary_orchestrated/packages/fig4/fig4_monthly_nft_volume.png
-[ok] csv: /Users/my/xp/reports/2026-03/secondary_orchestrated/packages/fig4/fig4_monthly_nft_volume.csv
+[ok] png: /Users/my/xp/reports/2026-03/secondary_orchestrated_rerun/packages/fig4/fig4_monthly_nft_volume.png
+[ok] csv: /Users/my/xp/reports/2026-03/secondary_orchestrated_rerun/packages/fig4/fig4_monthly_nft_volume.csv
 [source] https://web-api.cryptoslam.io/v1/global/sales?timeFrame=all
 
 --- STDERR ---

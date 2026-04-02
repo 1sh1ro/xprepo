@@ -11,12 +11,12 @@
 
 
 ### 2026 年 03 月核心结论
-- 总成交额与流动性：前排样本滚动 30 天成交额为 $4.65T，估算环比 -4.98%。
+- 总成交额与流动性：前排样本滚动 30 天成交额为 $4.62T，估算环比 -26.04%。
 - 全市场总市值：$2.30T -> $2.35T，月内变化 +1.82%。
 - 全市场日均 24h 成交额：$96.95B。
 - BTC 主导率：+58.15% -> +58.20%。
 - 恐惧贪婪指数：11（Extreme Fear）。
-- 稳定币资金面：市值 $288.40B，24h 成交量 $97.26B。
+- 稳定币资金面：市值 $288.53B，24h 成交量 $95.39B。
 
 ![chart-marketcap](charts/chart_1_marketcap.png)
 
@@ -35,15 +35,15 @@
 ![chart-ex-30d](charts/chart_3_exchange_30d_change.png)
 
 关键观察：
-1. 增幅靠前：HTX (+9.64%), OKX (+5.59%)。
-2. 回落靠前：KuCoin (-68.51%), Upbit (-19.76%)。
+1. 增幅靠前：HTX (-10.48%), MEXC (-14.99%)。
+2. 回落靠前：KuCoin (-71.06%), Upbit (-36.55%)。
 3. 结构上，衍生品成交占比在样本内依旧偏高，波动放大风险需持续跟踪。
 
 ## 资金费率与波动率观察
 参考交易所衍生品月报口径，本节给出资金费率快照与波动率代理指标。
 - Deribit BTC-PERP funding: +0.00%
 - Deribit ETH-PERP funding: +0.00%
-- 全市场衍生品 24h 成交量（CMC）：$825.89B
+- 全市场衍生品 24h 成交量（CMC）：$781.92B
 
 ![chart-rv](charts/chart_5_realized_vol.png)
 
@@ -62,22 +62,22 @@
 以 CoinGecko Trending 作为公开可得的搜索热度代理。
 | Symbol | Name | MCap Rank | Price (BTC) |
 | --- | --- | --- | --- |
-| STO | StakeStone | 304 | 0.00000511 |
-| NOM | Nomina | 818 | 0.00000010 |
-| MUSD | Mezo USD | 839 | 0.00001460 |
-| SIREN | Siren | 172 | 0.00000393 |
-| ALGO | Algorand | 68 | 0.00000153 |
-| BASED | Based | 799 | 0.00000127 |
-| ERG | Ergo | 732 | 0.00000427 |
-| HYPE | Hyperliquid | 16 | 0.00053870 |
-| TAO | Bittensor | 33 | 0.00475322 |
+| ERG | Ergo | 735 | 0.00000425 |
+| STO | StakeStone | 302 | 0.00000539 |
+| SIREN | Siren | 185 | 0.00000345 |
+| PENGU | Pudgy Penguins | 105 | 0.00000010 |
 | BTC | Bitcoin | 1 | 1.00000000 |
+| BASED | Based | 778 | 0.00000131 |
+| HYPE | Hyperliquid | 16 | 0.00053412 |
+| TAO | Bittensor | 33 | 0.00466858 |
+| SOL | Solana | 7 | 0.00121594 |
+| EDGE | edgeX | 150 | 0.00000980 |
 
 ## 稳定币与资金面观察
-- 稳定币市值：$288.40B
-- 稳定币 24h 成交量：$97.26B
-- DeFi 市值：$58.79B
-- DeFi 24h 成交量：$10.39B
+- 稳定币市值：$288.53B
+- 稳定币 24h 成交量：$95.39B
+- DeFi 市值：$58.95B
+- DeFi 24h 成交量：$10.34B
 
 ## 风险与运营建议
 1. 风险监控：将“衍生品占比 + 30d 量能变化 + F&G”纳入统一预警面板。
@@ -87,16 +87,16 @@
 ## 附录：前排交易所明细
 | Rank | Exchange | 30d Volume | 30d Change | 7d Change | 24h Spot | 24h Deriv |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Binance | $2.06T | +4.67% | +5.60% | $8.82B | $56.13B |
-| 2 | Coinbase Exchange | $60.77B | -2.86% | +9.86% | $1.84B | $0 |
-| 3 | Upbit | $40.22B | -19.76% | -5.39% | $1.00B | $0 |
-| 6 | OKX | $607.76B | +5.59% | +7.26% | $1.75B | $24.27B |
-| 7 | Bybit | $525.41B | +1.66% | -2.86% | $2.15B | $15.73B |
-| 8 | Bitget | $343.31B | +4.21% | +4.83% | $1.17B | $9.89B |
-| 9 | Gate | $535.49B | -14.12% | +7.45% | $1.83B | $14.27B |
-| 10 | KuCoin | $138.64B | -68.51% | -58.28% | $2.14B | $3.28B |
-| 12 | MEXC | $229.18B | +0.52% | -7.09% | $2.21B | $12.96B |
-| 22 | HTX | $115.69B | +9.64% | +21.79% | $1.35B | $3.15B |
+| 1 | Binance | $2.04T | -19.58% | +1.81% | $8.68B | $53.28B |
+| 2 | Coinbase Exchange | $60.08B | -30.61% | +3.66% | $1.73B | $0 |
+| 3 | Upbit | $39.91B | -36.55% | -7.16% | $983.03M | $0 |
+| 6 | OKX | $598.45B | -24.57% | +3.97% | $1.76B | $22.85B |
+| 7 | Bybit | $535.49B | -21.87% | -5.94% | $2.12B | $15.00B |
+| 8 | Bitget | $340.85B | -15.68% | +3.32% | $1.16B | $9.60B |
+| 9 | Gate | $530.20B | -34.78% | -3.00% | $1.80B | $12.96B |
+| 10 | KuCoin | $137.48B | -71.06% | -60.31% | $2.06B | $3.21B |
+| 13 | MEXC | $227.79B | -14.99% | -8.95% | $2.08B | $12.28B |
+| 21 | HTX | $114.78B | -10.48% | +22.76% | $1.33B | $3.03B |
 
 ## 数据源
 - CMC Exchange Quotes: `https://api.coinmarketcap.com/data-api/v3/exchange/quotes/latest`
@@ -107,5 +107,5 @@
 - CoinMetrics (State of the Network #348): `https://coinmetrics.substack.com/p/state-of-the-network-issue-348`
 - Deribit Ticker: `https://www.deribit.com/api/v2/public/ticker`
 - Alternative.me F&G: `https://api.alternative.me/fng/`
-- CMC 快照时间：`2026-04-01T14:49:58.931Z`
+- CMC 快照时间：`2026-04-01T16:28:22.206Z`
 - 明细数据：`yuque_style_exchange_data.csv`
