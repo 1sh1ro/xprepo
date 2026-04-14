@@ -1,0 +1,9 @@
+[ok] png: /Users/my/xp/reports/2026-03/secondary_orchestrated_rerun/packages/fig6/fig6_altcoin_outside_top10_share.png
+[ok] csv: /Users/my/xp/reports/2026-03/secondary_orchestrated_rerun/packages/fig6/fig6_altcoin_outside_top10_share.csv
+[source] https://api.coinmarketcap.com/data-api/v3/global-metrics/quotes/historical
+[source] https://api.coingecko.com/api/v3/coins/markets
+[source] https://api.coingecko.com/api/v3/coins/{id}/market_chart
+[basket] BTC + ethereum, binancecoin, ripple, solana, tron, dogecoin, whitebit, leo-token, bitcoin-cash, cardano
+[coingecko] plan=demo, key=yes
+
+--- STDERR ---

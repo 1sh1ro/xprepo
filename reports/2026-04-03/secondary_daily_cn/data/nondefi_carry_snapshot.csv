@@ -1,0 +1,3 @@
+exchange,asset,spot_price_usd,mark_price_usd,index_price_usd,basis_pct,funding_rate_pct,funding_interval_hours,annual_funding_pct,open_interest_contracts,quote_ccy
+OKX,BTC,67019.3,66987.1,,,0.00722222623891,8.0,7.9083377316064505,30605.855400000186,USDT
+OKX,ETH,2063.19,2062.13,,,-0.0001309795684,8.0,-0.143422627398,709219.2559999998,USDT

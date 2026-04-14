@@ -1,0 +1,5 @@
+currency,kind,instrument_count,open_interest_sum,volume_usd_sum
+BTC,future,9,2005633180.0,440758010.0
+BTC,option,888,380263.89999999985,41424347.39999997
+ETH,future,9,515900078.0,169922202.0
+ETH,option,748,2082344.0,12983273.929999985

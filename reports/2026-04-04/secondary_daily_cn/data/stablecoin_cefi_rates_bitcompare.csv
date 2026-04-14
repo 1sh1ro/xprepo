@@ -1,0 +1,5 @@
+asset,provider,apy_pct,source
+DAI,EarnPark,7.0,Bitcompare
+TUSD,JustLend,1.76,Bitcompare
+USDC,EarnPark,4.0,Bitcompare
+USDT,EarnPark,30.0,Bitcompare
