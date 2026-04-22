@@ -1,0 +1,3 @@
+exchange,asset,spot_price_usd,mark_price_usd,index_price_usd,basis_pct,funding_rate_pct,funding_interval_hours,annual_funding_pct,open_interest_contracts,quote_ccy
+Binance,BTC,78261.5,78214.50998442,78256.67825,-0.053884558510501224,0.0024000000000000002,8.0,2.628,100749.412,USDT
+Binance,ETH,2397.0,2396.0,2397.23511628,-0.05152253408988496,0.01,8.0,10.950000000000001,2238699.333,USDT
