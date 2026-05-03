@@ -1,0 +1,4 @@
+interface:
+  display_name: "CEX Monthly Orchestrator"
+  short_description: "Orchestrate monthly CEX report + v2 polish"
+  default_prompt: "Use $cex-monthly-secondary-orchestrator to run monthly secondary-market report orchestration, then apply the v2 polish pass for light-theme charts and final narrative style."
