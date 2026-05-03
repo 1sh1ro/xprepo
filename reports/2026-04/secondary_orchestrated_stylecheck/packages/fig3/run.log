@@ -1,0 +1,6 @@
+[ok] png: /Users/my/xp/reports/2026-04/secondary_orchestrated_stylecheck/packages/fig3/fig3_defi_tvl_share.png
+[ok] csv: /Users/my/xp/reports/2026-04/secondary_orchestrated_stylecheck/packages/fig3/fig3_defi_tvl_share.csv
+[source] https://api.llama.fi/v2/historicalChainTvl
+[source] https://api.llama.fi/v2/historicalChainTvl/{chain}
+
+--- STDERR ---

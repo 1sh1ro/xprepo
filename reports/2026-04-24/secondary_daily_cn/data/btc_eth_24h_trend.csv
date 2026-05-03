@@ -1,0 +1,3 @@
+asset,symbol,price_usd,open_usd,high_usd,low_usd,change_24h_pct,range_pos_pct,trend
+BTC,BTCUSDT,78233.84,77724.45,78662.5,76960.0,0.655,74.82173274596161,区间震荡
+ETH,ETHUSDT,2328.44,2329.0,2343.58,2285.42,-0.024,73.96836313617622,区间震荡

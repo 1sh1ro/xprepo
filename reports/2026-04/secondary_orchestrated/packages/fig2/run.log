@@ -1,0 +1,7 @@
+[ok] png: /Users/my/xp/reports/2026-04/secondary_orchestrated/packages/fig2/fig2_top10_monthly_performance.png
+[ok] csv: /Users/my/xp/reports/2026-04/secondary_orchestrated/packages/fig2/fig2_top10_monthly_performance.csv
+[source] https://api.coingecko.com/api/v3/coins/markets
+[mode] proxy-30d from coins/markets
+[coingecko] plan=demo, key=yes
+
+--- STDERR ---
