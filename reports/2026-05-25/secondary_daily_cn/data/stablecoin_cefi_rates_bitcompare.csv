@@ -1,0 +1,8 @@
+asset,provider,apy_pct,source
+DAI,EarnPark,7.0,Bitcompare
+PYUSD,Euler Finance,4.41,Bitcompare
+TUSD,JustLend,1.43,Bitcompare
+USDC,EarnPark,4.0,Bitcompare
+USDE,Pendle,4.69,Bitcompare
+USDP,Nexo,10.5,Bitcompare
+USDT,EarnPark,20.0,Bitcompare

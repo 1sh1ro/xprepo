@@ -1,0 +1,1 @@
+protocol,chain,asset,supply_apy_pct,rewards_apy_pct,total_apy_pct,borrow_apy_pct,tvl_usd,total_supply_usd,total_borrow_usd,utilization_pct,supply_cap_usd,borrow_cap_usd,available_liquidity_usd,can_be_collateral,is_paused,is_frozen,data_completeness,risk_note,safety_rank,pool_id,source_primary,source_tags,updated_at_utc
