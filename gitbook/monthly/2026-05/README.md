@@ -5,9 +5,10 @@
 ## Key Takeaways
 - 市场状态：5 月从修复转入防守整理。总市值较 4 月末回落约 -1.70%，成交额放大没有转化为广泛上涨，说明资金更像在波动中调仓，而不是一致性追涨。
 - 领导结构：BTC 主导率回落约 -0.81pct，但长尾承接仍不足。Top10 外市值占比升至 18.11%，改善幅度有限，尚不足以定义为全面风险扩张。
-- 资产分化：Top10 样本 2 涨 8 跌，中位数收益 -15.59%；RAIN 领涨 +82.49%，ETH 最弱 -30.49%。赚钱效应高度集中，主流资产内部承压更明显。
+- 资产分化：主流非稳定币篮子 4 涨 6 跌，中位数收益 -2.27%；HYPE 领涨 +77.19%，ETH 最弱 -12.31%。赚钱效应集中在交易/基础设施叙事，BTC 与 ETH 没有给出强趋势确认。
 - 杠杆温度：Deribit BTC/ETH 8h 资金费率为 -0.50bps / +0.02bps，整体接近中性但 BTC 偏空。价格回落没有伴随明显多头拥挤，强制去杠杆压力相对可控。
 - 情绪确认：月末恐惧与贪婪指数为 28，月均约 34.4，仍处恐惧区间。情绪没有给出趋势扩张确认，市场更接近谨慎防守后的再定价。
+- Web3 主线：交易所竞争从现货撮合延伸到衍生品、RWA perps、稳定币支付和链上入口。对二级市场而言，这意味着交易量不再只反映币价 beta，也越来越反映产品上线、资产类别扩张和 CEX/DEX 份额迁移。
 
 ## 宏观代理与市场状态
 总市值按月回落约 -1.70%，BTC 主导率也小幅下降，说明市场不是单纯向 BTC 集中防守，而是在主流资产普遍回撤中重新分配风险预算。Top10 外占比略有回升，但绝对水平仍低，长尾资产还没有形成足够强的持续承接。
@@ -26,8 +27,8 @@
 成交扩张没有带来对应的价格广度，是本月需要谨慎解读的地方。它更像波动放大后的再定价和仓位切换，而不是新增资金稳定推动的趋势行情。
 
 ## 主流资产表现与市场广度
-头部资产中，表现最强的是 RAIN（+82.49%），最弱的是 ETH（-30.49%），收益差约 112.97pct。
-上涨资产 2 个、下跌资产 8 个，头部样本中位数收益为 -15.59%。这说明本月不是普涨行情，而是少数标的强势与多数主流资产回撤并存。
+主流非稳定币篮子中，表现最强的是 HYPE（+77.19%），其次是 XLM（+60.24%）；最弱的是 ETH（-12.31%），收益差约 89.51pct。
+上涨资产 4 个、下跌资产 6 个，样本中位数收益为 -2.27%。这说明本月不是普涨行情，而是交易/基础设施和少数高弹性标的更强，BTC、ETH、DOGE 等高流动性资产仍偏弱。
 Top10 外市值占比月末为 18.11%，较 4 月末回升约 +0.96pct，但仍低于健康 altseason 通常需要的广度水平。长尾风险偏好有边际改善，却还没有强到可以抵消主流资产的整体压力。
 
 ![fig2_top10_monthly_performance.png](charts/fig2_top10_monthly_performance.png)
@@ -61,7 +62,16 @@ DVOL 月末降至 BTC 36.40 / ETH 49.63，较月内高点 BTC 41.00 / ETH 55.86 
 
 ![core_chart_5_realized_vol.png](charts/core_chart_5_realized_vol.png)
 
+## 当月 Web3 事件与市场影响
+机构需求有改善，但仍没有扩散成全面 altseason。Coinbase 5 月市场定位报告指出，BTC ETF 资金流在 4 月下旬至 5 月初转为持续正流入，7 日流入重新超过 $1B；同时，altcoin OI dominance 降至多年低位附近，说明资金更偏向 BTC/majors，而不是广泛高 beta 加杠杆。这与本月“成交放大但广度不足”的结论一致：市场并非没有需求，而是需求集中在更高流动性和更容易被机构承接的资产上。[来源：Coinbase Research](https://www.coinbase.com/institutional/research-insights/research/trading-insights/crypto-market-positioning-may-2026)
+
+交易所竞争的主线正在从单一现货成交转向“综合交易与链上入口”。Coinbase 5 月 7 日披露 Q1 结果时提到，其 crypto trading volume market share 升至 8.6% 的新高，衍生品 TTM 成交量同比增长 169%，同时 Base 承载了 62% 的全球链上稳定币交易量。对市场的影响是，CEX 估值和交易活跃度越来越受衍生品、稳定币支付、DEX 聚合和链上应用入口驱动，而不是只看现货手续费周期。[来源：Coinbase Investor Relations](https://investor.coinbase.com/news/news-details/2026/Coinbase-Q1-Financial-Results-Show-Resilient-Financial-Performance-Driven-by-New-All-Time-High-Crypto-Trading-Volume-Market-Share/default.aspx)
+
+RWA perps 成为 5 月最值得跟踪的产品结构变化之一。CMC Research 的 5 月报告显示，RWA perpetuals 在 2025 年 12 月 29 日至 2026 年 5 月 20 日累计成交 $821.8B，最近一完整周成交 $55.9B，CEX 仍占 72% 流量；Binance 单独占 48.6%，Top3（Binance、HIP-3、Bitget）合计 73.5%。这说明交易所产品竞争已经进入非加密资产 perps 阶段，未来月报需要把 RWA/股票/商品 perps 作为交易所流量结构的一部分，而不是只看 BTC/ETH/alt spot。[来源：CoinMarketCap Research](https://coinmarketcap.com/academy/article/rwa-perpetuals-state-of-the-market-%E2%80%94-may-2026)
+
+稳定币、RWA 与 DeFi 风险定价仍是跨月主线。Binance Research 的月度报告把稳定币净发行、RWA 增长、DeFi exploit 损失、pre-IPO perps 和 vault-style borrowing 放在同一框架下讨论，说明大型交易所研究已经不再只写币价涨跌，而是把“链上信用、现实资产映射、协议安全和交易所新品类”作为市场结构变量。对本月报告而言，这意味着 DeFi TVL 和 NFT 成交只能说明链上风险偏好的一部分；更重要的是稳定币流动性、RWA perps 和安全事件如何改变资金愿意承担的风险溢价。[来源：Binance Research](https://public.bnbstatic.com/static/files/research/monthly-market-insights-2026-05.pdf)
+
 ## 下月交易框架（基准情景）
 1. 基准情景：维持核心资产优先，BTC/ETH/SOL 等高流动性资产仍是主要风险预算承载。只要 funding 保持中性附近、DVOL 不重新上冲、Top10 外占比只是温和改善，仓位应以防守和再平衡为主。
-2. 上行情景：若 Top10 外占比连续抬升、头部资产中位数收益转正、成交额维持高位且 F&G 回到中性区间以上，可以逐步提高 beta 暴露，重点选择流动性充足且相对强势的头部 alt。
+2. 上行情景：若 Top10 外占比连续抬升、主流资产篮子中位数收益转正、成交额维持高位且 F&G 回到中性区间以上，可以逐步提高 beta 暴露，重点选择流动性充足且相对强势的头部 alt。
 3. 风险情景：若成交放大但价格和广度继续走弱，或 DVOL 重新抬升而 funding 快速转正，应降低追涨仓位。执行层面优先提高保证金缓冲、收紧长尾币流动性阈值，并对单月涨幅过大的资产分批止盈。
