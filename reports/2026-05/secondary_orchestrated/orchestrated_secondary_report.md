@@ -8,6 +8,7 @@
 - 资产分化：主流非稳定币篮子 4 涨 6 跌，中位数收益 -2.27%；HYPE 领涨 +77.19%，ETH 最弱 -12.31%。赚钱效应集中在交易/基础设施叙事，BTC 与 ETH 没有给出强趋势确认。
 - 杠杆温度：Deribit BTC/ETH 8h 资金费率为 -0.50bps / +0.02bps，整体接近中性但 BTC 偏空。价格回落没有伴随明显多头拥挤，强制去杠杆压力相对可控。
 - 情绪确认：月末恐惧与贪婪指数为 28，月均约 34.4，仍处恐惧区间。情绪没有给出趋势扩张确认，市场更接近谨慎防守后的再定价。
+- RWA 结构：RWA.xyz 公开分类页显示，U.S. Treasuries 仍是最大板块，分布规模约 $14.72B；Tokenized Stocks 30D 增速约 +39.37%，说明 RWA 的增量叙事开始从链上美债扩展到证券化交易品类。
 - Web3 主线：交易所竞争从现货撮合延伸到衍生品、RWA perps、稳定币支付和链上入口。对二级市场而言，这意味着交易量不再只反映币价 beta，也越来越反映产品上线、资产类别扩张和 CEX/DEX 份额迁移。
 
 ## 宏观代理与市场状态
@@ -43,6 +44,17 @@ NFT 月成交额约 $246.29M（约 0.25B 美元），较低体量决定了它只
 
 ![fig4_monthly_nft_volume.png](charts/fig4_monthly_nft_volume.png)
 
+## RWA 板块：美债仍是底座，股票与 Perps 抬升交易属性
+截至 6 月初的 RWA.xyz 公开分类页快照显示，U.S. Treasuries 仍是 RWA 资产端的核心底座，分布规模约 $14.72B，但 30D 变化为 -3.23%；Credit 约 $5.18B，30D 变化为 -2.07%。这说明传统“链上收益资产”并没有在 5 月形成全面扩张，资金对利率型和信用型 RWA 的配置更接近存量再平衡。[来源：RWA.xyz Treasuries](https://app.rwa.xyz/treasuries)、[RWA.xyz Credit](https://app.rwa.xyz/credit)
+
+增长更快的部分来自交易属性更强的品类。RWA.xyz 的 Tokenized Stocks 页面显示，股票类 RWA 分布规模约 $1.68B，30D 增速约 +39.37%；Active Strategies 约 $1.36B，30D 增速约 +5.10%；Non-U.S. Government Debt 约 $1.35B，30D 增速约 +1.76%。这意味着 RWA 的市场叙事正在从“链上美债收益”扩展为“可交易资产映射”，对 CEX 来说更接近新品类成交额和衍生品扩容机会。[来源：RWA.xyz Stocks](https://app.rwa.xyz/stocks)、[RWA.xyz Active Strategies](https://app.rwa.xyz/active-strategies)、[RWA.xyz Global Bonds](https://app.rwa.xyz/global-bonds)
+
+![chart_rwa_asset_class_snapshot.png](charts/chart_rwa_asset_class_snapshot.png)
+
+新闻面也支持这个方向。CMC Research 的 5 月 RWA perps 报告显示，RWA perpetuals 在 2025 年 12 月 29 日至 2026 年 5 月 20 日累计成交 $821.8B，最近一完整周成交 $55.9B，CEX 仍占 72% 流量；Binance 单独占 48.6%，Top3（Binance、HIP-3、Bitget）合计 73.5%。这对二级市场的含义是：RWA 不再只是低波动收益资产，它正在变成交易所争夺新增成交和用户留存的产品线，尤其会影响 Binance、OKX、Bitget 等平台在非加密资产 perps 上的竞争。[来源：CoinMarketCap Research](https://coinmarketcap.com/academy/article/rwa-perpetuals-state-of-the-market-%E2%80%94-may-2026)
+
+对下月的观察重点不应只看 RWA 总规模，而要拆成三类：第一，美债和信用类 RWA 是否重新恢复净流入；第二，股票/RWA perps 是否继续提升成交占比；第三，稳定币与链上结算入口是否带动 RWA 从“持有型资产”转为“交易型资产”。如果这三者同时改善，RWA 才会从边缘叙事变成影响 CEX 交易结构的核心变量。
+
 ## 衍生品仓位温度
 BTC 与 ETH 的资金费率并不一致（-0.50bps / +0.02bps），说明衍生品仓位更多体现结构分化，而不是单边多头或空头共识。BTC funding 偏负意味着下跌后追空并不极端，但多头风险偏好也没有恢复。
 DVOL 月末降至 BTC 36.40 / ETH 49.63，较月内高点 BTC 41.00 / ETH 55.86 明显回落。波动率回落与资金费率中性偏弱共存，意味着市场短期更像“回撤后的再定价”，而不是高杠杆趋势行情。
@@ -66,8 +78,6 @@ DVOL 月末降至 BTC 36.40 / ETH 49.63，较月内高点 BTC 41.00 / ETH 55.86 
 机构需求有改善，但仍没有扩散成全面 altseason。Coinbase 5 月市场定位报告指出，BTC ETF 资金流在 4 月下旬至 5 月初转为持续正流入，7 日流入重新超过 $1B；同时，altcoin OI dominance 降至多年低位附近，说明资金更偏向 BTC/majors，而不是广泛高 beta 加杠杆。这与本月“成交放大但广度不足”的结论一致：市场并非没有需求，而是需求集中在更高流动性和更容易被机构承接的资产上。[来源：Coinbase Research](https://www.coinbase.com/institutional/research-insights/research/trading-insights/crypto-market-positioning-may-2026)
 
 交易所竞争的主线正在从单一现货成交转向“综合交易与链上入口”。Coinbase 5 月 7 日披露 Q1 结果时提到，其 crypto trading volume market share 升至 8.6% 的新高，衍生品 TTM 成交量同比增长 169%，同时 Base 承载了 62% 的全球链上稳定币交易量。对市场的影响是，CEX 估值和交易活跃度越来越受衍生品、稳定币支付、DEX 聚合和链上应用入口驱动，而不是只看现货手续费周期。[来源：Coinbase Investor Relations](https://investor.coinbase.com/news/news-details/2026/Coinbase-Q1-Financial-Results-Show-Resilient-Financial-Performance-Driven-by-New-All-Time-High-Crypto-Trading-Volume-Market-Share/default.aspx)
-
-RWA perps 成为 5 月最值得跟踪的产品结构变化之一。CMC Research 的 5 月报告显示，RWA perpetuals 在 2025 年 12 月 29 日至 2026 年 5 月 20 日累计成交 $821.8B，最近一完整周成交 $55.9B，CEX 仍占 72% 流量；Binance 单独占 48.6%，Top3（Binance、HIP-3、Bitget）合计 73.5%。这说明交易所产品竞争已经进入非加密资产 perps 阶段，未来月报需要把 RWA/股票/商品 perps 作为交易所流量结构的一部分，而不是只看 BTC/ETH/alt spot。[来源：CoinMarketCap Research](https://coinmarketcap.com/academy/article/rwa-perpetuals-state-of-the-market-%E2%80%94-may-2026)
 
 稳定币、RWA 与 DeFi 风险定价仍是跨月主线。Binance Research 的月度报告把稳定币净发行、RWA 增长、DeFi exploit 损失、pre-IPO perps 和 vault-style borrowing 放在同一框架下讨论，说明大型交易所研究已经不再只写币价涨跌，而是把“链上信用、现实资产映射、协议安全和交易所新品类”作为市场结构变量。对本月报告而言，这意味着 DeFi TVL 和 NFT 成交只能说明链上风险偏好的一部分；更重要的是稳定币流动性、RWA perps 和安全事件如何改变资金愿意承担的风险溢价。[来源：Binance Research](https://public.bnbstatic.com/static/files/research/monthly-market-insights-2026-05.pdf)
 

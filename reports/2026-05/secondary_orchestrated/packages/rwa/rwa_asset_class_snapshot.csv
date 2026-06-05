@@ -1,0 +1,7 @@
+asset_class,value_usd_billion,change_30d_pct,as_of,source
+U.S. Treasuries,14.72,-3.23,2026-06-05,https://app.rwa.xyz/treasuries
+Credit,5.18,-2.07,2026-06-05,https://app.rwa.xyz/credit
+Tokenized Stocks,1.68,39.37,2026-06-01,https://app.rwa.xyz/stocks
+Non-U.S. Government Debt,1.35,1.76,2026-05-15,https://app.rwa.xyz/global-bonds
+Active Strategies,1.36,5.1,2026-06-05,https://app.rwa.xyz/active-strategies
+Real Estate,0.17696,-0.38,2026-05-27,https://app.rwa.xyz/real-estate
