@@ -1,0 +1,89 @@
+{
+  "date": "2026-06-13",
+  "data_gaps": [
+    "CMC 全市场历史数据获取失败: <urlopen error [Errno 1] Operation not permitted>",
+    "CoinGecko Top资产数据获取失败（已按 key 尝试 demo）: demo: <urlopen error [Errno 1] Operation not permitted>",
+    "CMC 交易所报价数据获取失败: <urlopen error [Errno 1] Operation not permitted>",
+    "Deribit ticker BTC-PERPETUAL 获取失败: <urlopen error [Errno 1] Operation not permitted>",
+    "Deribit ticker ETH-PERPETUAL 获取失败: <urlopen error [Errno 1] Operation not permitted>",
+    "Deribit DVOL BTC 获取失败: <urlopen error [Errno 1] Operation not permitted>",
+    "Deribit DVOL ETH 获取失败: <urlopen error [Errno 1] Operation not permitted>",
+    "Alternative.me F&G 获取失败: <urlopen error [Errno 1] Operation not permitted>",
+    "Binance BTC/ETH 24h 批量数据获取失败，转单币重试: <urlopen error [Errno 1] Operation not permitted>",
+    "Binance 24h 单币数据获取失败 BTCUSDT: <urlopen error [Errno 1] Operation not permitted>",
+    "Binance 24h 未返回 BTCUSDT 数据。",
+    "Binance 24h 单币数据获取失败 ETHUSDT: <urlopen error [Errno 1] Operation not permitted>",
+    "Binance 24h 未返回 ETHUSDT 数据。",
+    "Binance BTCUSDT 1h K线获取失败: <urlopen error [Errno 1] Operation not permitted>",
+    "Binance ETHUSDT 1h K线获取失败: <urlopen error [Errno 1] Operation not permitted>",
+    "Binance 非DeFi期现数据获取失败 BTC: <urlopen error [Errno 1] Operation not permitted>",
+    "Binance 非DeFi期现数据获取失败 ETH: <urlopen error [Errno 1] Operation not permitted>",
+    "OKX 非DeFi期现数据获取失败 BTC: <urlopen error [Errno 1] Operation not permitted>",
+    "OKX 非DeFi期现数据获取失败 ETH: <urlopen error [Errno 1] Operation not permitted>",
+    "非DeFi期现数据为空：未获取到 Binance/OKX 的可用样本。",
+    "借币成本多源数据获取失败: Binance: <urlopen error [Errno 1] Operation not permitted> | OKX: <urlopen error [Errno 1] Operation not permitted> | Bybit: <urlopen error [Errno 1] Operation not permitted> | Backpack: <urlopen error [Errno 1] Operation not permitted>",
+    "DefiLlama 稳定币收益数据获取失败: <urlopen error [Errno 1] Operation not permitted>",
+    "DefiLlama 扩展稳定币样本获取失败: <urlopen error [Errno 1] Operation not permitted>",
+    "Bitcompare CeFi 利率获取失败: <urlopen error [Errno 1] Operation not permitted>",
+    "OKX 聪明钱数据获取失败（traders）: Update available for @okx_ai/okx-trade-cli: 1.3.2 → 1.3.8\nRun: npm install -g @okx_ai/okx-trade-cli\n\nError: Not logged in — run `okx-auth login` first\nError: No credentials found.\nHint: Run `okx auth login` to authenticate, or configure API key credentials.\nVersion: @okx_ai/okx-trade-cli@1.3.2",
+    "OKX 聪明钱数据获取失败（news:coin-sentiment）: Update available for @okx_ai/okx-trade-cli: 1.3.2 → 1.3.8\nRun: npm install -g @okx_ai/okx-trade-cli\n\nError: Not logged in — run `okx-auth login` first\nError: No credentials found.\nHint: Run `okx auth login` to authenticate, or configure API key credentials.\nVersion: @okx_ai/okx-trade-cli@1.3.2",
+    "OKX 新闻情绪快照为空：coin-sentiment 未返回有效样本。"
+  ],
+  "market": {
+    "market_cap": null,
+    "prev_market_cap": null,
+    "volume_24h": null,
+    "prev_volume_24h": null,
+    "btc_dom": null,
+    "prev_btc_dom": null
+  },
+  "counts": {
+    "top_assets": 0,
+    "exchanges": 0,
+    "nondefi_carry": 0,
+    "borrow_rates": 0,
+    "stablecoin_yields": 0,
+    "stablecoin_yields_extended": 0,
+    "stablecoin_cefi_rates": 0,
+    "taoli_binance_margin_rates": 0,
+    "smartmoney_traders": 0,
+    "smartmoney_signals": 0,
+    "smartmoney_position_rows": 0,
+    "okx_news_sentiment_rows": 0
+  },
+  "top2_trend": {},
+  "top2_intraday_points": {
+    "BTC": 0,
+    "ETH": 0
+  },
+  "nondefi_carry": [],
+  "borrow_rates": [],
+  "coingecko": {
+    "status": "failed",
+    "configured_tier": "demo",
+    "attempted": [
+      "demo"
+    ],
+    "used": null,
+    "endpoint": "/coins/markets",
+    "key_required": true,
+    "key_present": true,
+    "errors": [
+      "demo: <urlopen error [Errno 1] Operation not permitted>"
+    ]
+  },
+  "stablecoin_yields": [],
+  "stablecoin_yields_extended": [],
+  "stablecoin_cefi_rates": [],
+  "taoli_binance_margin_rates": [],
+  "smartmoney_traders": [],
+  "smartmoney_signals": {},
+  "smartmoney_positions": {
+    "trader_count": 0,
+    "position_count": 0,
+    "rows": []
+  },
+  "okx_news_sentiment": {
+    "rows": []
+  }
+}
