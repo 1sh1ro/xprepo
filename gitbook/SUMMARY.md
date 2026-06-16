@@ -1,11 +1,10 @@
 # Summary
 
 * [二级市场日报](README.md)
-* [月报归档](monthly/README.md)
-  * [2026-05 月报](monthly/2026-05/README.md)
-  * [2026-04 月报](monthly/2026-04/README.md)
-  * [2026-03 月报](monthly/2026-03/README.md)
 * [日报归档](daily/README.md)
+  * [2026-06-16](daily/2026-06-16/README.md)
+  * [2026-06-15](daily/2026-06-15/README.md)
+  * [2026-06-14](daily/2026-06-14/README.md)
   * [2026-06-13](daily/2026-06-13/README.md)
   * [2026-06-07](daily/2026-06-07/README.md)
   * [2026-06-01](daily/2026-06-01/README.md)
