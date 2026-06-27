@@ -2,6 +2,8 @@
 
 * [二级市场日报](README.md)
 * [日报归档](daily/README.md)
+  * [2026-06-27](daily/2026-06-27/README.md)
+  * [2026-06-26](daily/2026-06-26/README.md)
   * [2026-06-25](daily/2026-06-25/README.md)
   * [2026-06-24](daily/2026-06-24/README.md)
   * [2026-06-23](daily/2026-06-23/README.md)

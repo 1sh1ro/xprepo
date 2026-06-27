@@ -1,0 +1,1807 @@
+{
+  "date": "2026-06-27",
+  "data_gaps": [
+    "Binance 非DeFi期现数据获取失败 BTC: HTTP Error 451: ",
+    "Binance 非DeFi期现数据获取失败 ETH: HTTP Error 451: ",
+    "借币成本部分数据源不可用: Bybit: HTTP Error 403: Forbidden",
+    "Morpho API 获取失败: HTTP Error 400: Bad Request",
+    "OKX 聪明钱数据获取失败：未安装 okx CLI。",
+    "OKX 聪明钱数据获取失败：未安装 okx CLI。",
+    "OKX 新闻情绪快照为空：coin-sentiment 未返回有效样本。"
+  ],
+  "market": {
+    "market_cap": 2074477539876.74,
+    "prev_market_cap": 2061313583586.17,
+    "volume_24h": 93702689506.72,
+    "prev_volume_24h": 94416995377.31,
+    "btc_dom": 58.0008,
+    "prev_btc_dom": 58.0728
+  },
+  "counts": {
+    "top_assets": 10,
+    "exchanges": 10,
+    "nondefi_carry": 2,
+    "borrow_rates": 12,
+    "stablecoin_yields": 23,
+    "stablecoin_yields_extended": 84,
+    "stablecoin_cefi_rates": 7,
+    "rwa_asset_classes": 6,
+    "taoli_binance_margin_rates": 4,
+    "smartmoney_traders": 0,
+    "smartmoney_signals": 0,
+    "smartmoney_position_rows": 0,
+    "okx_news_sentiment_rows": 0
+  },
+  "top2_trend": {
+    "BTC": {
+      "asset": "BTC",
+      "symbol": "BTC/USD",
+      "price_usd": 60194.996616724624,
+      "open_usd": 59181.15371571542,
+      "high_usd": 60455.26973124937,
+      "low_usd": 59181.15371571542,
+      "change_24h_pct": 1.7131178379511391,
+      "range_pos_pct": 79.5722594056184,
+      "trend": "偏强修复",
+      "source": "CoinGecko market_chart 1d hourly"
+    },
+    "ETH": {
+      "asset": "ETH",
+      "symbol": "ETH/USD",
+      "price_usd": 1579.7241028241076,
+      "open_usd": 1536.553932910832,
+      "high_usd": 1583.3877688319758,
+      "low_usd": 1536.553932910832,
+      "change_24h_pct": 2.809544721381463,
+      "range_pos_pct": 92.17730955449206,
+      "trend": "偏强修复",
+      "source": "CoinGecko market_chart 1d hourly"
+    }
+  },
+  "top2_intraday_points": {
+    "BTC": 25,
+    "ETH": 25
+  },
+  "nondefi_carry": [
+    {
+      "exchange": "OKX",
+      "asset": "BTC",
+      "spot_price": 60337.0,
+      "index_price": null,
+      "mark_price": 60302.2,
+      "funding_rate_pct": 0.0029855006720400003,
+      "funding_interval_hours": 8.0,
+      "annual_funding_pct": 3.2691232358838,
+      "basis_pct": null,
+      "open_interest_contracts": 31716.641100000066,
+      "quote_ccy": "USDT"
+    },
+    {
+      "exchange": "OKX",
+      "asset": "ETH",
+      "spot_price": 1583.25,
+      "index_price": null,
+      "mark_price": 1582.35,
+      "funding_rate_pct": -0.00408340900482,
+      "funding_interval_hours": 8.0,
+      "annual_funding_pct": -4.4713328602779,
+      "basis_pct": null,
+      "open_interest_contracts": 763804.973000002,
+      "quote_ccy": "USDT"
+    }
+  ],
+  "borrow_rates": [
+    {
+      "source": "Binance",
+      "asset": "USDT",
+      "daily_rate_pct": 0.009042,
+      "annual_rate_pct": 3.3003299999999998,
+      "borrow_limit": 500000.0,
+      "tier": "VIP0",
+      "rate_basis": "daily",
+      "updated_at": "2026-06-27T12:02:33.001037+00:00"
+    },
+    {
+      "source": "OKX",
+      "asset": "USDT",
+      "daily_rate_pct": 0.0068639999999999994,
+      "annual_rate_pct": 2.50536,
+      "borrow_limit": 5000000.0,
+      "tier": "Public",
+      "rate_basis": "daily",
+      "updated_at": "2026-06-27T12:02:33.866953+00:00"
+    },
+    {
+      "source": "Backpack",
+      "asset": "USDT",
+      "daily_rate_pct": 0.009732735835837716,
+      "annual_rate_pct": 3.5524485800807666,
+      "borrow_limit": 50000000.0,
+      "tier": "Public",
+      "rate_basis": "annual",
+      "updated_at": "2026-06-27T12:02:35.744413+00:00"
+    },
+    {
+      "source": "Binance",
+      "asset": "USDC",
+      "daily_rate_pct": 0.010369,
+      "annual_rate_pct": 3.784685,
+      "borrow_limit": 500000.0,
+      "tier": "VIP0",
+      "rate_basis": "daily",
+      "updated_at": "2026-06-27T12:02:33.001563+00:00"
+    },
+    {
+      "source": "OKX",
+      "asset": "USDC",
+      "daily_rate_pct": 0.0068639999999999994,
+      "annual_rate_pct": 2.50536,
+      "borrow_limit": 1000000.0,
+      "tier": "Public",
+      "rate_basis": "daily",
+      "updated_at": "2026-06-27T12:02:33.866967+00:00"
+    },
+    {
+      "source": "Backpack",
+      "asset": "USDC",
+      "daily_rate_pct": 0.005835471419913931,
+      "annual_rate_pct": 2.129947068268585,
+      "borrow_limit": 300000000.0,
+      "tier": "Public",
+      "rate_basis": "annual",
+      "updated_at": "2026-06-27T12:02:35.744435+00:00"
+    },
+    {
+      "source": "Binance",
+      "asset": "BTC",
+      "daily_rate_pct": 0.001106,
+      "annual_rate_pct": 0.40369000000000005,
+      "borrow_limit": 100.0,
+      "tier": "VIP0",
+      "rate_basis": "daily",
+      "updated_at": "2026-06-27T12:02:33.002243+00:00"
+    },
+    {
+      "source": "OKX",
+      "asset": "BTC",
+      "daily_rate_pct": 0.001392,
+      "annual_rate_pct": 0.50808,
+      "borrow_limit": 175.0,
+      "tier": "Public",
+      "rate_basis": "daily",
+      "updated_at": "2026-06-27T12:02:33.867050+00:00"
+    },
+    {
+      "source": "Backpack",
+      "asset": "BTC",
+      "daily_rate_pct": 0.0012949431846447578,
+      "annual_rate_pct": 0.4726542623953366,
+      "borrow_limit": 3000.0,
+      "tier": "Public",
+      "rate_basis": "annual",
+      "updated_at": "2026-06-27T12:02:35.744450+00:00"
+    },
+    {
+      "source": "Binance",
+      "asset": "ETH",
+      "daily_rate_pct": 0.006129000000000001,
+      "annual_rate_pct": 2.237085,
+      "borrow_limit": 2000.0,
+      "tier": "VIP0",
+      "rate_basis": "daily",
+      "updated_at": "2026-06-27T12:02:33.002277+00:00"
+    },
+    {
+      "source": "OKX",
+      "asset": "ETH",
+      "daily_rate_pct": 0.004128,
+      "annual_rate_pct": 1.5067199999999998,
+      "borrow_limit": 7000.0,
+      "tier": "Public",
+      "rate_basis": "daily",
+      "updated_at": "2026-06-27T12:02:33.867053+00:00"
+    },
+    {
+      "source": "Backpack",
+      "asset": "ETH",
+      "daily_rate_pct": 0.0023654530660927684,
+      "annual_rate_pct": 0.8633903691238605,
+      "borrow_limit": 20000.0,
+      "tier": "Public",
+      "rate_basis": "annual",
+      "updated_at": "2026-06-27T12:02:35.744456+00:00"
+    }
+  ],
+  "coingecko": {
+    "status": "ok",
+    "configured_tier": "demo",
+    "attempted": [
+      "demo"
+    ],
+    "used": "demo",
+    "endpoint": "/coins/markets",
+    "key_required": true,
+    "key_present": true,
+    "errors": []
+  },
+  "stablecoin_yields": [
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Ethereum",
+      "asset": "DAI",
+      "supply_apy": 3.2816906033547957,
+      "borrow_apy": 4.956163412957199,
+      "rewards_apy": null,
+      "total_apy": 3.22899,
+      "tvl_usd": 12165975.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 89.00559350035823,
+      "data_completeness": 6,
+      "pool_id": "3665ee7e-6c5d-49d9-abb7-c47ab5d9d4ac",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-06-27T12:02:39.383455+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 199956042.0,
+      "borrow_cap_usd": 179960437.8,
+      "available_liquidity_usd": 12166908.293654958,
+      "can_be_collateral": false,
+      "is_paused": false,
+      "is_frozen": false,
+      "safety_rank": 1
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Ethereum",
+      "asset": "USDS",
+      "supply_apy": 1.1537531820238411,
+      "borrow_apy": 5.884705668826826,
+      "rewards_apy": null,
+      "total_apy": 1.14715,
+      "tvl_usd": 9110516.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 26.749935050471834,
+      "data_completeness": 6,
+      "pool_id": "e65588a1-27ad-4e20-9232-68a6cfaccf63",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-06-27T12:02:39.383518+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 49982200.0,
+      "borrow_cap_usd": 34187824.8,
+      "available_liquidity_usd": 9109324.45239235,
+      "can_be_collateral": false,
+      "is_paused": false,
+      "is_frozen": false,
+      "safety_rank": 1
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Ethereum",
+      "asset": "PYUSD",
+      "supply_apy": 3.3726031411408446,
+      "borrow_apy": 4.684415723989135,
+      "rewards_apy": null,
+      "total_apy": 3.3174,
+      "tvl_usd": 2502830.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 80.50502892509706,
+      "data_completeness": 6,
+      "pool_id": "d118f505-e75f-4152-bad3-49a2dc7482bf",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-06-27T12:02:39.383875+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 21001009.89,
+      "borrow_cap_usd": 18000865.62,
+      "available_liquidity_usd": 2504308.543665559,
+      "can_be_collateral": true,
+      "is_paused": false,
+      "is_frozen": false,
+      "safety_rank": 1
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Ethereum",
+      "asset": "USDT",
+      "supply_apy": 2.169583387403149,
+      "borrow_apy": 3.2724990802188194,
+      "rewards_apy": 4.3,
+      "total_apy": 6.44611,
+      "tvl_usd": 79230460.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 74.06210191412038,
+      "data_completeness": 7,
+      "pool_id": "a90d554a-b548-4f50-b03e-9dcb724b7777",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-06-27T12:02:39.383143+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 3474780000.0,
+      "borrow_cap_usd": 2336490000.0,
+      "available_liquidity_usd": 714025996.9091903,
+      "can_be_collateral": true,
+      "is_paused": false,
+      "is_frozen": false,
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Ethereum",
+      "asset": "USDC",
+      "supply_apy": 3.2431880684176058,
+      "borrow_apy": 4.004800806876515,
+      "rewards_apy": 3.78,
+      "total_apy": 6.97336,
+      "tvl_usd": 60634034.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 90.31353314987791,
+      "data_completeness": 7,
+      "pool_id": "6f00d46b-8735-49ae-9ced-2a0fccc56ad0",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-06-27T12:02:39.383185+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 2499183700.0,
+      "borrow_cap_usd": 2249265330.0,
+      "available_liquidity_usd": 201359628.19867027,
+      "can_be_collateral": true,
+      "is_paused": false,
+      "is_frozen": false,
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Arbitrum",
+      "asset": "USDC",
+      "supply_apy": 2.315717154293001,
+      "borrow_apy": 3.419496480505869,
+      "rewards_apy": null,
+      "total_apy": 2.29131,
+      "tvl_usd": 42381317.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 75.65243938372835,
+      "data_completeness": 6,
+      "pool_id": "d9fa8e14-0447-4207-9ae8-7810199dfa1f",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-06-27T12:02:39.383243+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 249917305.0,
+      "borrow_cap_usd": 224925574.5,
+      "available_liquidity_usd": 42425964.7627835,
+      "can_be_collateral": true,
+      "is_paused": false,
+      "is_frozen": false,
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Base",
+      "asset": "USDC",
+      "supply_apy": 3.180627239570813,
+      "borrow_apy": 4.258923671500654,
+      "rewards_apy": null,
+      "total_apy": 3.13056,
+      "tvl_usd": 29140783.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 83.41443111485331,
+      "data_completeness": 6,
+      "pool_id": "7e0661bf-8cf3-45e6-9424-31916d4c7b84",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-06-27T12:02:39.383304+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 229915891.3,
+      "borrow_cap_usd": 206924302.17,
+      "available_liquidity_usd": 29121562.04060621,
+      "can_be_collateral": true,
+      "is_paused": false,
+      "is_frozen": false,
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Arbitrum",
+      "asset": "DAI",
+      "supply_apy": 1.8013437674951231,
+      "borrow_apy": 3.7036068685013683,
+      "rewards_apy": null,
+      "total_apy": 1.78531,
+      "tvl_usd": 1290280.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 65.4600560400302,
+      "data_completeness": 6,
+      "pool_id": "a8e3d841-2788-4647-ad54-5a36fac451b1",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-06-27T12:02:39.384128+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 4898949.979,
+      "borrow_cap_usd": 4409054.9811,
+      "available_liquidity_usd": 1290862.7666692152,
+      "can_be_collateral": false,
+      "is_paused": false,
+      "is_frozen": false,
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "spark-savings",
+      "chain": "Ethereum",
+      "asset": "USDT",
+      "supply_apy": 2.5,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 2.5,
+      "tvl_usd": 854492298.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "a5d67f7e-5b51-4a9d-969d-caf051a7f5a4",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-06-27T12:02:39.382924+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "spark-savings",
+      "chain": "Ethereum",
+      "asset": "USDC",
+      "supply_apy": 3.6,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 3.6,
+      "tvl_usd": 316159232.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "c5c74dd1-995c-4445-9d84-3e710bad7d52",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-06-27T12:02:39.383014+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "sparklend",
+      "chain": "Ethereum",
+      "asset": "USDS",
+      "supply_apy": 2.2016,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 2.2016,
+      "tvl_usd": 183248947.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "0ed981dc-b49d-426d-ade5-6014728b1ef9",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-06-27T12:02:39.383059+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "sparklend",
+      "chain": "Ethereum",
+      "asset": "DAI",
+      "supply_apy": 2.33925,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 2.33925,
+      "tvl_usd": 100064092.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "e26ce7d9-db75-4aa4-b1db-cc21ae17bdfb",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-06-27T12:02:39.383104+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "sparklend",
+      "chain": "Ethereum",
+      "asset": "PYUSD",
+      "supply_apy": 0.26631,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 0.26631,
+      "tvl_usd": 91992912.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "995b269a-8409-4c55-b97e-868f443b432e",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-06-27T12:02:39.383121+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "sparklend",
+      "chain": "Ethereum",
+      "asset": "SUSDS",
+      "supply_apy": 0.0,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 0.0,
+      "tvl_usd": 3278335.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "d3694b72-5bc4-44c9-8ab6-1fc7941d216a",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-06-27T12:02:39.383778+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Ethereum",
+      "asset": "USDS",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-06-27T12:02:51.260541+00:00",
+      "supply_apy": 3.2367648407328,
+      "borrow_apy": 3.9975237101808005,
+      "rewards_apy": 0.0,
+      "total_apy": 3.2367648407328,
+      "tvl_usd": 1893106.7824589682,
+      "total_supply_usd": 1893106.7824589682,
+      "total_borrow_usd": 1702131.6187663064,
+      "utilization_pct": 89.91013453160626,
+      "pool_id": "0x5d409e56d886231adaf00c8775665ad0f9897b56",
+      "source_tags": [
+        "Compound API"
+      ],
+      "source_primary": "Compound API",
+      "data_completeness": 9,
+      "safety_rank": 3
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "spark-savings",
+      "chain": "Arbitrum",
+      "asset": "USDS",
+      "supply_apy": 3.6,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 3.6,
+      "tvl_usd": 359802609.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "9d499222-a01a-45bb-bbc9-f01c7923693b",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-06-27T12:02:39.383007+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "safety_rank": 3
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "spark-savings",
+      "chain": "Base",
+      "asset": "USDS",
+      "supply_apy": 3.6,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 3.6,
+      "tvl_usd": 223133043.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "aa2d08c0-0abd-4dcf-be93-ff8ca89d01cd",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-06-27T12:02:39.383039+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "safety_rank": 3
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Ethereum",
+      "asset": "USDC",
+      "supply_apy": 3.176005523832,
+      "borrow_apy": 3.950641147824,
+      "rewards_apy": 0.0988640400112993,
+      "total_apy": 3.2748695638432994,
+      "tvl_usd": 325936775.3564733,
+      "total_supply_usd": 325936775.3564733,
+      "total_borrow_usd": 287549397.96377236,
+      "utilization_pct": 88.22237572266343,
+      "data_completeness": 9,
+      "pool_id": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-06-27T12:02:51.260467+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Compound API"
+      ],
+      "source_primary": "DefiLlama+Compound API",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Ethereum",
+      "asset": "USDT",
+      "supply_apy": 2.7220720004784,
+      "borrow_apy": 3.60038099772,
+      "rewards_apy": 0.09191605850553998,
+      "total_apy": 2.8139880589839397,
+      "tvl_usd": 191222455.4203375,
+      "total_supply_usd": 191222455.4203375,
+      "total_borrow_usd": 144589357.9805166,
+      "utilization_pct": 75.61311117225834,
+      "data_completeness": 9,
+      "pool_id": "0x3afdc9bca9213a35503b077a6072f3d0d5ab0840",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-06-27T12:02:51.260520+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Compound API"
+      ],
+      "source_primary": "DefiLlama+Compound API",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Arbitrum",
+      "asset": "USDT",
+      "supply_apy": 1.8660315031488,
+      "borrow_apy": 2.9398506381792,
+      "rewards_apy": 0.0,
+      "total_apy": 1.8660315031488,
+      "tvl_usd": 19710360.855297297,
+      "total_supply_usd": 19710360.855297297,
+      "total_borrow_usd": 10216724.90374329,
+      "utilization_pct": 51.834208479046815,
+      "data_completeness": 9,
+      "pool_id": "0xd98be00b5d27fc98112bde293e487f8d4ca57d07",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-06-27T12:02:51.260584+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Compound API"
+      ],
+      "source_primary": "DefiLlama+Compound API",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Arbitrum",
+      "asset": "USDC",
+      "supply_apy": 2.5654714525296,
+      "borrow_apy": 3.4795462756896005,
+      "rewards_apy": 0.0,
+      "total_apy": 2.5654714525296,
+      "tvl_usd": 15932179.697326874,
+      "total_supply_usd": 15932179.697326874,
+      "total_borrow_usd": 11353810.836548043,
+      "utilization_pct": 71.26309601089133,
+      "data_completeness": 9,
+      "pool_id": "0x9c4ec768c28520b50860ea7a15bd7213a9ff58bf",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-06-27T12:02:51.260565+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Compound API"
+      ],
+      "source_primary": "DefiLlama+Compound API",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Base",
+      "asset": "USDC",
+      "supply_apy": 4.8315666838319995,
+      "borrow_apy": 5.7927734591904,
+      "rewards_apy": 0.0,
+      "total_apy": 4.8315666838319995,
+      "tvl_usd": 8426056.308031037,
+      "total_supply_usd": 8426056.308031037,
+      "total_borrow_usd": 7625411.8226310015,
+      "utilization_pct": 90.49798707404118,
+      "data_completeness": 9,
+      "pool_id": "0xb125e6687d4313864e53df431d5425969c15eb2f",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-06-27T12:02:51.260604+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Compound API"
+      ],
+      "source_primary": "DefiLlama+Compound API",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Base",
+      "asset": "USDS",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-06-27T12:02:51.260629+00:00",
+      "supply_apy": 1.0527379276752,
+      "borrow_apy": 2.4747573380544,
+      "rewards_apy": 0.0,
+      "total_apy": 1.0527379276752,
+      "tvl_usd": 551631.6937538482,
+      "total_supply_usd": 551631.6937538482,
+      "total_borrow_usd": 107542.1279868071,
+      "utilization_pct": 19.495146828982932,
+      "pool_id": "0x2c776041ccfe903071af44aa147368a9c8eea518",
+      "source_tags": [
+        "Compound API"
+      ],
+      "source_primary": "Compound API",
+      "data_completeness": 9,
+      "safety_rank": 4
+    }
+  ],
+  "stablecoin_yields_extended": [
+    {
+      "asset": "SUSDS",
+      "protocol": "sky-lending",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.6,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.6,
+      "tvl_usd": 5853945783.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "maple",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.99026,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 4.99026,
+      "tvl_usd": 3071484269.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USYC",
+      "protocol": "circle-usyc",
+      "chain": "BSC",
+      "base_apy_pct": 3.16595,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.16595,
+      "tvl_usd": 3020955238.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SUSDE",
+      "protocol": "ethena-usde",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.78801,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.78801,
+      "tvl_usd": 1696149592.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDY",
+      "protocol": "ondo-yield-assets",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.55,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.55,
+      "tvl_usd": 1113323869.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDT",
+      "protocol": "maple",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.99602,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 3.99602,
+      "tvl_usd": 1051510470.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDS",
+      "protocol": "centrifuge-protocol",
+      "chain": "Ethereum",
+      "base_apy_pct": 1.86808,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 1.86808,
+      "tvl_usd": 869739285.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BUIDL",
+      "protocol": "blackrock-buidl",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.53952,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.53952,
+      "tvl_usd": 830612681.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BUIDL",
+      "protocol": "blackrock-buidl",
+      "chain": "Aptos",
+      "base_apy_pct": 3.19851,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.19851,
+      "tvl_usd": 821841169.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BUIDL",
+      "protocol": "blackrock-buidl",
+      "chain": "Solana",
+      "base_apy_pct": 3.50843,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.50843,
+      "tvl_usd": 636045464.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USTB",
+      "protocol": "invesco-ustb",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.42157,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.42157,
+      "tvl_usd": 609958690.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDY",
+      "protocol": "ondo-yield-assets",
+      "chain": "Stellar",
+      "base_apy_pct": 3.55,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.55,
+      "tvl_usd": 529458236.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BUSD0",
+      "protocol": "usual-usd0",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": 1.99007,
+      "total_apy_pct": 1.99007,
+      "tvl_usd": 510352195.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "GTUSDCP",
+      "protocol": "morpho-blue",
+      "chain": "Base",
+      "base_apy_pct": 4.41607,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 4.41607,
+      "tvl_usd": 429827913.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BUIDL",
+      "protocol": "blackrock-buidl",
+      "chain": "Avalanche",
+      "base_apy_pct": 3.50865,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.50865,
+      "tvl_usd": 402177697.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "jupiter-lend",
+      "chain": "Solana",
+      "base_apy_pct": 4.84333,
+      "rewards_apy_pct": 0.77296,
+      "total_apy_pct": 5.61629,
+      "tvl_usd": 390077236.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SUSDS",
+      "protocol": "sky-lending",
+      "chain": "Arbitrum",
+      "base_apy_pct": 3.6,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.6,
+      "tvl_usd": 359802609.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SENPYUSDMAIN",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 1.92795,
+      "rewards_apy_pct": 3.22401,
+      "total_apy_pct": 5.15197,
+      "tvl_usd": 318592123.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SUSDAI",
+      "protocol": "usd-ai",
+      "chain": "Arbitrum",
+      "base_apy_pct": 6.75,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 6.75,
+      "tvl_usd": 299265291.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STEAKUSDC",
+      "protocol": "morpho-blue",
+      "chain": "Base",
+      "base_apy_pct": 4.37855,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 4.37855,
+      "tvl_usd": 279156020.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDD",
+      "protocol": "justlend-v1",
+      "chain": "Tron",
+      "base_apy_pct": 0.00106,
+      "rewards_apy_pct": 4.00638,
+      "total_apy_pct": 4.00744,
+      "tvl_usd": 274072046.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDY",
+      "protocol": "ondo-yield-assets",
+      "chain": "Sei",
+      "base_apy_pct": 3.55,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.55,
+      "tvl_usd": 257123382.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SENRLUSDV2",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 1.99276,
+      "rewards_apy_pct": 3.96833,
+      "total_apy_pct": 5.96109,
+      "tvl_usd": 230346295.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SDAI",
+      "protocol": "sky-lending",
+      "chain": "Ethereum",
+      "base_apy_pct": 1.25,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 1.25,
+      "tvl_usd": 214305719.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDY",
+      "protocol": "ondo-yield-assets",
+      "chain": "Solana",
+      "base_apy_pct": 3.55,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.55,
+      "tvl_usd": 181156335.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "REUSD",
+      "protocol": "re",
+      "chain": "Ethereum",
+      "base_apy_pct": 6.16179,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 6.16179,
+      "tvl_usd": 163948820.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USD1",
+      "protocol": "lista-lending",
+      "chain": "BSC",
+      "base_apy_pct": 1.67955,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 1.67955,
+      "tvl_usd": 137644132.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "RWAUSDI",
+      "protocol": "multipli.fi",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.888,
+      "tvl_usd": 137316592.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "fluid-lending",
+      "chain": "Ethereum",
+      "base_apy_pct": 6.39,
+      "rewards_apy_pct": 0.86,
+      "total_apy_pct": 7.25,
+      "tvl_usd": 127771974.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "RWAUSDI",
+      "protocol": "multipli.fi",
+      "chain": "Base",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.888,
+      "tvl_usd": 123817261.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "APXUSD",
+      "protocol": "apyx-protocol",
+      "chain": "Ethereum",
+      "base_apy_pct": 14.60012,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 14.60012,
+      "tvl_usd": 122308949.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "AUSD",
+      "protocol": "accountable",
+      "chain": "Monad",
+      "base_apy_pct": 6.5475,
+      "rewards_apy_pct": 0.26051,
+      "total_apy_pct": 6.80801,
+      "tvl_usd": 118568737.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SENPYUSDPRIMEV2",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 2.99709,
+      "rewards_apy_pct": 3.39022,
+      "total_apy_pct": 6.38731,
+      "tvl_usd": 110589571.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BUIDL",
+      "protocol": "blackrock-buidl",
+      "chain": "BSC",
+      "base_apy_pct": 3.19851,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.19851,
+      "tvl_usd": 110499834.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDT",
+      "protocol": "fluid-lending",
+      "chain": "Ethereum",
+      "base_apy_pct": 6.3,
+      "rewards_apy_pct": 0.99,
+      "total_apy_pct": 7.29,
+      "tvl_usd": 110282961.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SIRLOINUSDC",
+      "protocol": "morpho-blue",
+      "chain": "Base",
+      "base_apy_pct": 2.29637,
+      "rewards_apy_pct": 2.50007,
+      "total_apy_pct": 4.79644,
+      "tvl_usd": 101887995.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "FPIFRAX",
+      "protocol": "frax",
+      "chain": "Ethereum",
+      "base_apy_pct": 0.34347,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 0.34347,
+      "tvl_usd": 98164272.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STEAKUSDC",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.26096,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 3.26096,
+      "tvl_usd": 94457574.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STEAKEURCV",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.99999,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 3.99999,
+      "tvl_usd": 93760014.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SAVUSD",
+      "protocol": "avant-avusd",
+      "chain": "Avalanche",
+      "base_apy_pct": 7.70834,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 7.70834,
+      "tvl_usd": 89622807.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USD1",
+      "protocol": "dolomite",
+      "chain": "Ethereum",
+      "base_apy_pct": 2.08556,
+      "rewards_apy_pct": 5.8096,
+      "total_apy_pct": 7.89516,
+      "tvl_usd": 89459322.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STEAKUSDT",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 2.37436,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 2.37436,
+      "tvl_usd": 88809438.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USCC",
+      "protocol": "bitwise-uscc",
+      "chain": "Ethereum",
+      "base_apy_pct": 2.76882,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 2.76882,
+      "tvl_usd": 85457041.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USYC",
+      "protocol": "circle-usyc",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.16595,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.16595,
+      "tvl_usd": 85170238.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "GTUSDCP",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.48577,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 3.48577,
+      "tvl_usd": 81678177.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "ETHENAUSDC",
+      "protocol": "morpho-blue",
+      "chain": "Base",
+      "base_apy_pct": 2.91748,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 2.91748,
+      "tvl_usd": 79720501.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "MSUSD",
+      "protocol": "mainstreet",
+      "chain": "Ethereum",
+      "base_apy_pct": 11.99824,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 11.99824,
+      "tvl_usd": 74207581.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "JUPUSD",
+      "protocol": "jupiter-lend",
+      "chain": "Solana",
+      "base_apy_pct": 3.62395,
+      "rewards_apy_pct": 2.00988,
+      "total_apy_pct": 5.63382,
+      "tvl_usd": 73291489.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDT",
+      "protocol": "venus-core-pool",
+      "chain": "BSC",
+      "base_apy_pct": 2.3411,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 2.3411,
+      "tvl_usd": 71420259.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SUSDF",
+      "protocol": "falcon-finance",
+      "chain": "Ethereum",
+      "base_apy_pct": 5.52926,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 5.52926,
+      "tvl_usd": 71257665.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SDAI",
+      "protocol": "sdai",
+      "chain": "Gnosis",
+      "base_apy_pct": 4.0951,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.0951,
+      "tvl_usd": 69878885.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDT",
+      "protocol": "justlend-v1",
+      "chain": "Tron",
+      "base_apy_pct": 1.39989,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 1.39989,
+      "tvl_usd": 68988330.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SKYMONEYUSDTSAVINGS",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 2.36385,
+      "rewards_apy_pct": 0.8048,
+      "total_apy_pct": 3.16865,
+      "tvl_usd": 64218262.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "GTUSDA",
+      "protocol": "gauntlet",
+      "chain": "Base",
+      "base_apy_pct": 4.64765,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.64765,
+      "tvl_usd": 62175033.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USD3",
+      "protocol": "3jane-lending",
+      "chain": "Ethereum",
+      "base_apy_pct": 7.1795,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 7.1795,
+      "tvl_usd": 59923451.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDT0",
+      "protocol": "fluid-lending",
+      "chain": "Plasma",
+      "base_apy_pct": 7.03,
+      "rewards_apy_pct": 0.58,
+      "total_apy_pct": 7.61,
+      "tvl_usd": 59687380.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STEAKUSDTBETHENA",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.11911,
+      "rewards_apy_pct": 0.00566,
+      "total_apy_pct": 3.12477,
+      "tvl_usd": 59530922.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STCUSD",
+      "protocol": "cap",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 5.71966,
+      "tvl_usd": 58980994.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STUSDT",
+      "protocol": "stusdt",
+      "chain": "Tron",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.51412,
+      "tvl_usd": 58506235.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "U",
+      "protocol": "lista-lending",
+      "chain": "BSC",
+      "base_apy_pct": 1.14964,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 1.14964,
+      "tvl_usd": 57841046.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "FXUSDSTABILITYPOOLV20",
+      "protocol": "fx-protocol",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.75,
+      "tvl_usd": 55637498.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "WSRUSD",
+      "protocol": "reservoir-protocol",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 5.00351,
+      "tvl_usd": 53964380.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "accountable",
+      "chain": "Monad",
+      "base_apy_pct": 11.6,
+      "rewards_apy_pct": 0.32997,
+      "total_apy_pct": 11.92997,
+      "tvl_usd": 45627442.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SRUSDE",
+      "protocol": "strata-markets",
+      "chain": "Ethereum",
+      "base_apy_pct": 2.94483,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 2.94483,
+      "tvl_usd": 44225691.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SUSDU",
+      "protocol": "unitas",
+      "chain": "BSC",
+      "base_apy_pct": 9.95637,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 9.95637,
+      "tvl_usd": 43835226.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BBQUSDC",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 5.02518,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 5.02518,
+      "tvl_usd": 43367341.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "PUFETH",
+      "protocol": "puffer-stake",
+      "chain": "Ethereum",
+      "base_apy_pct": 2.3257,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 2.3257,
+      "tvl_usd": 41929849.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "CTDEFIUSDT",
+      "protocol": "concrete",
+      "chain": "Ethereum",
+      "base_apy_pct": 5.02785,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 5.02785,
+      "tvl_usd": 38804009.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "fluid-lending",
+      "chain": "Arbitrum",
+      "base_apy_pct": 4.87,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.87,
+      "tvl_usd": 38721197.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SIUSD",
+      "protocol": "infinifi",
+      "chain": "Ethereum",
+      "base_apy_pct": 6.61306,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 6.61306,
+      "tvl_usd": 37430593.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "goldfinch",
+      "chain": "Ethereum",
+      "base_apy_pct": 10.12341,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 10.12341,
+      "tvl_usd": 36714889.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "XUSDC",
+      "protocol": "multipli.fi",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.07,
+      "tvl_usd": 36421502.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "VUSD",
+      "protocol": "curvance",
+      "chain": "Monad",
+      "base_apy_pct": 0.0,
+      "rewards_apy_pct": 0.65969,
+      "total_apy_pct": 0.65969,
+      "tvl_usd": 35898720.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "fluid-lite",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 8.53,
+      "tvl_usd": 35158034.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SFRXUSD",
+      "protocol": "frax",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.84945,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.84945,
+      "tvl_usd": 34483407.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "LIQUIDUSD",
+      "protocol": "ether.fi-liquid",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.79824,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.79824,
+      "tvl_usd": 34451609.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "YUSD",
+      "protocol": "aegis-yusd",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.21,
+      "tvl_usd": 34062958.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SKYMONEYUSDSFLAGSHIP",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 0.41555,
+      "rewards_apy_pct": 4.33249,
+      "total_apy_pct": 4.74805,
+      "tvl_usd": 33894659.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "PLASMAUSD",
+      "protocol": "veda",
+      "chain": "Plasma",
+      "base_apy_pct": 3.1335,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.1335,
+      "tvl_usd": 33253765.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "centrifuge-protocol",
+      "chain": "Plume Mainnet",
+      "base_apy_pct": 7.93869,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 7.93869,
+      "tvl_usd": 32906496.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDCUSDT",
+      "protocol": "fluid-dex",
+      "chain": "Ethereum",
+      "base_apy_pct": 0.98664,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 0.98664,
+      "tvl_usd": 32797644.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SPARKUSDTBC",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 2.24813,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 2.24813,
+      "tvl_usd": 32008171.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "ARMUSDCS",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.55531,
+      "rewards_apy_pct": 0.15475,
+      "total_apy_pct": 4.71006,
+      "tvl_usd": 31906257.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "avantis",
+      "chain": "Base",
+      "base_apy_pct": 10.08707,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 10.08707,
+      "tvl_usd": 31131148.0,
+      "source": "DefiLlama API"
+    }
+  ],
+  "stablecoin_cefi_rates": [
+    {
+      "asset": "DAI",
+      "provider": "EarnPark",
+      "apy_pct": 7.0,
+      "source": "Bitcompare"
+    },
+    {
+      "asset": "PYUSD",
+      "provider": "Euler Finance",
+      "apy_pct": 4.44,
+      "source": "Bitcompare"
+    },
+    {
+      "asset": "TUSD",
+      "provider": "JustLend",
+      "apy_pct": 1.37,
+      "source": "Bitcompare"
+    },
+    {
+      "asset": "USDC",
+      "provider": "EarnPark",
+      "apy_pct": 4.0,
+      "source": "Bitcompare"
+    },
+    {
+      "asset": "USDE",
+      "provider": "Pendle",
+      "apy_pct": 3.95,
+      "source": "Bitcompare"
+    },
+    {
+      "asset": "USDP",
+      "provider": "Nexo",
+      "apy_pct": 10.5,
+      "source": "Bitcompare"
+    },
+    {
+      "asset": "USDT",
+      "provider": "Bitfinex",
+      "apy_pct": 10.84,
+      "source": "Bitcompare"
+    }
+  ],
+  "rwa_asset_classes": [
+    {
+      "asset_class": "U.S. Treasuries",
+      "value_usd": 14591211334.754725,
+      "change_7d_pct": -2.6210737448242964,
+      "as_of": "2026-06-26",
+      "source": "https://app.rwa.xyz/treasuries",
+      "source_type": "RWA.xyz public page"
+    },
+    {
+      "asset_class": "Credit",
+      "value_usd": 5795795989.337414,
+      "change_7d_pct": 8.494488973425591,
+      "as_of": "2026-06-26",
+      "source": "https://app.rwa.xyz/credit",
+      "source_type": "RWA.xyz public page"
+    },
+    {
+      "asset_class": "Tokenized Stocks",
+      "value_usd": 1467036247.4101586,
+      "change_7d_pct": -12.125339764925197,
+      "as_of": "2026-06-26",
+      "source": "https://app.rwa.xyz/stocks",
+      "source_type": "RWA.xyz public page"
+    },
+    {
+      "asset_class": "Active Strategies",
+      "value_usd": 1425845576.4891593,
+      "change_7d_pct": 2.7869259007515046,
+      "as_of": "2026-06-26",
+      "source": "https://app.rwa.xyz/active-strategies",
+      "source_type": "RWA.xyz public page"
+    },
+    {
+      "asset_class": "Non-U.S. Government Debt",
+      "value_usd": 1315485532.0875378,
+      "change_7d_pct": -5.329769012313955,
+      "as_of": "2026-06-26",
+      "source": "https://app.rwa.xyz/government-bonds",
+      "source_type": "RWA.xyz public page"
+    },
+    {
+      "asset_class": "Real Estate",
+      "value_usd": 202640270.74742067,
+      "change_7d_pct": 0.4076843210358724,
+      "as_of": "2026-06-26",
+      "source": "https://app.rwa.xyz/real-estate",
+      "source_type": "RWA.xyz public page"
+    }
+  ],
+  "taoli_binance_margin_rates": [
+    {
+      "asset": "BTC",
+      "daily_rate_pct": 0.001106,
+      "annual_rate_pct": 0.40369000000000005,
+      "borrow_limit": 100.0,
+      "source": "taoli",
+      "updated_at": "2026-06-27T12:02:33.002243+00:00"
+    },
+    {
+      "asset": "ETH",
+      "daily_rate_pct": 0.006129000000000001,
+      "annual_rate_pct": 2.237085,
+      "borrow_limit": 2000.0,
+      "source": "taoli",
+      "updated_at": "2026-06-27T12:02:33.002277+00:00"
+    },
+    {
+      "asset": "USDC",
+      "daily_rate_pct": 0.010369,
+      "annual_rate_pct": 3.784685,
+      "borrow_limit": 500000.0,
+      "source": "taoli",
+      "updated_at": "2026-06-27T12:02:33.001563+00:00"
+    },
+    {
+      "asset": "USDT",
+      "daily_rate_pct": 0.009042,
+      "annual_rate_pct": 3.3003299999999998,
+      "borrow_limit": 500000.0,
+      "source": "taoli",
+      "updated_at": "2026-06-27T12:02:33.001037+00:00"
+    }
+  ],
+  "smartmoney_traders": [],
+  "smartmoney_signals": {},
+  "smartmoney_positions": {
+    "trader_count": 0,
+    "position_count": 0,
+    "rows": []
+  },
+  "okx_news_sentiment": {
+    "rows": []
+  },
+  "supplements": [
+    {
+      "date": "2026-06-27",
+      "section": "BTC/ETH 24h 趋势判断",
+      "source": "CoinGecko market_chart 1d hourly",
+      "reason": "Binance API returned HTTP 451 in the original run"
+    }
+  ]
+}
