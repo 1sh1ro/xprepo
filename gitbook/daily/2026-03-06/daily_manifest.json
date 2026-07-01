@@ -1,0 +1,54 @@
+{
+  "date": "2026-03-06",
+  "data_gaps": [],
+  "market": {
+    "market_cap": 2406044730645.46,
+    "prev_market_cap": 2455986104085.64,
+    "volume_24h": 111679151937.16,
+    "prev_volume_24h": 155254645778.52,
+    "btc_dom": 58.8972,
+    "prev_btc_dom": 59.1958
+  },
+  "counts": {
+    "top_assets": 10,
+    "exchanges": 10
+  },
+  "top2_trend": {
+    "BTC": {
+      "symbol": "BTCUSDT",
+      "price": 68026.82,
+      "open": 69999.86,
+      "high": 70341.76,
+      "low": 67446.41,
+      "change_pct": -2.819,
+      "range_pos_pct": 20.046281105911383,
+      "trend": "偏弱，下行主导"
+    },
+    "ETH": {
+      "symbol": "ETHUSDT",
+      "price": 1981.86,
+      "open": 2050.81,
+      "high": 2062.12,
+      "low": 1955.95,
+      "change_pct": -3.362,
+      "range_pos_pct": 24.404257323160866,
+      "trend": "偏弱，下行主导"
+    }
+  },
+  "top2_intraday_points": {
+    "BTC": 23,
+    "ETH": 23
+  },
+  "coingecko": {
+    "status": "ok",
+    "configured_tier": "demo",
+    "attempted": [
+      "demo"
+    ],
+    "used": "demo",
+    "endpoint": "/coins/markets",
+    "key_required": true,
+    "key_present": true,
+    "errors": []
+  }
+}

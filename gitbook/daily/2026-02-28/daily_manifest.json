@@ -1,0 +1,16 @@
+{
+  "date": "2026-02-28",
+  "data_gaps": [],
+  "market": {
+    "market_cap": 2271948950710.83,
+    "prev_market_cap": 2326893457092.33,
+    "volume_24h": 97314040428.0,
+    "prev_volume_24h": 104282252961.48,
+    "btc_dom": 57.9767,
+    "prev_btc_dom": 57.9748
+  },
+  "counts": {
+    "top_assets": 10,
+    "exchanges": 10
+  }
+}

@@ -13,6 +13,7 @@
 从流动性结构看，平台流量呈分化状态，头部与非头部恢复节奏不一致；从杠杆维度看，杠杆拥挤度整体可控；在风险定价层面，期权端对尾部波动的定价仍偏谨慎；再结合情绪与价格修复节奏尚未完全同步。整体来看，盘面更像是修复中的高波动环境，而不是低波动顺趋势环境。
 
 ## BTC/ETH 24h 趋势判断
+![BTC/ETH 24h价格路径](charts/chart_btc_eth_24h_trend.png)
 
 - BTC/ETH 24h 趋势数据暂不可用。
 
@@ -128,3 +129,4 @@ Error: No credentials found.
 Hint: Run `okx auth login` to authenticate, or configure API key credentials.
 Version: @okx_ai/okx-trade-cli@1.3.2
 - OKX 新闻情绪快照为空：coin-sentiment 未返回有效样本。
+
