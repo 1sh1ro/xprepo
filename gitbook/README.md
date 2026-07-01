@@ -7,6 +7,7 @@
 
 ## 月度报告
 - [月度报告总览](monthly/README.md)
+- [2026-06 月度报告](monthly/2026-06/README.md)
 - [2026-05 月度报告](monthly/2026-05/README.md)
 - [2026-04 月度报告](monthly/2026-04/README.md)
 - [2026-03 月度报告](monthly/2026-03/README.md)
