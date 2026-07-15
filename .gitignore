@@ -1,0 +1,24 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Local environments and credentials.
+.env
+.env.*.local
+.venv/
+venv/
+node_modules/
+
+# Scratch output. Existing tracked fixtures remain tracked.
+/tmp/
+
+# This project is maintained as its own Git repository.
+/tokenized-stock-factor-research/
+
+# Event-model runs are reproducible. Keep run summaries in Git, but not bulky
+# raw candles, feature matrices, fitted models, or row-level predictions.
+/event_contract_model/runs/**/data/
+/event_contract_model/runs/**/features/
+/event_contract_model/runs/**/model/
+/event_contract_model/runs/**/backtest/
+/event_contract_model/runs/*_data/
