@@ -7,6 +7,7 @@
   * [2026-04 月度报告](monthly/2026-04/README.md)
   * [2026-03 月度报告](monthly/2026-03/README.md)
 * [日报归档](daily/README.md)
+  * [2026-07-18](daily/2026-07-18/README.md)
   * [2026-07-17](daily/2026-07-17/README.md)
   * [2026-07-16](daily/2026-07-16/README.md)
   * [2026-07-15](daily/2026-07-15/README.md)
