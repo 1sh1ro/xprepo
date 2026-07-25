@@ -1,0 +1,2 @@
+exchange,asset,spot_price_usd,mark_price_usd,index_price_usd,basis_pct,funding_rate_pct,funding_interval_hours,annual_funding_pct,open_interest_contracts,quote_ccy
+OKX,ETH,1867.55,1866.57,,,0.00432854105645,8.0,4.7397524568127505,739629.4160000018,USDT
