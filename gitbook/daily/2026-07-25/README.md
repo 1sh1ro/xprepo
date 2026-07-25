@@ -1,13 +1,13 @@
 # 二级市场日报（2026-07-25）
 
 ## 关键结论
-- 全市场市值 N/A（24h N/A），成交额 N/A（24h N/A）。
-- BTC 主导率 N/A。
+- 全市场市值 $2.19T（24h -1.09%），成交额 $62.38B（24h +2.89%）。
+- BTC 主导率 58.73%（-0.22pct），Top10 外占比 100.00%。
 - Top10 资产广度统计不完整。
 - 衍生品：部分数据缺失。
 
 ## 今日盘面判断
-如果只用一句话概括今天的市场，关键词是 `Data-Limited`。核心价格或成交数据不完整，当前以结构信号做保守判断。广度仍偏窄，增量风险偏好尚未形成持续外溢。这意味着短线虽然有可交易的弹性，但要把它理解成新一轮趋势启动，证据还不够。
+如果只用一句话概括今天的市场，关键词是 `Stress Repricing`。价格回撤但换手抬升，说明市场在高分歧下重估风险，波动脉冲概率偏高。长尾占比已进入可观察扩散区间，若持续抬升，风格可能从核心资产外溢。这意味着短线虽然有可交易的弹性，但要把它理解成新一轮趋势启动，证据还不够。
 
 ## 核心驱动因素
 从流动性结构看，多数平台成交走弱，流动性恢复仍依赖少数头部平台；从杠杆维度看，杠杆拥挤度整体可控；在风险定价层面，期权端对尾部波动的定价仍偏谨慎；再结合情绪与价格修复节奏尚未完全同步。整体来看，盘面更像是修复中的高波动环境，而不是低波动顺趋势环境。
@@ -43,16 +43,16 @@
 | Aave | Ethereum | USDT | 2.82% | 3.73% | 4.25% | 7.03% | 84.28% | $80.63M | DefiLlama+Aave API |
 | Aave | Ethereum | USDC | 3.19% | 3.97% | 3.53% | 6.66% | 89.53% | $65.81M | DefiLlama+Aave API |
 | Aave | Ethereum | USDS | 0.14% | 5.68% | 3.36% | 3.50% | 3.40% | $11.88M | DefiLlama+Aave API |
-| Aave | Arbitrum | USDC | 2.68% | 3.68% | N/A | 2.64% | 81.27% | $31.82M | DefiLlama+Aave API |
-| Aave | Base | USDC | 3.57% | 4.51% | N/A | 3.50% | 88.29% | $20.29M | DefiLlama+Aave API |
+| Aave | Arbitrum | USDC | 2.68% | 3.68% | N/A | 2.64% | 81.26% | $31.82M | DefiLlama+Aave API |
+| Aave | Base | USDC | 3.57% | 4.51% | N/A | 3.50% | 88.28% | $20.29M | DefiLlama+Aave API |
 | Aave | Arbitrum | DAI | 2.03% | 3.93% | N/A | 2.01% | 69.40% | $1.09M | DefiLlama+Aave API |
 
 稳定币收益对比（扩展样本，TVL≥$1M，共 22 条）
 | 币种 | 协议 | 链 | Supply | Borrow | Rewards | Total | Utilization | TVL | 数据源 |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|
 | USDC | Aave | Ethereum | 3.19% | 3.97% | 3.53% | 6.66% | 89.53% | $65.81M | DefiLlama+Aave API |
-| USDC | Aave | Arbitrum | 2.68% | 3.68% | N/A | 2.64% | 81.27% | $31.82M | DefiLlama+Aave API |
-| USDC | Aave | Base | 3.57% | 4.51% | N/A | 3.50% | 88.29% | $20.29M | DefiLlama+Aave API |
+| USDC | Aave | Arbitrum | 2.68% | 3.68% | N/A | 2.64% | 81.26% | $31.82M | DefiLlama+Aave API |
+| USDC | Aave | Base | 3.57% | 4.51% | N/A | 3.50% | 88.28% | $20.29M | DefiLlama+Aave API |
 | USDC | Spark | Ethereum | 3.60% | N/A | N/A | 3.60% | N/A | $273.30M | DefiLlama |
 | USDC | Compound | Ethereum | 3.11% | 3.90% | 0.10% | 3.21% | 86.30% | $345.73M | DefiLlama+Compound API |
 | USDC | Compound | Arbitrum | 2.67% | 3.56% | 0.00% | 2.67% | 74.22% | $15.58M | DefiLlama+Compound API |
@@ -114,8 +114,8 @@
 | HOOD | -6.73% | 17.6 | 空头 | $350 | +0.00% | Weekend or Holiday |
 | RIOT | -6.17% | 26.4 | 空头 | $0 | +0.00% | Weekend or Holiday |
 | MARA | -4.55% | 27.4 | 空头 | -$33 | +0.00% | Weekend or Holiday |
-| CRCL | +3.75% | 56.5 | 多头 | -$237,974 | -0.02% | TRADING |
-| COIN | -2.71% | 29.6 | 空头 | $26,130 | +0.00% | Weekend or Holiday |
+| CRCL | +3.81% | 56.1 | 多头 | -$237,760 | -0.02% | TRADING |
+| COIN | -2.71% | 29.6 | 空头 | N/A | +0.00% | Weekend or Holiday |
 
 - **HOOD**：24h -6.73%，RSI14 17.6，短周期均线未站上长周期均线；链上主动买入占优（净额 $350）；未匹配到活跃聪明钱交易信号，当前聪明钱持有地址 0 个。映射溢折价 +0.00%。资产状态显示 `Weekend or Holiday`，这是可验证的事件线索。
 - **RIOT**：24h -6.17%，RSI14 26.4，短周期均线未站上长周期均线；链上主动卖出占优（净额 $0）；未匹配到活跃聪明钱交易信号，当前聪明钱持有地址 0 个。映射溢折价 +0.00%。资产状态显示 `Weekend or Holiday`，这是可验证的事件线索。
@@ -147,16 +147,16 @@ RWA 资产类别对照表
 ![非DeFi期现快照](charts/chart_nondefi_carry_snapshot.png)
 
 样本范围覆盖 Binance 与 OKX 的 BTC/ETH 现货与永续，用于观察 funding 与 basis 的当期结构。
-- Funding 最高样本：OKX-ETH，年化约 4.75%。
-- Funding 最低样本：OKX-ETH，年化约 4.75%。
+- Funding 最高样本：OKX-ETH，年化约 4.74%。
+- Funding 最低样本：OKX-ETH，年化约 4.74%。
 
 借币成本多源对比表
 | 资产 | Binance(日/年) | OKX(日/年) | Bybit(日/年) | Backpack(日/年) | KuCoin(日/年) | 最低日利率 |
 |---|---:|---:|---:|---:|---:|---:|
-| USDT | 0.01%/3.83% · 500k | 0.01%/2.51% · 5.0M | N/A | 0.01%/4.54% · 50.0M | N/A | OKX 0.01% |
-| USDC | 0.01%/4.18% · 500k | 0.01%/2.51% · 1.0M | N/A | 0.01%/2.18% · 300.0M | N/A | Backpack 0.01% |
-| BTC | 0.00%/0.38% · 100 | 0.00%/0.51% · 175 | N/A | 0.00%/0.45% · 3k | N/A | Binance 0.00% |
-| ETH | 0.01%/2.23% · 2k | 0.00%/1.51% · 7k | N/A | 0.00%/0.56% · 20k | N/A | Backpack 0.00% |
+| USDT | 0.01%/3.83% · 500k | 0.01%/2.51% · 5.0M | N/A | N/A | N/A | OKX 0.01% |
+| USDC | 0.01%/4.18% · 500k | 0.01%/2.51% · 1.0M | N/A | N/A | N/A | OKX 0.01% |
+| BTC | 0.00%/0.38% · 100 | 0.00%/0.51% · 175 | N/A | N/A | N/A | Binance 0.00% |
+| ETH | 0.01%/2.23% · 2k | 0.00%/1.51% · 7k | N/A | N/A | N/A | OKX 0.00% |
 说明：统一按日利率/年化展示，单元格尾部为可借额度。
 - 交易含义：当 funding 年化显著高于 basis 且持续为正，carry 交易更偏向收取 funding；若 basis 与 funding 同步回落，需降低杠杆并关注资金回流速度。
 该部分与链上收益分开统计，便于比较两类策略的收益与风险结构。
@@ -164,19 +164,19 @@ RWA 资产类别对照表
 ## 市场脉冲
 ![全市场当日水平](charts/chart_market_snapshot_levels.png)
 
-截至 2026-07-25，全市场市值 N/A，24h 成交额 N/A，BTC 主导率 N/A。
-价格与成交同向上行，说明风险预算有边际回补，短线反弹具备交易基础。在这种盘面下，成交能否继续跟上，是判断明天反弹延续还是回吐的第一道分水岭。
+截至 2026-07-25，全市场市值 $2.19T，24h 成交额 $62.38B，BTC 主导率 58.73%。
+价格下行但换手放大，反映分歧加剧，通常伴随更高的日内波动。在这种盘面下，成交能否继续跟上，是判断明天反弹延续还是回吐的第一道分水岭。
 
 ![全市场当日变化](charts/chart_market_daily_change.png)
 
-相对前日，市值 N/A、成交 N/A。
+相对前日，市值 -1.09%、成交 +2.89%、BTC.D -0.22pct。
 把这组变化拆开看，比看单一涨跌更有用：价格、成交、主导率三者同向时，行情更有连续性；一旦出现背离，走势往往会变得更短促、更反复。
 
 ## 主导率与市场广度
 ![市场广度快照](charts/chart_market_breadth_snapshot.png)
 
-广度快照数据不完整。
-当前广度仍集中于核心资产，长尾板块的参与度有限。换句话说，资金目前更愿意在高流动性的核心资产里做仓位调整，而不是大面积扩散到长尾资产。
+当前结构为 BTC 58.73% / Top2-10 0.00% / Top10 外 100.00%。长尾占比仍偏低，广度修复还未形成持续趋势。
+Top10 外占比已进入扩散区，若继续抬升，市场风格可能向高 Beta 资产切换。换句话说，资金目前更愿意在高流动性的核心资产里做仓位调整，而不是大面积扩散到长尾资产。
 
 ## 资产与交易所资金流
 ![Top10资产24h表现](charts/chart_top10_assets_24h.png)
@@ -228,10 +228,11 @@ OKX 新闻情绪快照暂不可用（见 Data Gaps）。
 - 关注情绪改善与广度扩散是否同步发生，二者背离时避免追逐单边。
 
 ## 数据缺口（Data Gaps）
-- CMC 全市场历史数据获取失败: <urlopen error _ssl.c:1112: The handshake operation timed out>
 - CoinGecko 数据获取失败：未设置 COINGECKO_API_KEY（已禁用匿名接口）。
-- Deribit DVOL BTC 获取失败: Remote end closed connection without response
-- Deribit DVOL ETH 获取失败: The read operation timed out
+- Deribit ticker BTC-PERPETUAL 获取失败: <urlopen error _ssl.c:1112: The handshake operation timed out>
+- Deribit ticker ETH-PERPETUAL 获取失败: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>
+- Deribit DVOL BTC 获取失败: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>
+- Deribit DVOL ETH 获取失败: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>
 - Alternative.me F&G 获取失败: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>
 - Binance BTC/ETH 24h 批量数据获取失败，转单币重试: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>
 - Binance 24h 单币数据获取失败 BTCUSDT: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>
@@ -240,12 +241,13 @@ OKX 新闻情绪快照暂不可用（见 Data Gaps）。
 - Binance 24h 未返回 ETHUSDT 数据。
 - Binance BTCUSDT 1h K线获取失败: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>
 - Binance ETHUSDT 1h K线获取失败: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>
-- Binance 非DeFi期现数据获取失败 BTC: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>
-- Binance 非DeFi期现数据获取失败 ETH: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>
-- OKX 非DeFi期现数据获取失败 BTC: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>
-- 借币成本部分数据源不可用: Bybit: HTTP Error 403: Forbidden
+- Binance 非DeFi期现数据获取失败 BTC: HTTP Error 451: 
+- Binance 非DeFi期现数据获取失败 ETH: HTTP Error 451: 
+- OKX 非DeFi期现数据获取失败 BTC: The read operation timed out
+- 借币成本部分数据源不可用: Bybit: HTTP Error 403: Forbidden | Backpack: The read operation timed out
 - Morpho API 获取失败: HTTP Error 400: Bad Request
 - Bitcompare CeFi 稳定币样本为空：未匹配到稳定币资产。
+- RWA COIN 链上流向获取失败: The read operation timed out
 - OKX 聪明钱数据获取失败（traders）: Update available for @okx_ai/okx-trade-cli: 1.3.2 → 1.4.2
 Run: npm install -g @okx_ai/okx-trade-cli
 
