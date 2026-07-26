@@ -5,23 +5,20 @@ import argparse
 import csv
 import json
 import math
+import hashlib
 import shutil
 import statistics
 import subprocess
 from dataclasses import dataclass
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
+from monthly_module_registry import MODULE_ORDER, MODULE_SOURCES, build_module_commands
 
-FIG2 = "/Users/my/.codex/skills/binance-fig2-top10-monthly-performance/scripts/build_fig2_top10_monthly_performance.py"
-FIG3 = "/Users/my/.codex/skills/binance-fig3-defi-tvl-share/scripts/build_fig3_defi_tvl_share.py"
-FIG4 = "/Users/my/.codex/skills/binance-fig4-monthly-nft-volume/scripts/build_fig4_monthly_nft_volume.py"
-FIG6 = "/Users/my/.codex/skills/binance-fig6-altcoin-outside-top10-share/scripts/build_fig6_altcoin_outside_top10_share.py"
-DERIBIT = "/Users/my/.codex/skills/deribit-monthly-secondary-metrics/scripts/build_deribit_monthly_metrics.py"
-CORE = "/Users/my/xp/scripts/generate_our_cex_feb_report_yuque.py"
+VALIDATOR = "/Users/my/.codex/skills/cex-monthly-secondary-orchestrator/scripts/validate_monthly_output.py"
 
 CMC_GLOBAL_HIST = "https://api.coinmarketcap.com/data-api/v3/global-metrics/quotes/historical"
 
@@ -136,6 +133,10 @@ def _prepare_output(charts_dir: Path, packages_dir: Path) -> None:
         except Exception:
             pass
 
+    for stale in (charts_dir.parent / "orchestrated_secondary_report.md", charts_dir.parent / "monthly_manifest.json"):
+        if stale.exists():
+            stale.unlink()
+
     for name in ("fig1", "fig2", "fig3", "fig4", "fig6", "deribit", "core_report"):
         d = packages_dir / name
         if d.exists():
@@ -149,7 +150,7 @@ def _get_json(url: str, params: Optional[Dict[str, Any]] = None) -> Dict[str, An
         return json.loads(resp.read().decode("utf-8"))
 
 
-def fetch_cmc_month_stats(month: str) -> Dict[str, Optional[float]]:
+def fetch_cmc_month_stats(month: str) -> Dict[str, Any]:
     start, end = _month_bounds(month)
     end_excl = end + timedelta(days=1)
     payload = _get_json(
@@ -173,6 +174,8 @@ def fetch_cmc_month_stats(month: str) -> Dict[str, Optional[float]]:
         try:
             d = datetime.fromisoformat(ts.replace("Z", "+00:00")).date()
         except Exception:
+            continue
+        if d < start or d > end:
             continue
         qq = q.get("quote")
         qq0 = qq[0] if isinstance(qq, list) and qq and isinstance(qq[0], dict) else {}
@@ -210,6 +213,11 @@ def fetch_cmc_month_stats(month: str) -> Dict[str, Optional[float]]:
     dom_max = max((r[3] for r in dom_rows if r[3] is not None), default=None)
 
     return {
+        "requested_start": start.isoformat(),
+        "requested_end": end.isoformat(),
+        "actual_start": rows[0][0].isoformat() if rows else None,
+        "actual_end": rows[-1][0].isoformat() if rows else None,
+        "observation_count": len({r[0] for r in rows}),
         "cap_start": cap_start,
         "cap_end": cap_end,
         "cap_chg_pct": cap_chg,
@@ -294,6 +302,32 @@ def _read_deribit_snapshot(csv_path: Path) -> Dict[str, Optional[float]]:
             elif ccy == "ETH":
                 out["eth_funding_8h"] = f8h
     return out
+
+
+def _read_deribit_monthly(csv_path: Path) -> Dict[str, Any]:
+    out: Dict[str, Any] = {"btc_funding_8h": None, "eth_funding_8h": None, "rows": []}
+    if not csv_path.exists():
+        return out
+    with csv_path.open("r", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            ccy = str(row.get("currency") or "").upper()
+            avg = _safe_float(row.get("average_funding_8h"))
+            record = dict(row)
+            record["observation_count"] = _safe_int(row.get("observation_count"))
+            record["average_funding_8h"] = avg
+            out["rows"].append(record)
+            if ccy == "BTC":
+                out["btc_funding_8h"] = avg
+            elif ccy == "ETH":
+                out["eth_funding_8h"] = avg
+    return out
+
+
+def _append_image(lines: List[str], outdir: Path, rel: str) -> bool:
+    if not (outdir / rel).is_file():
+        return False
+    lines.extend([f"![{Path(rel).name}]({rel})", ""])
+    return True
 
 
 def _read_deribit_dvol_stats(csv_path: Path) -> Dict[str, Any]:
@@ -561,7 +595,7 @@ def _fetch_rv_month_stats(month: str) -> Dict[str, Optional[float]]:
     return out
 
 
-def build_report(month: str, outdir: Path, tasks: List[TaskResult]) -> None:
+def build_report(month: str, outdir: Path, tasks: List[TaskResult]) -> Dict[str, Any]:
     charts_dir = outdir / "charts"
     packages = outdir / "packages"
     start, end = _month_bounds(month)
@@ -570,12 +604,20 @@ def build_report(month: str, outdir: Path, tasks: List[TaskResult]) -> None:
     fig2_top, fig2_tail = _read_fig2_summary(packages / "fig2" / "fig2_top10_monthly_performance.csv")
     fig2_rows = _read_fig2_rows(packages / "fig2" / "fig2_top10_monthly_performance.csv")
     outside_share = _read_fig6_last(packages / "fig6" / "fig6_altcoin_outside_top10_share.csv")
-    deribit = _read_deribit_snapshot(packages / "deribit" / "deribit_funding_snapshot.csv")
+    deribit = _read_deribit_monthly(packages / "deribit" / "deribit_funding_monthly.csv")
     dvol = _read_deribit_dvol_stats(packages / "deribit" / "deribit_dvol_daily.csv")
-    deribit_oi = _read_deribit_oi(packages / "deribit" / "deribit_oi_volume_snapshot.csv")
+    deribit_manifest: Dict[str, Any] = {}
+    try:
+        deribit_manifest = json.loads((packages / "deribit" / "deribit_manifest.json").read_text(encoding="utf-8"))
+    except Exception:
+        pass
+    oi_snapshot_usable = bool((deribit_manifest.get("oi_snapshot") or {}).get("usable_as_target_month_end"))
+    deribit_oi = _read_deribit_oi(packages / "deribit" / "deribit_oi_volume_snapshot.csv") if oi_snapshot_usable else {}
     fig3 = _read_fig3_snapshot(packages / "fig3" / "fig3_defi_tvl_share.csv")
     nft_volume = _read_fig4_volume(packages / "fig4" / "fig4_monthly_nft_volume.csv")
-    exchange_rows = _read_exchange_rows(packages / "core_report" / "yuque_style_exchange_data.csv")
+    # The core package exposes a rolling/current CMC exchange snapshot, not an
+    # auditable historical calendar-month series. Never relabel it as target month.
+    exchange_rows: List[Dict[str, Any]] = []
     try:
         fng_stats = _fetch_fng_month_stats(month)
     except Exception:
@@ -596,15 +638,10 @@ def build_report(month: str, outdir: Path, tasks: List[TaskResult]) -> None:
 
     cap_chg = month_stats.get("cap_chg_pct")
     dom_chg = month_stats.get("dom_chg")
-    breadth_weak = outside_share is not None and outside_share < 20.0
-    if cap_chg is not None and cap_chg > 0 and breadth_weak:
+    if cap_chg is not None and cap_chg > 0:
         lead = (
             f"{start.month} 月市场更像一次修复，而不是一轮全面风险偏好回归。"
-            "总市值较月初回升，但资金仍主要集中在 BTC 与头部资产。"
-        )
-    elif cap_chg is not None and cap_chg > 0:
-        lead = (
-            f"{start.month} 月市场整体偏修复，头部资产普遍企稳，风险偏好较上月有所改善。"
+            "总市值较月初回升，但是否扩散到长尾仍需更广的收益率样本验证。"
         )
     elif cap_chg is not None and cap_chg < 0:
         lead = (
@@ -636,17 +673,18 @@ def build_report(month: str, outdir: Path, tasks: List[TaskResult]) -> None:
         f"- 市场从防守转向修复：总市值由 {_fmt_usd(month_stats.get('cap_start'))} 升至 {_fmt_usd(month_stats.get('cap_end'))}，月内变化 {cap_chg_text}，但 BTC 主导率同步上行 {dom_chg_text}。"
     )
     if fig2_top and fig2_tail:
+        gain_claim = "全部上涨" if not fig2_losses else f"上涨 {len(fig2_gains)} 个、下跌 {len(fig2_losses)} 个"
         lines.append(
-            f"- 头部资产没有出现明显亏钱效应：Top10 样本全部上涨，中位数收益 {_fmt_pct(fig2_mid)}，最强 {fig2_top[0]} {_fmt_pct(fig2_top[1])}，最弱 {fig2_tail[0]} {_fmt_pct(fig2_tail[1])}。"
+            f"- 头部资产样本{gain_claim}：中位数收益 {_fmt_pct(fig2_mid)}，最强 {fig2_top[0]} {_fmt_pct(fig2_top[1])}，最弱 {fig2_tail[0]} {_fmt_pct(fig2_tail[1])}。"
         )
     if outside_share is not None:
         lines.append(
-            f"- 广度仍是短板：Top10 外市值占比仅 {outside_share:.2f}%，说明增量风险偏好尚未充分外溢到长尾资产。"
+            f"- 月末市值集中度：Top10 外市值占比为 {outside_share:.2f}%；该指标描述市值结构，不单独证明长尾风险偏好。"
         )
     bfd = deribit.get("btc_funding_8h")
     efd = deribit.get("eth_funding_8h")
     lines.append(
-        f"- 杠杆不拥挤：Deribit BTC/ETH 8h 资金费率为 {_fmt_bps(bfd)} / {_fmt_bps(efd)}，价格修复并未伴随明显多头挤压。"
+        f"- Deribit BTC/ETH 月内平均 8h 资金费率为 {_fmt_bps(bfd)} / {_fmt_bps(efd)}；是否拥挤还需结合分布与 OI 历史。"
     )
     if fng_end is not None:
         lines.append(
@@ -670,10 +708,8 @@ def build_report(month: str, outdir: Path, tasks: List[TaskResult]) -> None:
     else:
         lines.append("市值与主导率没有给出单边信号，市场仍处在结构分化阶段。")
     lines.append("")
-    lines.append("![core_chart_1_marketcap.png](charts/core_chart_1_marketcap.png)")
-    lines.append("")
-    lines.append("![core_chart_2_btc_dom.png](charts/core_chart_2_btc_dom.png)")
-    lines.append("")
+    _append_image(lines, outdir, "charts/core_chart_1_marketcap.png")
+    _append_image(lines, outdir, "charts/core_chart_2_btc_dom.png")
     lines.append("接下来需要确认的是成交额能否继续放大。如果市值上行但成交没有跟随，修复容易停留在估值回补；若成交同步回升，才更接近趋势延续。")
     lines.append("")
 
@@ -706,13 +742,14 @@ def build_report(month: str, outdir: Path, tasks: List[TaskResult]) -> None:
         lines.append("")
     else:
         lines.append(
-            f"前排交易所明细因上游 CMC 连接失败暂不可用，因此本节不强行给平台排名。可用的全市场口径显示，4 月日均成交额约 {_fmt_usd(month_stats.get('vol_avg'))}，成交峰值约 {_fmt_usd(month_stats.get('vol_max'))}。"
+            f"前排交易所历史自然月明细暂无可验证数据，因此本节不使用当前/滚动 30d 快照冒充目标月。全市场口径显示，{start.month} 月日均成交额约 {_fmt_usd(month_stats.get('vol_avg'))}，成交峰值约 {_fmt_usd(month_stats.get('vol_max'))}。"
         )
         lines.append("这意味着本月价格修复并不是在完全低流动性环境中完成，但平台间流量迁移和执行质量仍需要在补齐交易所明细后再判断。")
         lines.append("")
 
     lines.append("## 主流资产表现与市场广度")
     if fig2_rows:
+        lines.append("口径说明：Top10 样本按报告生成时的当前市值排名选取，再回溯目标月收益；该方法存在幸存者偏差，不代表目标月初的历史 Top10 成分。")
         lines.append(
             f"头部资产中，表现最强的是 {fig2_top[0]}（{fig2_top[1]:+.2f}%），最弱的是 {fig2_tail[0]}（{fig2_tail[1]:+.2f}%），收益差约 {fig2_spread:.2f}pct。"
         )
@@ -720,12 +757,10 @@ def build_report(month: str, outdir: Path, tasks: List[TaskResult]) -> None:
             f"上涨资产 {len(fig2_gains)} 个、下跌资产 {len(fig2_losses)} 个，头部样本中位数收益为 {_fmt_pct(fig2_mid)}。这说明本月不是单一资产行情，但也还不是长尾全面补涨。"
         )
         if outside_share is not None:
-            lines.append(f"Top10 外市值占比月末为 {outside_share:.2f}%，仍低于一个健康 altseason 通常需要的广度水平。")
+            lines.append(f"Top10 外市值占比月末为 {outside_share:.2f}%；它是集中度指标，不能代替更广资产收益率广度。")
         lines.append("")
-    lines.append("![fig2_top10_monthly_performance.png](charts/fig2_top10_monthly_performance.png)")
-    lines.append("")
-    lines.append("![fig6_altcoin_outside_top10_share.png](charts/fig6_altcoin_outside_top10_share.png)")
-    lines.append("")
+    _append_image(lines, outdir, "charts/fig2_top10_monthly_performance.png")
+    _append_image(lines, outdir, "charts/fig6_altcoin_outside_top10_share.png")
 
     lines.append("## 链上风险偏好：DeFi 稳定，NFT 仍弱")
     if fig3.get("total_tvl_usd") is not None:
@@ -744,11 +779,8 @@ def build_report(month: str, outdir: Path, tasks: List[TaskResult]) -> None:
     else:
         lines.append("NFT 成交数据本次未稳定返回，因此不将 NFT 作为本月风险偏好判断的核心依据。")
     lines.append("")
-    lines.append("![fig3_defi_tvl_share.png](charts/fig3_defi_tvl_share.png)")
-    if (charts_dir / "fig4_monthly_nft_volume.png").exists():
-        lines.append("")
-        lines.append("![fig4_monthly_nft_volume.png](charts/fig4_monthly_nft_volume.png)")
-    lines.append("")
+    _append_image(lines, outdir, "charts/fig3_defi_tvl_share.png")
+    _append_image(lines, outdir, "charts/fig4_monthly_nft_volume.png")
 
     lines.append("## 衍生品仓位温度")
     if bfd is not None and efd is not None:
@@ -773,12 +805,11 @@ def build_report(month: str, outdir: Path, tasks: List[TaskResult]) -> None:
                 f"DVOL 月末降至 BTC {dvol['btc_end']:.2f} / ETH {dvol['eth_end']:.2f}，较月内高点 BTC {dvol['btc_max']:.2f} / ETH {dvol['eth_max']:.2f} 明显回落。波动率回落与资金费率中性共存，意味着市场短期更像“修复后的再定价”，而不是高杠杆趋势行情。"
             )
         lines.append("")
-    lines.append("![chart_deribit_funding.png](charts/chart_deribit_funding.png)")
-    lines.append("")
-    lines.append("![chart_deribit_oi.png](charts/chart_deribit_oi.png)")
-    lines.append("")
-    lines.append("![chart_deribit_dvol.png](charts/chart_deribit_dvol.png)")
-    lines.append("")
+    _append_image(lines, outdir, "charts/chart_deribit_funding.png")
+    if not _append_image(lines, outdir, "charts/chart_deribit_oi.png"):
+        lines.append("OI 仅有运行时快照，距离目标月末超过 48 小时，已从本月报告剔除。")
+        lines.append("")
+    _append_image(lines, outdir, "charts/chart_deribit_dvol.png")
 
     lines.append("## 情绪与波动定价")
     if fng_stats.get("end") is not None:
@@ -789,10 +820,8 @@ def build_report(month: str, outdir: Path, tasks: List[TaskResult]) -> None:
     else:
         lines.append("情绪修复仍需结合后续成交与广度确认，短线更容易出现事件驱动下的波动放大。")
     lines.append("")
-    lines.append("![core_chart_4_fng.png](charts/core_chart_4_fng.png)")
-    lines.append("")
-    lines.append("![core_chart_5_realized_vol.png](charts/core_chart_5_realized_vol.png)")
-    lines.append("")
+    _append_image(lines, outdir, "charts/core_chart_4_fng.png")
+    _append_image(lines, outdir, "charts/core_chart_5_realized_vol.png")
 
     inside_share = (100.0 - outside_share) if outside_share is not None else None
     btc_fut = (deribit_oi.get("BTC") or {}).get("future_oi")
@@ -809,6 +838,14 @@ def build_report(month: str, outdir: Path, tasks: List[TaskResult]) -> None:
     lines.append("")
 
     (outdir / "orchestrated_secondary_report.md").write_text("\n".join(lines), encoding="utf-8")
+    return {
+        "market": month_stats,
+        "deribit": deribit_manifest,
+        "fig2_row_count": len(fig2_rows),
+        "nft_volume_usd": nft_volume,
+        "exchange_history_status": "unavailable_current_snapshot_rejected",
+        "oi_snapshot_used": oi_snapshot_usable,
+    }
 
 
 def write_manifest(path: Path, tasks: List[TaskResult]) -> None:
@@ -817,6 +854,53 @@ def write_manifest(path: Path, tasks: List[TaskResult]) -> None:
         w.writerow(["task", "status", "package_dir", "notes"])
         for t in tasks:
             w.writerow([t.name, t.status, str(t.package_dir), t.notes])
+
+
+def write_json_manifest(path: Path, month: str, tasks: List[TaskResult], report_meta: Dict[str, Any], outdir: Path) -> Dict[str, Any]:
+    required_tasks = {"fig2", "fig3", "fig6", "deribit", "core_report"}
+    task_map = {t.name: {"status": t.status, "notes": t.notes, "package_dir": str(t.package_dir)} for t in tasks}
+    failed_required = sorted(name for name in required_tasks if (task_map.get(name) or {}).get("status") != "ok")
+    gaps: List[str] = []
+    if failed_required:
+        gaps.append("required tasks failed: " + ", ".join(failed_required))
+    if (task_map.get("fig4") or {}).get("status") != "ok":
+        gaps.append("NFT monthly source unavailable; NFT chart and conclusion omitted")
+    if report_meta.get("exchange_history_status") != "ok":
+        gaps.append("historical calendar-month exchange volume unavailable; current rolling snapshot rejected")
+    if not report_meta.get("oi_snapshot_used"):
+        gaps.append("Deribit OI current snapshot is not within 48h of target month end; omitted")
+
+    files: Dict[str, Dict[str, Any]] = {}
+    for file_path in sorted(p for p in outdir.rglob("*") if p.is_file() and p.name not in {path.name}):
+        rel = str(file_path.relative_to(outdir))
+        files[rel] = {"size": file_path.stat().st_size, "sha256": hashlib.sha256(file_path.read_bytes()).hexdigest()}
+    market = report_meta.get("market") or {}
+    market_exact = market.get("actual_start") == market.get("requested_start") and market.get("actual_end") == market.get("requested_end")
+    status = "failed" if failed_required or not market_exact or not (outdir / "orchestrated_secondary_report.md").is_file() else ("partial" if gaps else "complete")
+    obj = {
+        "month": month,
+        "generated_at_utc": datetime.now(tz=timezone.utc).isoformat(),
+        "status": status,
+        "tasks": task_map,
+        "module_sources": MODULE_SOURCES,
+        "coverage": {
+            "requested_start": market.get("requested_start"),
+            "requested_end": market.get("requested_end"),
+            "market_actual_start": market.get("actual_start"),
+            "market_actual_end": market.get("actual_end"),
+            "market_observation_count": market.get("observation_count"),
+            "market_exact_calendar_month": market_exact,
+            "fig2_return_method": "exact_market_chart_range",
+            "fig2_universe_method": "current_market_cap_snapshot_survivorship_bias_disclosed",
+            "deribit_funding_source": "public/get_funding_rate_history",
+            "oi_snapshot_used": bool(report_meta.get("oi_snapshot_used")),
+        },
+        "data_gaps": gaps,
+        "report_meta": report_meta,
+        "files": files,
+    }
+    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+    return obj
 
 
 def main() -> int:
@@ -844,30 +928,8 @@ def main() -> int:
     context_months = max(1, int(args.context_months))
     context_start = _month_minus(args.month, context_months - 1) if context_months > 1 else args.month
 
-    tasks: List[TaskResult] = []
-    tasks.append(_run("fig2", ["python3", FIG2, "--month", args.month, "--outdir", str(packages / "fig2")], packages / "fig2"))
-    tasks.append(_run("fig3", ["python3", FIG3, "--start-month", context_start, "--end-month", args.month, "--outdir", str(packages / "fig3")], packages / "fig3"))
-    tasks.append(_run("fig4", ["python3", FIG4, "--start-month", context_start, "--end-month", args.month, "--outdir", str(packages / "fig4")], packages / "fig4"))
-    tasks.append(
-        _run(
-            "fig6",
-            [
-                "python3",
-                FIG6,
-                "--start-month",
-                context_start,
-                "--end-month",
-                args.month,
-                "--top-alt",
-                str(args.fig6_top_alt),
-                "--outdir",
-                str(packages / "fig6"),
-            ],
-            packages / "fig6",
-        )
-    )
-    tasks.append(_run("deribit", ["python3", DERIBIT, "--month", args.month, "--outdir", str(packages / "deribit")], packages / "deribit"))
-    tasks.append(_run("core_report", ["python3", CORE, "--month", args.month, "--outdir", str(packages / "core_report")], packages / "core_report"))
+    commands = build_module_commands(args.month, packages, context_start, args.fig6_top_alt)
+    tasks = [_run(name, commands[name], packages / name) for name in MODULE_ORDER]
 
     copies = {
         packages / "fig2" / "fig2_top10_monthly_performance.png": charts_dir / "fig2_top10_monthly_performance.png",
@@ -879,20 +941,34 @@ def main() -> int:
         packages / "deribit" / "chart_deribit_oi.png": charts_dir / "chart_deribit_oi.png",
         packages / "core_report" / "charts" / "chart_1_marketcap.png": charts_dir / "core_chart_1_marketcap.png",
         packages / "core_report" / "charts" / "chart_2_btc_dom.png": charts_dir / "core_chart_2_btc_dom.png",
-        packages / "core_report" / "charts" / "chart_3_exchange_30d_change.png": charts_dir / "core_chart_3_exchange_30d_change.png",
         packages / "core_report" / "charts" / "chart_4_fng.png": charts_dir / "core_chart_4_fng.png",
         packages / "core_report" / "charts" / "chart_5_realized_vol.png": charts_dir / "core_chart_5_realized_vol.png",
     }
     for src, dst in copies.items():
         _copy_if_exists(src, dst)
 
-    build_report(args.month, outdir, tasks)
     write_manifest(outdir / "orchestrator_manifest.csv", tasks)
 
-    print(f"[ok] report: {outdir / 'orchestrated_secondary_report.md'}")
-    print(f"[ok] manifest: {outdir / 'orchestrator_manifest.csv'}")
-    print(f"[ok] charts: {charts_dir}")
-    return 0
+    required_failed = [t.name for t in tasks if t.name in {"fig2", "fig3", "fig6", "deribit", "core_report"} and t.status != "ok"]
+    report_meta: Dict[str, Any] = {}
+    if not required_failed:
+        try:
+            report_meta = build_report(args.month, outdir, tasks)
+        except Exception as exc:
+            report_meta = {"build_error": str(exc)}
+    manifest = write_json_manifest(outdir / "monthly_manifest.json", args.month, tasks, report_meta, outdir)
+
+    validation = subprocess.run(
+        ["python3", VALIDATOR, "--dir", str(outdir), "--month", args.month],
+        capture_output=True,
+        text=True,
+    )
+    (outdir / "validation.json").write_text(validation.stdout or json.dumps({"status": "failed", "errors": [validation.stderr]}), encoding="utf-8")
+
+    print(f"[{manifest['status']}] report: {outdir / 'orchestrated_secondary_report.md'}")
+    print(f"[{manifest['status']}] manifest: {outdir / 'monthly_manifest.json'}")
+    print(f"[{manifest['status']}] charts: {charts_dir}")
+    return 1 if manifest["status"] == "failed" or validation.returncode != 0 else 0
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 ---
 name: cex-monthly-secondary-orchestrator
-description: Orchestrate end-to-end CEX monthly secondary-market reporting by combining Binance/Coinbase/KuCoin benchmark framing with figure skills, Deribit monthly metrics skill, and core report scripts. Includes a v2 polish pass for light-theme charts and finalized monthly-report style.
+description: Orchestrate strict-calendar-month CEX secondary-market reports, or run top-assets, DeFi, NFT, concentration, derivatives, and core modules independently with explicit source routing and validation. Includes a v2 polish pass for final report style.
 ---
 
 # CEX Monthly Secondary Orchestrator
@@ -8,6 +8,8 @@ description: Orchestrate end-to-end CEX monthly secondary-market reporting by co
 Run one pipeline to build a complete monthly secondary-market report pack.
 Use strict month scope only (first day to last day of target month), never annual aggregation.
 Public-facing output is the default target. Do not expose internal production scaffolding in正文.
+
+If the request also includes the RWA Night Desk website, report archive, Sites deployment, or subscriber notification, hand the validated monthly output to `$rwa-report-site-orchestrator`. Do not stop after producing the local Markdown and charts.
 
 ## Quick Start
 
@@ -28,8 +30,8 @@ python3 /Users/my/.codex/skills/cex-monthly-secondary-orchestrator/scripts/apply
 
 This pass applies:
 
-1. Light-theme redraw for Deribit funding chart.
-2. USD-normalized redraw for Deribit OI chart.
+1. Light-theme redraw for Deribit calendar-month funding chart.
+2. USD-normalized redraw for Deribit OI chart only when the snapshot is within 48 hours of target month-end.
 3. Donut redraw for DeFi TVL single-month share chart.
 4. 100% stacked-bar redraw for outside-top10 breadth chart.
 5. Report markdown cleanup (removes standalone Derivatives Risk block and NFT figure line when present, strips Chinese smart quotes).
@@ -51,13 +53,36 @@ This contract is mandatory. It defines what each paragraph should do, which metr
 5. Deribit monthly metrics skill.
 6. Core yuque-style monthly report generator.
 
+## Module Calls
+
+Run a single module when only one dataset needs refresh or diagnosis:
+
+```bash
+python3 /Users/my/.codex/skills/cex-monthly-secondary-orchestrator/scripts/run_monthly_module.py \
+  --module derivatives \
+  --month 2026-02 \
+  --outdir /tmp/monthly-modules/deribit
+```
+
+Supported aliases are `top-assets`, `defi`, `nft`, `concentration`, `derivatives`, and `core`. Use `run_monthly_module.py --describe` for the machine-readable source registry. The single-module CLI and full orchestrator share `monthly_module_registry.py`; see [module-routing.md](references/module-routing.md).
+
 ## Output
 
 - `orchestrated_secondary_report.md`
 - `orchestrator_manifest.csv`
+- `monthly_manifest.json` (coverage status, source gaps, hashes, strict-month audit)
+- `validation.json`
 - `charts/*.png`
 - `packages/*` (sub-skill raw outputs)
 - `orchestrated_secondary_report_coinbase_style_text.md` (if generated in workspace flow)
+
+Generation is fail-closed for required modules. Figure 2 always uses `--exact-history`; NFT missing months are not converted to zero; rolling/current exchange snapshots are rejected as historical month data. Run the validator before publishing:
+
+```bash
+python3 /Users/my/.codex/skills/cex-monthly-secondary-orchestrator/scripts/validate_monthly_output.py \
+  --dir /Users/my/xp/reports/2026-02/secondary_orchestrated \
+  --month 2026-02
+```
 
 ## Public Writing Standard
 
@@ -82,5 +107,6 @@ This contract is mandatory. It defines what each paragraph should do, which metr
 
 - See [benchmark-frame.md](references/benchmark-frame.md)
 - See [metric-routing.md](references/metric-routing.md)
+- See [module-routing.md](references/module-routing.md)
 - See [v2-house-style.md](references/v2-house-style.md)
 - See [monthly-paragraph-contract.md](references/monthly-paragraph-contract.md)

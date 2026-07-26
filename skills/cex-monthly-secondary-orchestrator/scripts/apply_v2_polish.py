@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 import re
 from pathlib import Path
 
@@ -164,7 +165,7 @@ def redraw_fig6_stacked(report_dir: Path) -> bool:
 
 
 def _read_deribit_prices_and_funding(report_dir: Path) -> list[tuple[str, float, float, float]]:
-    csv_path = report_dir / "packages" / "deribit" / "deribit_funding_snapshot.csv"
+    csv_path = report_dir / "packages" / "deribit" / "deribit_funding_monthly.csv"
     out: list[tuple[str, float, float, float]] = []
     if not csv_path.exists():
         return out
@@ -174,10 +175,9 @@ def _read_deribit_prices_and_funding(report_dir: Path) -> list[tuple[str, float,
             c = str(row.get("currency") or "").upper().strip()
             if c not in ("BTC", "ETH"):
                 continue
-            last = float(row.get("last_price") or 0.0)
-            f8 = float(row.get("funding_8h") or 0.0) * 10000.0
-            cur = float(row.get("current_funding") or 0.0) * 10000.0
-            out.append((c, f8, cur, last))
+            avg = float(row.get("average_funding_8h") or 0.0) * 10000.0
+            ending = float(row.get("ending_funding_8h") or 0.0) * 10000.0
+            out.append((c, avg, ending, 0.0))
     order = {"BTC": 0, "ETH": 1}
     out.sort(key=lambda x: order.get(x[0], 99))
     return out
@@ -196,14 +196,14 @@ def redraw_deribit_funding_light(report_dir: Path) -> bool:
 
     x = np.arange(len(labels))
     w = 0.32
-    b1 = ax.bar(x - w / 2, f8, width=w, color="#F97316", label="Funding 8h (bps)")
-    b2 = ax.bar(x + w / 2, cur, width=w, color="#4F8CD6", label="Current funding (bps)")
+    b1 = ax.bar(x - w / 2, f8, width=w, color="#F97316", label="Monthly average 8h (bps)")
+    b2 = ax.bar(x + w / 2, cur, width=w, color="#4F8CD6", label="Month-end 8h (bps)")
 
     ax.axhline(0, color="#AEB6C2", linewidth=1)
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
     ax.set_ylabel("bps")
-    ax.set_title("Deribit Perp Funding Snapshot", loc="left", fontweight="bold")
+    ax.set_title("Deribit Monthly Perp Funding", loc="left", fontweight="bold")
     ax.legend(loc="upper right")
 
     max_abs = max([abs(v) for v in f8 + cur] + [0.8])
@@ -216,7 +216,7 @@ def redraw_deribit_funding_light(report_dir: Path) -> bool:
             va = "bottom" if h >= 0 else "top"
             ax.text(x0, y0, f"{h:+.2f}", ha="center", va=va, fontsize=10)
 
-    fig.text(0.01, 0.01, "Source: Deribit public/ticker", fontsize=9, color="#5F6B7A")
+    fig.text(0.01, 0.01, "Source: Deribit public/get_funding_rate_history", fontsize=9, color="#5F6B7A")
     fig.tight_layout(rect=[0, 0.04, 1, 1])
 
     out_main = report_dir / "charts" / "chart_deribit_funding.png"
@@ -230,8 +230,27 @@ def redraw_deribit_funding_light(report_dir: Path) -> bool:
 
 
 def redraw_deribit_oi_usd(report_dir: Path) -> bool:
-    funding_rows = _read_deribit_prices_and_funding(report_dir)
-    prices = {ccy: px for ccy, _, _, px in funding_rows}
+    try:
+        manifest = json.loads((report_dir / "packages" / "deribit" / "deribit_manifest.json").read_text(encoding="utf-8"))
+    except Exception:
+        manifest = {}
+    if not bool((manifest.get("oi_snapshot") or {}).get("usable_as_target_month_end")):
+        for stale in (
+            report_dir / "charts" / "chart_deribit_oi.png",
+            report_dir / "packages" / "deribit" / "chart_deribit_oi.png",
+        ):
+            if stale.exists():
+                stale.unlink()
+        return False
+
+    prices: dict[str, float] = {}
+    snapshot_csv = report_dir / "packages" / "deribit" / "deribit_funding_snapshot.csv"
+    if snapshot_csv.exists():
+        with snapshot_csv.open("r", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                ccy = str(row.get("currency") or "").upper()
+                if ccy in ("BTC", "ETH"):
+                    prices[ccy] = float(row.get("last_price") or 0.0)
 
     oi_csv = report_dir / "packages" / "deribit" / "deribit_oi_volume_snapshot.csv"
     if not oi_csv.exists():

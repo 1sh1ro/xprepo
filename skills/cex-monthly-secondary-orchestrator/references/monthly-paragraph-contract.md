@@ -127,8 +127,8 @@ Paragraph 1, asset performance:
 
 Paragraph 2, breadth:
 
-- Interpret outside-Top10 market-cap share.
-- State whether long-tail risk appetite is expanding, stable, or lagging.
+- Describe outside-Top10 market-cap share as concentration only.
+- State whether long-tail risk appetite is expanding only when a broader asset-return sample confirms it; otherwise disclose the evidence gap.
 
 Charts:
 
@@ -161,19 +161,19 @@ Two paragraphs plus 3 charts.
 
 Paragraph 1, leverage bias:
 
-- Interpret BTC and ETH funding together.
+- Interpret BTC and ETH calendar-month funding history together; a run-time ticker snapshot is not monthly evidence.
 - Classify as neutral, crowded long, crowded short, or divergent.
 
 Paragraph 2, volatility and positioning:
 
 - Interpret DVOL range and month-end level.
-- If OI is available, explain whether OI supports or weakens the leverage conclusion.
+- Use OI only when its snapshot time is within 48 hours of target month-end; otherwise omit it and disclose the gap.
 - State what derivatives imply for next-month risk: squeeze risk, low-vol carry, or repricing risk.
 
 Charts:
 
 - Funding chart.
-- OI chart.
+- OI chart only when the month-end timing gate passes.
 - DVOL chart.
 
 ### 9. Sentiment And Volatility Pricing
