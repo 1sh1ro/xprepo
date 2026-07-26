@@ -26,3 +26,7 @@ python3 scripts/run_daily_module.py \
 ```
 
 单模块用于诊断、补数和定向研究；完整日报仍运行 `run_cex_daily_orchestrator.py`。总编排器调用相同模块实现，并把模块状态写入 `daily_manifest.json -> coverage.modules`。
+
+`yields` 中的 Bybit 公共借币接口可通过 `BYBIT_MIHOMO_*` 环境变量在单次请求期间临时选择日本 Mihomo 节点；实现必须加锁并在 `finally` 中恢复原选择器。OKX 等其他非 Binance 来源不参与该临时切换。
+
+所有 `*.binance.com` 公共请求通过 `BINANCE_MIHOMO_*` 使用同一临时路由机制，覆盖现货、合约、借币、RWA 与 Web3；`api.binance.us` fallback 不切换。Bybit 与 Binance 都默认使用 `JP-Dedicated-B1-1`，且不得把节点选择长期留在 `GLOBAL`。

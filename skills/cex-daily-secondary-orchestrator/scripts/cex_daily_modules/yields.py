@@ -7,7 +7,7 @@ from .base import ModuleResult, build_result, fetch_recoverable
 
 
 SOURCES = {
-    "borrow_rates": "Binance, OKX, Bybit, KuCoin and Backpack public endpoints",
+    "borrow_rates": "Binance, OKX, KuCoin and Backpack public endpoints; Bybit public endpoint via optional Mihomo JP route",
     "stablecoin_primary": "DefiLlama plus Aave, Compound and Morpho official APIs",
     "stablecoin_extended": "DefiLlama yields API",
     "platform_apy": "Bitcompare aggregator, unverified quote",

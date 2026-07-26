@@ -396,6 +396,8 @@ def _curl_request(
 
 
 def _http_get_json(url: str, params: Optional[Dict[str, Any]] = None, headers: Optional[Dict[str, str]] = None, timeout: int = 30) -> Any:
+    from cex_daily_modules.mihomo_route import optional_url_route
+
     full = url if not params else f"{url}?{urlencode({k: v for k, v in params.items() if v is not None})}"
     req_headers = {
         "User-Agent": "cex-daily-secondary-orchestrator/1.0",
@@ -408,32 +410,35 @@ def _http_get_json(url: str, params: Optional[Dict[str, Any]] = None, headers: O
             req_headers.setdefault("X-CMC_PRO_API_KEY", cmc_key)
     if headers:
         req_headers.update(headers)
-    if _prefer_curl_transport():
-        raw = _curl_request(full, headers=req_headers, timeout=timeout)
-        return json.loads(raw.decode("utf-8"))
-    req = Request(full, headers=req_headers)
-    try:
-        with urlopen(req, timeout=timeout) as resp:
-            raw = resp.read()
-            enc = (resp.headers.get("Content-Encoding") or "").lower()
-            if enc == "gzip":
-                import gzip
-
-                raw = gzip.decompress(raw)
-            elif enc == "deflate":
-                import zlib
-
-                raw = zlib.decompress(raw)
-            return json.loads(raw.decode("utf-8"))
-    except Exception as urllib_error:
-        try:
+    with optional_url_route(full):
+        if _prefer_curl_transport():
             raw = _curl_request(full, headers=req_headers, timeout=timeout)
             return json.loads(raw.decode("utf-8"))
-        except Exception as curl_error:
-            raise RuntimeError(f"urllib={urllib_error}; curl={curl_error}") from curl_error
+        req = Request(full, headers=req_headers)
+        try:
+            with urlopen(req, timeout=timeout) as resp:
+                raw = resp.read()
+                enc = (resp.headers.get("Content-Encoding") or "").lower()
+                if enc == "gzip":
+                    import gzip
+
+                    raw = gzip.decompress(raw)
+                elif enc == "deflate":
+                    import zlib
+
+                    raw = zlib.decompress(raw)
+                return json.loads(raw.decode("utf-8"))
+        except Exception as urllib_error:
+            try:
+                raw = _curl_request(full, headers=req_headers, timeout=timeout)
+                return json.loads(raw.decode("utf-8"))
+            except Exception as curl_error:
+                raise RuntimeError(f"urllib={urllib_error}; curl={curl_error}") from curl_error
 
 
 def _http_get_text(url: str, params: Optional[Dict[str, Any]] = None, headers: Optional[Dict[str, str]] = None, timeout: int = 30) -> str:
+    from cex_daily_modules.mihomo_route import optional_url_route
+
     full = url if not params else f"{url}?{urlencode({k: v for k, v in params.items() if v is not None})}"
     req_headers = {
         "User-Agent": "cex-daily-secondary-orchestrator/1.0",
@@ -442,29 +447,30 @@ def _http_get_text(url: str, params: Optional[Dict[str, Any]] = None, headers: O
     }
     if headers:
         req_headers.update(headers)
-    if _prefer_curl_transport():
-        raw = _curl_request(full, headers=req_headers, timeout=timeout)
-        return raw.decode("utf-8", errors="ignore")
-    req = Request(full, headers=req_headers)
-    try:
-        with urlopen(req, timeout=timeout) as resp:
-            raw = resp.read()
-            enc = (resp.headers.get("Content-Encoding") or "").lower()
-            if enc == "gzip":
-                import gzip
-
-                raw = gzip.decompress(raw)
-            elif enc == "deflate":
-                import zlib
-
-                raw = zlib.decompress(raw)
-            return raw.decode("utf-8", errors="ignore")
-    except Exception as urllib_error:
-        try:
+    with optional_url_route(full):
+        if _prefer_curl_transport():
             raw = _curl_request(full, headers=req_headers, timeout=timeout)
             return raw.decode("utf-8", errors="ignore")
-        except Exception as curl_error:
-            raise RuntimeError(f"urllib={urllib_error}; curl={curl_error}") from curl_error
+        req = Request(full, headers=req_headers)
+        try:
+            with urlopen(req, timeout=timeout) as resp:
+                raw = resp.read()
+                enc = (resp.headers.get("Content-Encoding") or "").lower()
+                if enc == "gzip":
+                    import gzip
+
+                    raw = gzip.decompress(raw)
+                elif enc == "deflate":
+                    import zlib
+
+                    raw = zlib.decompress(raw)
+                return raw.decode("utf-8", errors="ignore")
+        except Exception as urllib_error:
+            try:
+                raw = _curl_request(full, headers=req_headers, timeout=timeout)
+                return raw.decode("utf-8", errors="ignore")
+            except Exception as curl_error:
+                raise RuntimeError(f"urllib={urllib_error}; curl={curl_error}") from curl_error
 
 
 def _http_get_json_retry(
@@ -489,22 +495,25 @@ def _http_get_json_retry(
 
 
 def _http_post_json(url: str, payload: Dict[str, Any], headers: Optional[Dict[str, str]] = None, timeout: int = 45) -> Any:
+    from cex_daily_modules.mihomo_route import optional_url_route
+
     req_headers = {"User-Agent": "cex-daily-secondary-orchestrator/1.0", "Accept": "application/json", "Content-Type": "application/json"}
     if headers:
         req_headers.update(headers)
-    if _prefer_curl_transport():
-        raw = _curl_request(url, headers=req_headers, timeout=timeout, method="POST", payload=payload)
-        return json.loads(raw.decode("utf-8"))
-    req = Request(url, data=json.dumps(payload).encode("utf-8"), headers=req_headers, method="POST")
-    try:
-        with urlopen(req, timeout=timeout) as resp:
-            return json.loads(resp.read().decode("utf-8"))
-    except Exception as urllib_error:
-        try:
+    with optional_url_route(url):
+        if _prefer_curl_transport():
             raw = _curl_request(url, headers=req_headers, timeout=timeout, method="POST", payload=payload)
             return json.loads(raw.decode("utf-8"))
-        except Exception as curl_error:
-            raise RuntimeError(f"urllib={urllib_error}; curl={curl_error}") from curl_error
+        req = Request(url, data=json.dumps(payload).encode("utf-8"), headers=req_headers, method="POST")
+        try:
+            with urlopen(req, timeout=timeout) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except Exception as urllib_error:
+            try:
+                raw = _curl_request(url, headers=req_headers, timeout=timeout, method="POST", payload=payload)
+                return json.loads(raw.decode("utf-8"))
+            except Exception as curl_error:
+                raise RuntimeError(f"urllib={urllib_error}; curl={curl_error}") from curl_error
 
 
 def _coingecko_auth_candidates(data_gaps: List[str]) -> Optional[List[Tuple[str, Dict[str, str], str]]]:

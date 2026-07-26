@@ -176,12 +176,19 @@ python3 /Users/my/.codex/skills/cex-daily-secondary-orchestrator/scripts/notion_
 - `CMC_API_KEY`：从环境变量读取；不可用时将相关缺口写入 `data_gaps`。
 - `COINGECKO_API_TIER`：可选，`demo`（默认）、`pro` 或 `auto`（先 `pro` 后 `demo`）。
 - `CEX_HTTP_TRANSPORT`：可选，`auto`（默认）、`curl` 或 `urllib`；代理环境下 `auto` 优先使用 curl。
+- `BYBIT_MIHOMO_MODE`：可选，`auto`（默认）、`off` 或 `required`。`auto` 在本机 Mihomo Party 可用时临时切换 Bybit 请求，失败则保留原网络路径并登记告警；`required` 在无法切换时直接把 Bybit 标记失败。
+- `BYBIT_MIHOMO_PROXY`：Bybit 请求使用的 Mihomo 节点，默认 `JP-Dedicated-B1-1`。
+- `BYBIT_MIHOMO_SELECTOR`：临时切换的选择器，默认 `GLOBAL`。调用完成或抛错时必须恢复原选择。
+- `BYBIT_MIHOMO_SOCKET`：可选的 Mihomo Unix 控制 socket；未设置时自动发现 `/tmp/mihomo-party-*.sock`。
+- `BINANCE_MIHOMO_MODE`、`BINANCE_MIHOMO_PROXY`、`BINANCE_MIHOMO_SELECTOR`、`BINANCE_MIHOMO_SOCKET`：与 Bybit 配置同义；默认对 `*.binance.com` 的现货、合约、借币、RWA 和 Web3 公共请求临时使用 `JP-Dedicated-B1-1`。`api.binance.us` 不参与该路由。
 - 默认行为：若 CoinGecko key 无效，Top10 资产章节使用 CoinPaprika；BTC/ETH 行情在 Binance Global 不可用时使用 Binance.US。
 - `RWA_API_KEY`：当前日报 RWA 面板默认使用 RWA.xyz 公开页，不强依赖 key；如后续切换到官方 API，可按 RWA.xyz 文档设置该变量。
 
 ## 失败策略
 
 - 单一数据源失败不应导致整份日报失败。
+- Bybit 只在单次接口调用期间临时选择配置的日本节点，并通过进程锁避免并发切换；不得把日本节点长期留在全局选择器中。
+- Binance Global 也只在单次 HTTP 调用期间使用配置的日本节点；Binance.US fallback 保持原路由。每次调用结束都必须恢复原选择器。
 - 无法由等价 fallback 或其他有效样本补齐的指标写入 `data_gaps`；已恢复的来源故障写入 `source_warnings`，并继续输出可用部分。
 - 若 Bitcompare 不可用，保留链上稳定币主表与扩展样本。
 - 若 taoli 对齐数据不可用，平台 APY 表内对应列显示 `N/A`，但不阻断日报生成。
