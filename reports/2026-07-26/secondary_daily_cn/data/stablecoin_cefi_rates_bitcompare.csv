@@ -1,0 +1,12 @@
+asset,provider,apy_pct,source,source_url,retrieved_at,verification_status,is_extreme_apy
+DAI,Nexo,10.5,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-26T12:02:56.931856+00:00,aggregator_quote_unverified,False
+FRAX,Aave V3,2.7,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-26T12:03:15.370987+00:00,aggregator_quote_unverified,False
+PYUSD,Aave V3,2.82,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-26T12:03:00.334986+00:00,aggregator_quote_unverified,False
+SUSDS,Pendle,5.33,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-26T12:02:58.344073+00:00,aggregator_quote_unverified,False
+TUSD,YouHodler,11.0,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-26T12:03:07.440329+00:00,aggregator_quote_unverified,False
+USD0,Euler Finance,0.91,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-26T12:03:07.440215+00:00,aggregator_quote_unverified,False
+USDC,Lune.fi,29.5,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-26T12:02:55.112004+00:00,aggregator_quote_unverified,True
+USDD,JustLend,0.0006515,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-26T12:03:02.536910+00:00,aggregator_quote_unverified,False
+USDE,Pendle,6.41,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-26T12:02:58.344162+00:00,aggregator_quote_unverified,False
+USDS,Compound V3,4.53,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-26T12:02:56.931819+00:00,aggregator_quote_unverified,False
+USDT,Lune.fi,29.5,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-26T12:02:55.111986+00:00,aggregator_quote_unverified,True

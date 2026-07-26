@@ -1,0 +1,3882 @@
+{
+  "date": "2026-07-26",
+  "generated_at_shanghai": "2026-07-26T09:28:33.811366+08:00",
+  "data_gaps": [
+    "OKX 聪明钱聚合榜单、仓位与信号模块无可用记录。",
+    "OKX 新闻情绪模块无可用记录。"
+  ],
+  "source_warnings": [
+    "Binance 非DeFi期现数据获取失败 BTC: curl: (56) The requested URL returned error: 451",
+    "Binance 非DeFi期现数据获取失败 ETH: curl: (56) The requested URL returned error: 451",
+    "借币成本部分数据源不可用: Bybit: curl: (56) The requested URL returned error: 403",
+    "Morpho API 获取失败: curl: (22) The requested URL returned error: 400",
+    "Bitcompare 平台 APY 获取中断：第 10 页失败，已保留已抓取样本。",
+    "OKX 聪明钱数据获取失败（traders）: Update available for @okx_ai/okx-trade-cli: 1.3.2 → 1.4.2\nRun: npm install -g @okx_ai/okx-trade-cli\n\nError: Session expired — run `okx-auth login` again\nError: No credentials found.\nHint: Run `okx auth login` to authenticate, or configure API key credentials.\nVersion: @okx_ai/okx-trade-cli@1.3.2",
+    "OKX 聪明钱数据获取失败（news:coin-sentiment）: Update available for @okx_ai/okx-trade-cli: 1.3.2 → 1.4.2\nRun: npm install -g @okx_ai/okx-trade-cli\n\nError: Session expired — run `okx-auth login` again\nError: No credentials found.\nHint: Run `okx auth login` to authenticate, or configure API key credentials.\nVersion: @okx_ai/okx-trade-cli@1.3.2",
+    "OKX 新闻情绪快照为空：coin-sentiment 未返回有效样本。"
+  ],
+  "market": {
+    "as_of": "2026-07-26",
+    "lag_days": 0,
+    "market_cap": 2198245001275.96,
+    "prev_market_cap": 2189384863154.65,
+    "volume_24h": 38694180680.17,
+    "prev_volume_24h": 62382523141.26,
+    "btc_dom": 58.6907,
+    "prev_btc_dom": 58.729
+  },
+  "counts": {
+    "top_assets": 10,
+    "exchanges": 10,
+    "nondefi_carry": 2,
+    "borrow_rates": 12,
+    "stablecoin_yields": 23,
+    "stablecoin_yields_extended": 94,
+    "stablecoin_cefi_rates": 10,
+    "rwa_asset_classes": 6,
+    "rwa_token_movers": 5,
+    "taoli_binance_margin_rates": 4,
+    "smartmoney_traders": 0,
+    "smartmoney_signals": 0,
+    "smartmoney_position_rows": 0,
+    "okx_news_sentiment_rows": 0
+  },
+  "top2_trend": {
+    "BTC": {
+      "symbol": "BTCUSDT",
+      "price": 64473.36,
+      "open": 64035.16,
+      "high": 64535.93,
+      "low": 63813.18,
+      "change_pct": 0.684,
+      "range_pos_pct": 91.34278796264272,
+      "trend": "区间震荡",
+      "source": "Binance.US fallback"
+    },
+    "ETH": {
+      "symbol": "ETHUSDT",
+      "price": 1879.18,
+      "open": 1860.96,
+      "high": 1881.18,
+      "low": 1851.93,
+      "change_pct": 0.979,
+      "range_pos_pct": 93.16239316239316,
+      "trend": "区间震荡",
+      "source": "Binance.US fallback"
+    }
+  },
+  "top2_intraday_points": {
+    "BTC": 23,
+    "ETH": 23
+  },
+  "nondefi_carry": [
+    {
+      "exchange": "OKX",
+      "asset": "BTC",
+      "spot_price": 64476.6,
+      "index_price": null,
+      "mark_price": 64436.7,
+      "funding_rate_pct": 0.00345450639096,
+      "funding_interval_hours": 8.0,
+      "annual_funding_pct": 3.7826844981012,
+      "basis_pct": null,
+      "open_interest_contracts": 31850.795600000187,
+      "quote_ccy": "USDT"
+    },
+    {
+      "exchange": "OKX",
+      "asset": "ETH",
+      "spot_price": 1879.24,
+      "index_price": null,
+      "mark_price": 1878.09,
+      "funding_rate_pct": 0.00041814662505000003,
+      "funding_interval_hours": 8.0,
+      "annual_funding_pct": 0.45787055442975,
+      "basis_pct": null,
+      "open_interest_contracts": 740451.2480000022,
+      "quote_ccy": "USDT"
+    }
+  ],
+  "borrow_rates": [
+    {
+      "source": "Binance",
+      "asset": "USDT",
+      "daily_rate_pct": 0.010482,
+      "annual_rate_pct": 3.8259300000000005,
+      "borrow_limit": 500000.0,
+      "tier": "VIP0",
+      "rate_basis": "daily",
+      "updated_at": "2026-07-26T01:27:22.105125+00:00"
+    },
+    {
+      "source": "OKX",
+      "asset": "USDT",
+      "daily_rate_pct": 0.0068639999999999994,
+      "annual_rate_pct": 2.50536,
+      "borrow_limit": 5000000.0,
+      "tier": "Public",
+      "rate_basis": "daily",
+      "updated_at": "2026-07-26T01:27:22.841419+00:00"
+    },
+    {
+      "source": "Backpack",
+      "asset": "USDT",
+      "daily_rate_pct": 0.01244409931892437,
+      "annual_rate_pct": 4.542096251407395,
+      "borrow_limit": 50000000.0,
+      "tier": "Public",
+      "rate_basis": "annual",
+      "updated_at": "2026-07-26T01:27:24.343453+00:00"
+    },
+    {
+      "source": "Binance",
+      "asset": "USDC",
+      "daily_rate_pct": 0.012184,
+      "annual_rate_pct": 4.44716,
+      "borrow_limit": 500000.0,
+      "tier": "VIP0",
+      "rate_basis": "daily",
+      "updated_at": "2026-07-26T01:27:22.105385+00:00"
+    },
+    {
+      "source": "OKX",
+      "asset": "USDC",
+      "daily_rate_pct": 0.0068639999999999994,
+      "annual_rate_pct": 2.50536,
+      "borrow_limit": 1000000.0,
+      "tier": "Public",
+      "rate_basis": "daily",
+      "updated_at": "2026-07-26T01:27:22.841568+00:00"
+    },
+    {
+      "source": "Backpack",
+      "asset": "USDC",
+      "daily_rate_pct": 0.005989847000030647,
+      "annual_rate_pct": 2.1862941550111863,
+      "borrow_limit": 300000000.0,
+      "tier": "Public",
+      "rate_basis": "annual",
+      "updated_at": "2026-07-26T01:27:24.343535+00:00"
+    },
+    {
+      "source": "Binance",
+      "asset": "BTC",
+      "daily_rate_pct": 0.001052,
+      "annual_rate_pct": 0.38397999999999993,
+      "borrow_limit": 100.0,
+      "tier": "VIP0",
+      "rate_basis": "daily",
+      "updated_at": "2026-07-26T01:27:22.105646+00:00"
+    },
+    {
+      "source": "OKX",
+      "asset": "BTC",
+      "daily_rate_pct": 0.001392,
+      "annual_rate_pct": 0.50808,
+      "borrow_limit": 175.0,
+      "tier": "Public",
+      "rate_basis": "daily",
+      "updated_at": "2026-07-26T01:27:22.841944+00:00"
+    },
+    {
+      "source": "Backpack",
+      "asset": "BTC",
+      "daily_rate_pct": 0.0012212772934269505,
+      "annual_rate_pct": 0.44576621210083694,
+      "borrow_limit": 3000.0,
+      "tier": "Public",
+      "rate_basis": "annual",
+      "updated_at": "2026-07-26T01:27:24.343574+00:00"
+    },
+    {
+      "source": "Binance",
+      "asset": "ETH",
+      "daily_rate_pct": 0.006121000000000001,
+      "annual_rate_pct": 2.234165,
+      "borrow_limit": 2000.0,
+      "tier": "VIP0",
+      "rate_basis": "daily",
+      "updated_at": "2026-07-26T01:27:22.105686+00:00"
+    },
+    {
+      "source": "OKX",
+      "asset": "ETH",
+      "daily_rate_pct": 0.004128,
+      "annual_rate_pct": 1.5067199999999998,
+      "borrow_limit": 7000.0,
+      "tier": "Public",
+      "rate_basis": "daily",
+      "updated_at": "2026-07-26T01:27:22.841963+00:00"
+    },
+    {
+      "source": "Backpack",
+      "asset": "ETH",
+      "daily_rate_pct": 0.001542765205936501,
+      "annual_rate_pct": 0.5631093001668228,
+      "borrow_limit": 20000.0,
+      "tier": "Public",
+      "rate_basis": "annual",
+      "updated_at": "2026-07-26T01:27:24.343586+00:00"
+    }
+  ],
+  "coingecko": {
+    "status": "fallback",
+    "configured_tier": "demo",
+    "attempted": [],
+    "used": "coinpaprika",
+    "endpoint": "/coins/markets",
+    "key_required": true,
+    "key_present": false,
+    "errors": [
+      "COINGECKO_API_KEY is not configured"
+    ],
+    "fallback_provider": "CoinPaprika",
+    "fallback_endpoint": "/v1/tickers"
+  },
+  "derivatives": {
+    "btc_funding_8h": 2.797e-05,
+    "eth_funding_8h": 1e-06,
+    "btc_open_interest": 741265930.0,
+    "eth_open_interest": 277389125.0,
+    "btc_source": "Deribit public/ticker",
+    "eth_source": "Deribit public/ticker",
+    "fallbacks": [],
+    "source_errors": []
+  },
+  "dvol": {
+    "btc_dvol_close": 37.62,
+    "eth_dvol_close": 51.16,
+    "btc_source": "Deribit public/get_volatility_index_data",
+    "eth_source": "Deribit public/get_volatility_index_data"
+  },
+  "sentiment": {
+    "value": 26.0,
+    "prev": 27.0,
+    "delta": -1.0,
+    "source": "Alternative.me /fng/",
+    "fallback": false,
+    "source_errors": [],
+    "as_of": "2026-07-26",
+    "lag_days": 0
+  },
+  "source_registry": {
+    "market_cap_volume_btc_dominance": "CoinMarketCap global metrics historical",
+    "top_assets": "coinpaprika",
+    "btc_24h": "Binance.US fallback",
+    "eth_24h": "Binance.US fallback",
+    "btc_intraday": "Binance.US fallback",
+    "eth_intraday": "Binance.US fallback",
+    "btc_perpetual": "Deribit public/ticker",
+    "eth_perpetual": "Deribit public/ticker",
+    "btc_dvol": "Deribit public/get_volatility_index_data",
+    "eth_dvol": "Deribit public/get_volatility_index_data",
+    "fear_greed": "Alternative.me /fng/",
+    "stablecoin_yields": "DefiLlama + protocol official APIs",
+    "stablecoin_platform_apy": "Bitcompare (CeFi/DeFi/Hybrid)"
+  },
+  "stablecoin_yields": [
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Ethereum",
+      "asset": "DAI",
+      "supply_apy": 3.3749051271803325,
+      "borrow_apy": 5.02661876596726,
+      "rewards_apy": null,
+      "total_apy": 3.3749051271803325,
+      "tvl_usd": 10919260.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 90.24027809635213,
+      "data_completeness": 6,
+      "pool_id": "3665ee7e-6c5d-49d9-abb7-c47ab5d9d4ac",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-07-26T01:27:26.707825+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 199971290.0,
+      "borrow_cap_usd": 179974161.0,
+      "available_liquidity_usd": 10919193.162247652,
+      "can_be_collateral": false,
+      "is_paused": false,
+      "is_frozen": false,
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 1
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Ethereum",
+      "asset": "PYUSD",
+      "supply_apy": 2.859259261064187,
+      "borrow_apy": 4.356770969470414,
+      "rewards_apy": null,
+      "total_apy": 2.859259261064187,
+      "tvl_usd": 2887735.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 73.45208422815462,
+      "data_completeness": 6,
+      "pool_id": "d118f505-e75f-4152-bad3-49a2dc7482bf",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-07-26T01:27:26.708361+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 20998963.65,
+      "borrow_cap_usd": 17999111.7,
+      "available_liquidity_usd": 2888600.8635210744,
+      "can_be_collateral": false,
+      "is_paused": false,
+      "is_frozen": false,
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 1
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Ethereum",
+      "asset": "USDT",
+      "supply_apy": 2.819228426586845,
+      "borrow_apy": 3.7328176298438653,
+      "rewards_apy": 4.25,
+      "total_apy": 7.069228426586845,
+      "tvl_usd": 80656195.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 84.29116242765812,
+      "data_completeness": 7,
+      "pool_id": "a90d554a-b548-4f50-b03e-9dcb724b7777",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-07-26T01:27:26.707258+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 3476763600.0,
+      "borrow_cap_usd": 3087126300.0,
+      "available_liquidity_usd": 463791851.7874096,
+      "can_be_collateral": true,
+      "is_paused": false,
+      "is_frozen": false,
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Ethereum",
+      "asset": "USDC",
+      "supply_apy": 3.183224901126764,
+      "borrow_apy": 3.9674682284413163,
+      "rewards_apy": 3.53,
+      "total_apy": 6.713224901126764,
+      "tvl_usd": 65814000.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 89.48676092706206,
+      "data_completeness": 7,
+      "pool_id": "6f00d46b-8735-49ae-9ced-2a0fccc56ad0",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-07-26T01:27:26.707314+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 2499893350.0,
+      "borrow_cap_usd": 2249904015.0,
+      "available_liquidity_usd": 226615352.5422872,
+      "can_be_collateral": true,
+      "is_paused": false,
+      "is_frozen": false,
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Ethereum",
+      "asset": "USDS",
+      "supply_apy": 0.14119163641746676,
+      "borrow_apy": 5.683378040421276,
+      "rewards_apy": 3.35516,
+      "total_apy": 3.496351636417467,
+      "tvl_usd": 11882907.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 3.403918077503592,
+      "data_completeness": 7,
+      "pool_id": "e65588a1-27ad-4e20-9232-68a6cfaccf63",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-07-26T01:27:26.707800+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 49995065.0,
+      "borrow_cap_usd": 34196624.46,
+      "available_liquidity_usd": 11883261.126001224,
+      "can_be_collateral": false,
+      "is_paused": false,
+      "is_frozen": false,
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Arbitrum",
+      "asset": "USDC",
+      "supply_apy": 2.659479762802807,
+      "borrow_apy": 3.6658246457670565,
+      "rewards_apy": null,
+      "total_apy": 2.659479762802807,
+      "tvl_usd": 32323460.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 81.00519463839369,
+      "data_completeness": 6,
+      "pool_id": "d9fa8e14-0447-4207-9ae8-7810199dfa1f",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-07-26T01:27:26.707482+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 249978667.5,
+      "borrow_cap_usd": 224980800.75,
+      "available_liquidity_usd": 32339575.08022811,
+      "can_be_collateral": true,
+      "is_paused": false,
+      "is_frozen": false,
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Base",
+      "asset": "USDC",
+      "supply_apy": 3.5770422698233504,
+      "borrow_apy": 4.517823715917676,
+      "rewards_apy": null,
+      "total_apy": 3.5770422698233504,
+      "tvl_usd": 20047636.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 88.37474833932797,
+      "data_completeness": 6,
+      "pool_id": "7e0661bf-8cf3-45e6-9424-31916d4c7b84",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-07-26T01:27:26.707630+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 229984258.8,
+      "borrow_cap_usd": 206985832.92,
+      "available_liquidity_usd": 20047229.714822993,
+      "can_be_collateral": true,
+      "is_paused": false,
+      "is_frozen": false,
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Aave",
+      "protocol_key": "aave-v3",
+      "chain": "Arbitrum",
+      "asset": "DAI",
+      "supply_apy": 2.0269674578698096,
+      "borrow_apy": 3.9308620555965232,
+      "rewards_apy": null,
+      "total_apy": 2.0269674578698096,
+      "tvl_usd": 1091469.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": 69.40047339945195,
+      "data_completeness": 6,
+      "pool_id": "a8e3d841-2788-4647-ad54-5a36fac451b1",
+      "risk_note": "审计成熟/头部流动性",
+      "updated_at": "2026-07-26T01:27:26.708854+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Aave API"
+      ],
+      "source_primary": "DefiLlama+Aave API",
+      "supply_cap_usd": 4898852.665,
+      "borrow_cap_usd": 4408967.3985,
+      "available_liquidity_usd": 1091617.1471536406,
+      "can_be_collateral": false,
+      "is_paused": false,
+      "is_frozen": false,
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "spark-savings",
+      "chain": "Ethereum",
+      "asset": "USDT",
+      "supply_apy": 2.75,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 2.75,
+      "tvl_usd": 410399980.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "a5d67f7e-5b51-4a9d-969d-caf051a7f5a4",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-07-26T01:27:26.707089+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "sparklend",
+      "chain": "Ethereum",
+      "asset": "USDS",
+      "supply_apy": 2.03489,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 2.03489,
+      "tvl_usd": 277629980.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "0ed981dc-b49d-426d-ade5-6014728b1ef9",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-07-26T01:27:26.707114+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "spark-savings",
+      "chain": "Ethereum",
+      "asset": "USDC",
+      "supply_apy": 3.6,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 3.6,
+      "tvl_usd": 273298930.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "c5c74dd1-995c-4445-9d84-3e710bad7d52",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-07-26T01:27:26.707122+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "sparklend",
+      "chain": "Ethereum",
+      "asset": "DAI",
+      "supply_apy": 2.16848,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 2.16848,
+      "tvl_usd": 112304922.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "e26ce7d9-db75-4aa4-b1db-cc21ae17bdfb",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-07-26T01:27:26.707185+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "sparklend",
+      "chain": "Ethereum",
+      "asset": "PYUSD",
+      "supply_apy": 0.29064,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 0.29064,
+      "tvl_usd": 91111298.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "995b269a-8409-4c55-b97e-868f443b432e",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-07-26T01:27:26.707236+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "sparklend",
+      "chain": "Ethereum",
+      "asset": "SUSDS",
+      "supply_apy": 0.0,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 0.0,
+      "tvl_usd": 3288494.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "d3694b72-5bc4-44c9-8ab6-1fc7941d216a",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-07-26T01:27:26.708322+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 2
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Ethereum",
+      "asset": "USDS",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-07-26T01:27:33.445278+00:00",
+      "supply_apy": 5.795730873734399,
+      "borrow_apy": 6.878815723915201,
+      "rewards_apy": 0.0,
+      "total_apy": 5.795730873734399,
+      "tvl_usd": 1819968.0999208875,
+      "total_supply_usd": 1819968.0999208875,
+      "total_borrow_usd": 1652533.1259093052,
+      "utilization_pct": 90.79966548158198,
+      "pool_id": "0x5d409e56d886231adaf00c8775665ad0f9897b56",
+      "source_tags": [
+        "Compound API"
+      ],
+      "source_primary": "Compound API",
+      "total_apy_method": "supply_plus_rewards",
+      "data_completeness": 9,
+      "safety_rank": 3
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "spark-savings",
+      "chain": "Arbitrum",
+      "asset": "USDS",
+      "supply_apy": 3.6,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 3.6,
+      "tvl_usd": 361823561.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "9d499222-a01a-45bb-bbc9-f01c7923693b",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-07-26T01:27:26.707100+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 3
+    },
+    {
+      "protocol": "Spark",
+      "protocol_key": "spark-savings",
+      "chain": "Base",
+      "asset": "USDS",
+      "supply_apy": 3.6,
+      "borrow_apy": null,
+      "rewards_apy": null,
+      "total_apy": 3.6,
+      "tvl_usd": 11982534.0,
+      "total_supply_usd": null,
+      "total_borrow_usd": null,
+      "utilization_pct": null,
+      "data_completeness": 2,
+      "pool_id": "aa2d08c0-0abd-4dcf-be93-ff8ca89d01cd",
+      "risk_note": "Aave系改造/审计覆盖",
+      "updated_at": "2026-07-26T01:27:26.707792+00:00",
+      "source_tags": [
+        "DefiLlama"
+      ],
+      "source_primary": "DefiLlama",
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 3
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Ethereum",
+      "asset": "USDC",
+      "supply_apy": 3.1068470285279997,
+      "borrow_apy": 3.8972776820256003,
+      "rewards_apy": 0.100744881423115,
+      "total_apy": 3.2075919099511148,
+      "tvl_usd": 345760894.4604771,
+      "total_supply_usd": 345760894.4604771,
+      "total_borrow_usd": 298396223.67004955,
+      "utilization_pct": 86.30130639514857,
+      "data_completeness": 9,
+      "pool_id": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-07-26T01:27:33.445147+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Compound API"
+      ],
+      "source_primary": "DefiLlama+Compound API",
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Ethereum",
+      "asset": "USDT",
+      "supply_apy": 2.9898986864544,
+      "borrow_apy": 3.8070390421296,
+      "rewards_apy": 0.10634852959664333,
+      "total_apy": 3.0962472160510437,
+      "tvl_usd": 178659427.7852389,
+      "total_supply_usd": 178659427.7852389,
+      "total_borrow_usd": 148381967.67151147,
+      "utilization_pct": 83.05274134167306,
+      "data_completeness": 9,
+      "pool_id": "0x3afdc9bca9213a35503b077a6072f3d0d5ab0840",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-07-26T01:27:33.445252+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Compound API"
+      ],
+      "source_primary": "DefiLlama+Compound API",
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Arbitrum",
+      "asset": "USDT",
+      "supply_apy": 1.946523712032,
+      "borrow_apy": 3.0019593206016,
+      "rewards_apy": 0.0,
+      "total_apy": 1.946523712032,
+      "tvl_usd": 19609313.929571077,
+      "total_supply_usd": 19609313.929571077,
+      "total_borrow_usd": 10602794.786839988,
+      "utilization_pct": 54.0701032150095,
+      "data_completeness": 9,
+      "pool_id": "0xd98be00b5d27fc98112bde293e487f8d4ca57d07",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-07-26T01:27:33.445328+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Compound API"
+      ],
+      "source_primary": "DefiLlama+Compound API",
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Arbitrum",
+      "asset": "USDC",
+      "supply_apy": 2.6693128685088,
+      "borrow_apy": 3.5596714622976,
+      "rewards_apy": 0.0,
+      "total_apy": 2.6693128685088,
+      "tvl_usd": 15596685.833534963,
+      "total_supply_usd": 15596685.833534963,
+      "total_borrow_usd": 11564566.033929598,
+      "utilization_pct": 74.14757971262758,
+      "data_completeness": 9,
+      "pool_id": "0x9c4ec768c28520b50860ea7a15bd7213a9ff58bf",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-07-26T01:27:33.445306+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Compound API"
+      ],
+      "source_primary": "DefiLlama+Compound API",
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Base",
+      "asset": "USDC",
+      "supply_apy": 6.3154853839008,
+      "borrow_apy": 7.4642713683264,
+      "rewards_apy": 0.0,
+      "total_apy": 6.3154853839008,
+      "tvl_usd": 8355938.236141528,
+      "total_supply_usd": 8355938.236141528,
+      "total_borrow_usd": 7600753.323874417,
+      "utilization_pct": 90.96229204886826,
+      "data_completeness": 9,
+      "pool_id": "0xb125e6687d4313864e53df431d5425969c15eb2f",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-07-26T01:27:33.445359+00:00",
+      "source_tags": [
+        "DefiLlama",
+        "Compound API"
+      ],
+      "source_primary": "DefiLlama+Compound API",
+      "total_apy_method": "supply_plus_rewards",
+      "safety_rank": 4
+    },
+    {
+      "protocol": "Compound",
+      "protocol_key": "compound-v3",
+      "chain": "Base",
+      "asset": "USDS",
+      "risk_note": "成熟协议/资金利用率驱动",
+      "updated_at": "2026-07-26T01:27:33.445386+00:00",
+      "supply_apy": 1.2689617270464,
+      "borrow_apy": 2.6749645580592,
+      "rewards_apy": 0.0,
+      "total_apy": 1.2689617270464,
+      "tvl_usd": 459003.023520287,
+      "total_supply_usd": 459003.023520287,
+      "total_borrow_usd": 107863.20435172564,
+      "utilization_pct": 23.499291269077332,
+      "pool_id": "0x2c776041ccfe903071af44aa147368a9c8eea518",
+      "source_tags": [
+        "Compound API"
+      ],
+      "source_primary": "Compound API",
+      "total_apy_method": "supply_plus_rewards",
+      "data_completeness": 9,
+      "safety_rank": 4
+    }
+  ],
+  "stablecoin_yields_extended": [
+    {
+      "asset": "SUSDS",
+      "protocol": "sky-lending",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.52,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.52,
+      "tvl_usd": 4687857599.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USYC",
+      "protocol": "circle-usyc",
+      "chain": "BSC",
+      "base_apy_pct": 3.04856,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.04856,
+      "tvl_usd": 2913651074.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "maple",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.86129,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 4.86129,
+      "tvl_usd": 2554247530.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SUSDE",
+      "protocol": "ethena-usde",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.13067,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.13067,
+      "tvl_usd": 1536674060.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDY",
+      "protocol": "ondo-yield-assets",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.55,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.55,
+      "tvl_usd": 1107526123.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BUIDL",
+      "protocol": "blackrock-buidl",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.569,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.569,
+      "tvl_usd": 963102522.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDS",
+      "protocol": "centrifuge-protocol",
+      "chain": "Ethereum",
+      "base_apy_pct": 2.80334,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 2.80334,
+      "tvl_usd": 870118433.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDT",
+      "protocol": "maple",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.37331,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 4.37331,
+      "tvl_usd": 869843869.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BUIDL",
+      "protocol": "blackrock-buidl",
+      "chain": "Aptos",
+      "base_apy_pct": 3.2279,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.2279,
+      "tvl_usd": 821883701.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USTB",
+      "protocol": "invesco-ustb",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.3172,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.3172,
+      "tvl_usd": 717737968.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BUIDL",
+      "protocol": "blackrock-buidl",
+      "chain": "Solana",
+      "base_apy_pct": 3.5379,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.5379,
+      "tvl_usd": 653839521.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BUIDL",
+      "protocol": "blackrock-buidl",
+      "chain": "Avalanche",
+      "base_apy_pct": 3.53816,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.53816,
+      "tvl_usd": 634198350.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDY",
+      "protocol": "ondo-yield-assets",
+      "chain": "Stellar",
+      "base_apy_pct": 3.55,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.55,
+      "tvl_usd": 533281366.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BUSD0",
+      "protocol": "usual-usd0",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": 2.0836,
+      "total_apy_pct": 2.0836,
+      "tvl_usd": 508893462.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDD",
+      "protocol": "justlend-v1",
+      "chain": "Tron",
+      "base_apy_pct": 0.00065,
+      "rewards_apy_pct": 3.98166,
+      "total_apy_pct": 3.98232,
+      "tvl_usd": 450606497.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "GTUSDCP",
+      "protocol": "morpho-blue",
+      "chain": "Base",
+      "base_apy_pct": 4.64082,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 4.64082,
+      "tvl_usd": 425870051.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "jupiter-lend",
+      "chain": "Solana",
+      "base_apy_pct": 4.21623,
+      "rewards_apy_pct": 0.73266,
+      "total_apy_pct": 4.94889,
+      "tvl_usd": 415482247.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "AUSD",
+      "protocol": "centrifuge-protocol",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.57588,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.57588,
+      "tvl_usd": 373852748.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STEAKUSDC",
+      "protocol": "morpho-blue",
+      "chain": "Base",
+      "base_apy_pct": 4.65496,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 4.65496,
+      "tvl_usd": 371132314.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SUSDS",
+      "protocol": "sky-lending",
+      "chain": "Arbitrum",
+      "base_apy_pct": 3.52,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.52,
+      "tvl_usd": 360908290.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SUSDAI",
+      "protocol": "usd-ai",
+      "chain": "Arbitrum",
+      "base_apy_pct": 7.68,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 7.68,
+      "tvl_usd": 328516286.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SENPYUSDMAIN",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 1.90867,
+      "rewards_apy_pct": 3.09691,
+      "total_apy_pct": 5.00557,
+      "tvl_usd": 315011179.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SENRLUSDV2",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 2.55547,
+      "rewards_apy_pct": 3.44378,
+      "total_apy_pct": 5.99926,
+      "tvl_usd": 280206510.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "centrifuge-protocol",
+      "chain": "Avalanche",
+      "base_apy_pct": 4.57588,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.57588,
+      "tvl_usd": 260478577.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SIRLOINUSDC",
+      "protocol": "morpho-blue",
+      "chain": "Base",
+      "base_apy_pct": 2.62751,
+      "rewards_apy_pct": 2.71866,
+      "total_apy_pct": 5.34617,
+      "tvl_usd": 260214981.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDY",
+      "protocol": "ondo-yield-assets",
+      "chain": "Sei",
+      "base_apy_pct": 3.55,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.55,
+      "tvl_usd": 257807003.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDE",
+      "protocol": "morpho-blue",
+      "chain": "Base",
+      "base_apy_pct": 0.0,
+      "rewards_apy_pct": 4.5,
+      "total_apy_pct": 4.5,
+      "tvl_usd": 256785431.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDG",
+      "protocol": "maple",
+      "chain": "Ethereum",
+      "base_apy_pct": 5.05815,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 5.05815,
+      "tvl_usd": 223698320.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDS",
+      "protocol": "sky-lending",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": 6.15872,
+      "total_apy_pct": 6.15872,
+      "tvl_usd": 211600362.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SDAI",
+      "protocol": "sky-lending",
+      "chain": "Ethereum",
+      "base_apy_pct": 1.25,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 1.25,
+      "tvl_usd": 210938108.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STEAKUSDG",
+      "protocol": "morpho-blue",
+      "chain": "Robinhood Chain",
+      "base_apy_pct": 2.6537,
+      "rewards_apy_pct": 3.80077,
+      "total_apy_pct": 6.45447,
+      "tvl_usd": 193048322.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STUSDS",
+      "protocol": "sky-lending",
+      "chain": "Ethereum",
+      "base_apy_pct": 6.48,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 6.48,
+      "tvl_usd": 189809684.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDY",
+      "protocol": "ondo-yield-assets",
+      "chain": "Solana",
+      "base_apy_pct": 3.55,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.55,
+      "tvl_usd": 181661313.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDE",
+      "protocol": "morpho-blue",
+      "chain": "Robinhood Chain",
+      "base_apy_pct": 0.0,
+      "rewards_apy_pct": 4.5,
+      "total_apy_pct": 4.5,
+      "tvl_usd": 180657483.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "pareto-credit",
+      "chain": "Ethereum",
+      "base_apy_pct": 8.31317,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 8.31317,
+      "tvl_usd": 170713978.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "REUSD",
+      "protocol": "re",
+      "chain": "Ethereum",
+      "base_apy_pct": 6.20122,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 6.20122,
+      "tvl_usd": 165647005.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "APXUSD",
+      "protocol": "apyx-protocol",
+      "chain": "Ethereum",
+      "base_apy_pct": 13.90317,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 13.90317,
+      "tvl_usd": 153105053.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SENPYUSDPRIMEV2",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.23379,
+      "rewards_apy_pct": 2.73637,
+      "total_apy_pct": 5.97016,
+      "tvl_usd": 150122526.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "fluid-lending",
+      "chain": "Ethereum",
+      "base_apy_pct": 5.62,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 5.62,
+      "tvl_usd": 141163390.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDT",
+      "protocol": "fluid-lending",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.29,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.29,
+      "tvl_usd": 139662882.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USD1",
+      "protocol": "lista-lending",
+      "chain": "BSC",
+      "base_apy_pct": 0.55215,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 0.55215,
+      "tvl_usd": 137874475.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "RWAUSDI",
+      "protocol": "multipli.fi",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.888,
+      "tvl_usd": 137345293.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USD1",
+      "protocol": "dolomite",
+      "chain": "Ethereum",
+      "base_apy_pct": 1.4367,
+      "rewards_apy_pct": 5.7453,
+      "total_apy_pct": 7.18201,
+      "tvl_usd": 135640831.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "RWAUSDI",
+      "protocol": "multipli.fi",
+      "chain": "Base",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.888,
+      "tvl_usd": 123817261.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "AUSD",
+      "protocol": "accountable",
+      "chain": "Monad",
+      "base_apy_pct": 6.5475,
+      "rewards_apy_pct": 0.27874,
+      "total_apy_pct": 6.82624,
+      "tvl_usd": 111476047.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BUIDL",
+      "protocol": "blackrock-buidl",
+      "chain": "BSC",
+      "base_apy_pct": 3.2279,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.2279,
+      "tvl_usd": 110691029.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STEAKEURCV",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.5,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 3.5,
+      "tvl_usd": 109970774.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SAVUSD",
+      "protocol": "avant-avusd",
+      "chain": "Avalanche",
+      "base_apy_pct": 8.29312,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 8.29312,
+      "tvl_usd": 98206556.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "accountable",
+      "chain": "Monad",
+      "base_apy_pct": 17.6,
+      "rewards_apy_pct": 0.17424,
+      "total_apy_pct": 17.77424,
+      "tvl_usd": 94151847.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USYC",
+      "protocol": "circle-usyc",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.04856,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.04856,
+      "tvl_usd": 90953951.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STEAKUSDT",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.68294,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 3.68294,
+      "tvl_usd": 87723929.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "GTUSDCP",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.13911,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 4.13911,
+      "tvl_usd": 80466438.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "ETHENAUSDC",
+      "protocol": "morpho-blue",
+      "chain": "Base",
+      "base_apy_pct": 4.16522,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 4.16522,
+      "tvl_usd": 79915052.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STEAKUSDC",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.19869,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 4.19869,
+      "tvl_usd": 79145329.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "MSUSD",
+      "protocol": "mainstreet",
+      "chain": "Ethereum",
+      "base_apy_pct": 6.61774,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 6.61774,
+      "tvl_usd": 74374100.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "JUPUSD",
+      "protocol": "jupiter-lend",
+      "chain": "Solana",
+      "base_apy_pct": 3.80024,
+      "rewards_apy_pct": 1.50112,
+      "total_apy_pct": 5.30136,
+      "tvl_usd": 70798141.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "midas-rwa",
+      "chain": "Ethereum",
+      "base_apy_pct": 10.38,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 10.38,
+      "tvl_usd": 70271772.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STCUSD",
+      "protocol": "cap",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 5.95892,
+      "tvl_usd": 68781519.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SUSDF",
+      "protocol": "falcon-finance",
+      "chain": "Ethereum",
+      "base_apy_pct": 5.31185,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 5.31185,
+      "tvl_usd": 68175956.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USD3",
+      "protocol": "3jane-lending",
+      "chain": "Ethereum",
+      "base_apy_pct": 6.82215,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 6.82215,
+      "tvl_usd": 66830957.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDT",
+      "protocol": "venus-core-pool",
+      "chain": "BSC",
+      "base_apy_pct": 2.38321,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 2.38321,
+      "tvl_usd": 65872801.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SFRAX",
+      "protocol": "frax",
+      "chain": "Ethereum",
+      "base_apy_pct": 1.24973,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 1.24973,
+      "tvl_usd": 65126818.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SKYMONEYUSDTSAVINGS",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 2.51345,
+      "rewards_apy_pct": 0.81601,
+      "total_apy_pct": 3.32945,
+      "tvl_usd": 63190250.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SRUSDE",
+      "protocol": "strata-markets",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.20273,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.20273,
+      "tvl_usd": 61413308.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "STUSDT",
+      "protocol": "stusdt",
+      "chain": "Tron",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.48564,
+      "tvl_usd": 60044469.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SDAI",
+      "protocol": "sdai",
+      "chain": "Gnosis",
+      "base_apy_pct": 4.34413,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.34413,
+      "tvl_usd": 58133782.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "FXUSDSTABILITYPOOLV20",
+      "protocol": "fx-protocol",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 8.33,
+      "tvl_usd": 56919322.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "GTUSDA",
+      "protocol": "gauntlet",
+      "chain": "Base",
+      "base_apy_pct": 4.83185,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.83185,
+      "tvl_usd": 52250244.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "centrifuge-protocol",
+      "chain": "Base",
+      "base_apy_pct": 4.57588,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.57588,
+      "tvl_usd": 50228779.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "U",
+      "protocol": "lista-lending",
+      "chain": "BSC",
+      "base_apy_pct": 1.25486,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 1.25486,
+      "tvl_usd": 49858314.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDT0",
+      "protocol": "fluid-lending",
+      "chain": "Plasma",
+      "base_apy_pct": 4.64,
+      "rewards_apy_pct": 0.47,
+      "total_apy_pct": 5.11,
+      "tvl_usd": 46156789.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "PUFETH",
+      "protocol": "puffer-stake",
+      "chain": "Ethereum",
+      "base_apy_pct": 2.65991,
+      "rewards_apy_pct": 0.01162,
+      "total_apy_pct": 2.67153,
+      "tvl_usd": 45568891.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "BBQUSDC",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.84573,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 4.84573,
+      "tvl_usd": 41303411.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SUSDU",
+      "protocol": "unitas",
+      "chain": "BSC",
+      "base_apy_pct": 9.95629,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 9.95629,
+      "tvl_usd": 41114232.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "HYPERUSDCA",
+      "protocol": "morpho-blue",
+      "chain": "Monad",
+      "base_apy_pct": 8.39064,
+      "rewards_apy_pct": 1.17091,
+      "total_apy_pct": 9.56154,
+      "tvl_usd": 39441687.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "AUSD",
+      "protocol": "euler-v2",
+      "chain": "Monad",
+      "base_apy_pct": 5.15133,
+      "rewards_apy_pct": 2.5,
+      "total_apy_pct": 7.65133,
+      "tvl_usd": 38656111.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SIUSD",
+      "protocol": "infinifi",
+      "chain": "Ethereum",
+      "base_apy_pct": 5.82875,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 5.82875,
+      "tvl_usd": 38527152.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "fluid-lite",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 8.08,
+      "tvl_usd": 37096784.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "XUSDC",
+      "protocol": "multipli.fi",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.81,
+      "tvl_usd": 36415767.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "VUSD",
+      "protocol": "curvance",
+      "chain": "Monad",
+      "base_apy_pct": 0.0,
+      "rewards_apy_pct": 0.77176,
+      "total_apy_pct": 0.77176,
+      "tvl_usd": 36087007.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "ARMUSDCS",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.75112,
+      "rewards_apy_pct": 0.03514,
+      "total_apy_pct": 4.78626,
+      "tvl_usd": 35999744.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "goldfinch",
+      "chain": "Ethereum",
+      "base_apy_pct": 10.21226,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 10.21226,
+      "tvl_usd": 35955715.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SKYMONEYUSDSFLAGSHIP",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 0.55859,
+      "rewards_apy_pct": 4.19895,
+      "total_apy_pct": 4.75754,
+      "tvl_usd": 35653030.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "fluid-lending",
+      "chain": "Arbitrum",
+      "base_apy_pct": 5.65,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 5.65,
+      "tvl_usd": 35432827.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "WSRUSD",
+      "protocol": "reservoir-protocol",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 5.00351,
+      "tvl_usd": 34238830.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "CTDEFIUSDT",
+      "protocol": "concrete",
+      "chain": "Ethereum",
+      "base_apy_pct": 11.60963,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 11.60963,
+      "tvl_usd": 34224835.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "YUSD",
+      "protocol": "aegis-yusd",
+      "chain": "Ethereum",
+      "base_apy_pct": null,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 5.82,
+      "tvl_usd": 34157083.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "PLASMAUSD",
+      "protocol": "veda",
+      "chain": "Plasma",
+      "base_apy_pct": 3.47672,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 3.47672,
+      "tvl_usd": 33246951.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDG",
+      "protocol": "aave-v4",
+      "chain": "Ethereum",
+      "base_apy_pct": 0.79477,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 0.79477,
+      "tvl_usd": 32476022.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "SFRXUSD",
+      "protocol": "frax",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.09883,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.09883,
+      "tvl_usd": 32263415.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "MSUSD",
+      "protocol": "vesper",
+      "chain": "Ethereum",
+      "base_apy_pct": 1.66,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 1.66,
+      "tvl_usd": 31921779.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "GUSDTQ",
+      "protocol": "morpho-blue",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.88941,
+      "rewards_apy_pct": 0.0,
+      "total_apy_pct": 3.88941,
+      "tvl_usd": 30760382.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "USDC",
+      "protocol": "dolomite",
+      "chain": "Ethereum",
+      "base_apy_pct": 3.18013,
+      "rewards_apy_pct": 4.186,
+      "total_apy_pct": 7.36614,
+      "tvl_usd": 30648286.0,
+      "source": "DefiLlama API"
+    },
+    {
+      "asset": "LIQUIDUSD",
+      "protocol": "ether.fi-liquid",
+      "chain": "Ethereum",
+      "base_apy_pct": 4.8722,
+      "rewards_apy_pct": null,
+      "total_apy_pct": 4.8722,
+      "tvl_usd": 30487823.0,
+      "source": "DefiLlama API"
+    }
+  ],
+  "stablecoin_cefi_rates": [
+    {
+      "asset": "DAI",
+      "provider": "Nexo",
+      "apy_pct": 10.5,
+      "source": "Bitcompare (CeFi/DeFi/Hybrid)",
+      "source_url": "https://bitcompare.net/lending-rates",
+      "retrieved_at": "2026-07-26T01:27:40.293219+00:00"
+    },
+    {
+      "asset": "PYUSD",
+      "provider": "Kamino",
+      "apy_pct": 6.24,
+      "source": "Bitcompare (CeFi/DeFi/Hybrid)",
+      "source_url": "https://bitcompare.net/lending-rates",
+      "retrieved_at": "2026-07-26T01:27:42.846034+00:00"
+    },
+    {
+      "asset": "SUSDS",
+      "provider": "Pendle",
+      "apy_pct": 5.35,
+      "source": "Bitcompare (CeFi/DeFi/Hybrid)",
+      "source_url": "https://bitcompare.net/lending-rates",
+      "retrieved_at": "2026-07-26T01:27:41.525642+00:00"
+    },
+    {
+      "asset": "TUSD",
+      "provider": "YouHodler",
+      "apy_pct": 11.0,
+      "source": "Bitcompare (CeFi/DeFi/Hybrid)",
+      "source_url": "https://bitcompare.net/lending-rates",
+      "retrieved_at": "2026-07-26T01:27:48.123421+00:00"
+    },
+    {
+      "asset": "USD0",
+      "provider": "Euler Finance",
+      "apy_pct": 0.91,
+      "source": "Bitcompare (CeFi/DeFi/Hybrid)",
+      "source_url": "https://bitcompare.net/lending-rates",
+      "retrieved_at": "2026-07-26T01:27:48.123320+00:00"
+    },
+    {
+      "asset": "USDC",
+      "provider": "Lune.fi",
+      "apy_pct": 29.5,
+      "source": "Bitcompare (CeFi/DeFi/Hybrid)",
+      "source_url": "https://bitcompare.net/lending-rates",
+      "retrieved_at": "2026-07-26T01:27:38.894477+00:00"
+    },
+    {
+      "asset": "USDD",
+      "provider": "JustLend",
+      "apy_pct": 0.0006535,
+      "source": "Bitcompare (CeFi/DeFi/Hybrid)",
+      "source_url": "https://bitcompare.net/lending-rates",
+      "retrieved_at": "2026-07-26T01:27:44.136718+00:00"
+    },
+    {
+      "asset": "USDE",
+      "provider": "Pendle",
+      "apy_pct": 6.41,
+      "source": "Bitcompare (CeFi/DeFi/Hybrid)",
+      "source_url": "https://bitcompare.net/lending-rates",
+      "retrieved_at": "2026-07-26T01:27:41.525659+00:00"
+    },
+    {
+      "asset": "USDS",
+      "provider": "Compound V3",
+      "apy_pct": 5.8,
+      "source": "Bitcompare (CeFi/DeFi/Hybrid)",
+      "source_url": "https://bitcompare.net/lending-rates",
+      "retrieved_at": "2026-07-26T01:27:40.293160+00:00"
+    },
+    {
+      "asset": "USDT",
+      "provider": "Lune.fi",
+      "apy_pct": 29.5,
+      "source": "Bitcompare (CeFi/DeFi/Hybrid)",
+      "source_url": "https://bitcompare.net/lending-rates",
+      "retrieved_at": "2026-07-26T01:27:38.894455+00:00"
+    }
+  ],
+  "rwa_asset_classes": [
+    {
+      "asset_class": "U.S. Treasuries",
+      "value_usd": 16196535897.43917,
+      "change_7d_pct": 4.66817790359525,
+      "as_of": "2026-07-25",
+      "source": "https://app.rwa.xyz/treasuries",
+      "source_type": "RWA.xyz public page"
+    },
+    {
+      "asset_class": "Credit",
+      "value_usd": 6983291783.420916,
+      "change_7d_pct": -0.7173443099115664,
+      "as_of": "2026-07-25",
+      "source": "https://app.rwa.xyz/credit",
+      "source_type": "RWA.xyz public page"
+    },
+    {
+      "asset_class": "Active Strategies",
+      "value_usd": 3495891137.636097,
+      "change_7d_pct": 4.15376270495361,
+      "as_of": "2026-07-25",
+      "source": "https://app.rwa.xyz/active-strategies",
+      "source_type": "RWA.xyz public page"
+    },
+    {
+      "asset_class": "Tokenized Stocks",
+      "value_usd": 1854943703.6050572,
+      "change_7d_pct": 22.966894479628053,
+      "as_of": "2026-07-25",
+      "source": "https://app.rwa.xyz/stocks",
+      "source_type": "RWA.xyz public page"
+    },
+    {
+      "asset_class": "Non-U.S. Government Debt",
+      "value_usd": 1382939897.222782,
+      "change_7d_pct": 5.118530492419556,
+      "as_of": "2026-07-25",
+      "source": "https://app.rwa.xyz/government-bonds",
+      "source_type": "RWA.xyz public page"
+    },
+    {
+      "asset_class": "Real Estate",
+      "value_usd": 202630665.19620612,
+      "change_7d_pct": -0.0046835664095819084,
+      "as_of": "2026-07-25",
+      "source": "https://app.rwa.xyz/real-estate",
+      "source_type": "RWA.xyz public page"
+    }
+  ],
+  "rwa_token_movers": [
+    {
+      "ticker": "HOOD",
+      "symbol": "HOODon",
+      "chain_id": "56",
+      "contract_address": "0x19601179a60f55ff6636f5d1a8b6671053bd60a8",
+      "price_usd": 94.61,
+      "change_24h_pct": -6.734715657402749,
+      "holders": 609,
+      "market_cap_usd": 2373683.3942683786,
+      "shares_multiplier": 1.0,
+      "stock_price_usd": 94.61,
+      "reference_price_usd": 94.61,
+      "premium_pct": null,
+      "premium_status": "unavailable_reference_frozen",
+      "market_status": "closed",
+      "reason_code": "MARKET_CLOSED",
+      "reason_msg": "Weekend or Holiday",
+      "pe_ttm": 44.92,
+      "kline_1h": [
+        {
+          "timestamp_ms": 1784764800000,
+          "open": 103.685,
+          "high": 105.117059,
+          "low": 103.22965,
+          "close": 104.81027
+        },
+        {
+          "timestamp_ms": 1784768400000,
+          "open": 104.81027,
+          "high": 105.34071,
+          "low": 104.3625,
+          "close": 104.3625
+        },
+        {
+          "timestamp_ms": 1784772000000,
+          "open": 104.323571,
+          "high": 104.466364,
+          "low": 103.540225,
+          "close": 104.102632
+        },
+        {
+          "timestamp_ms": 1784775600000,
+          "open": 104.102632,
+          "high": 104.114465,
+          "low": 103.611144,
+          "close": 104.000693
+        },
+        {
+          "timestamp_ms": 1784779200000,
+          "open": 104.000693,
+          "high": 104.302857,
+          "low": 103.772,
+          "close": 104.045685
+        },
+        {
+          "timestamp_ms": 1784782800000,
+          "open": 104.045685,
+          "high": 104.476008,
+          "low": 103.832,
+          "close": 104.201556
+        },
+        {
+          "timestamp_ms": 1784786400000,
+          "open": 104.201556,
+          "high": 104.453418,
+          "low": 104.10041,
+          "close": 104.201218
+        },
+        {
+          "timestamp_ms": 1784790000000,
+          "open": 104.268291,
+          "high": 104.3224,
+          "low": 103.7975,
+          "close": 104.100961
+        },
+        {
+          "timestamp_ms": 1784793600000,
+          "open": 104.1,
+          "high": 104.8,
+          "low": 103.696364,
+          "close": 104.46
+        },
+        {
+          "timestamp_ms": 1784797200000,
+          "open": 104.45,
+          "high": 104.866667,
+          "low": 104.214545,
+          "close": 104.355
+        },
+        {
+          "timestamp_ms": 1784800800000,
+          "open": 104.355,
+          "high": 104.425,
+          "low": 104.083333,
+          "close": 104.24
+        },
+        {
+          "timestamp_ms": 1784804400000,
+          "open": 104.411429,
+          "high": 104.437143,
+          "low": 103.4525,
+          "close": 103.7255
+        },
+        {
+          "timestamp_ms": 1784808000000,
+          "open": 103.7255,
+          "high": 103.965333,
+          "low": 102.284783,
+          "close": 102.37
+        },
+        {
+          "timestamp_ms": 1784811600000,
+          "open": 102.37,
+          "high": 104.102857,
+          "low": 100.933333,
+          "close": 102.425
+        },
+        {
+          "timestamp_ms": 1784815200000,
+          "open": 102.53,
+          "high": 103.21,
+          "low": 100.841429,
+          "close": 101.25
+        },
+        {
+          "timestamp_ms": 1784818800000,
+          "open": 101.24,
+          "high": 101.258,
+          "low": 99.343333,
+          "close": 100.53
+        },
+        {
+          "timestamp_ms": 1784822400000,
+          "open": 100.555556,
+          "high": 102.536667,
+          "low": 100.405,
+          "close": 102.46
+        },
+        {
+          "timestamp_ms": 1784826000000,
+          "open": 102.44,
+          "high": 103.115,
+          "low": 102.345,
+          "close": 102.575
+        },
+        {
+          "timestamp_ms": 1784829600000,
+          "open": 102.56,
+          "high": 102.85,
+          "low": 102.123333,
+          "close": 102.282857
+        },
+        {
+          "timestamp_ms": 1784833200000,
+          "open": 102.301667,
+          "high": 102.47,
+          "low": 101.236667,
+          "close": 101.599474
+        },
+        {
+          "timestamp_ms": 1784836800000,
+          "open": 101.613333,
+          "high": 102.326667,
+          "low": 101.613333,
+          "close": 101.904
+        },
+        {
+          "timestamp_ms": 1784840400000,
+          "open": 101.904,
+          "high": 102.074348,
+          "low": 101.6775,
+          "close": 101.9625
+        },
+        {
+          "timestamp_ms": 1784844000000,
+          "open": 101.84,
+          "high": 101.855,
+          "low": 101.306667,
+          "close": 101.485
+        },
+        {
+          "timestamp_ms": 1784847600000,
+          "open": 101.485,
+          "high": 101.604286,
+          "low": 101.265278,
+          "close": 101.507273
+        },
+        {
+          "timestamp_ms": 1784851200000,
+          "open": 101.475,
+          "high": 102.466304,
+          "low": 101.214179,
+          "close": 101.424
+        },
+        {
+          "timestamp_ms": 1784854800000,
+          "open": 101.437879,
+          "high": 101.720238,
+          "low": 101.394643,
+          "close": 101.655778
+        },
+        {
+          "timestamp_ms": 1784858400000,
+          "open": 101.686,
+          "high": 101.686,
+          "low": 100.490547,
+          "close": 100.520578
+        },
+        {
+          "timestamp_ms": 1784862000000,
+          "open": 100.520635,
+          "high": 101.249214,
+          "low": 100.52053,
+          "close": 100.873387
+        },
+        {
+          "timestamp_ms": 1784865600000,
+          "open": 100.873387,
+          "high": 101.374,
+          "low": 100.873387,
+          "close": 101.348772
+        },
+        {
+          "timestamp_ms": 1784869200000,
+          "open": 101.205594,
+          "high": 101.500256,
+          "low": 101.192468,
+          "close": 101.249804
+        },
+        {
+          "timestamp_ms": 1784872800000,
+          "open": 101.249804,
+          "high": 101.394789,
+          "low": 101.180267,
+          "close": 101.390476
+        },
+        {
+          "timestamp_ms": 1784876400000,
+          "open": 101.390476,
+          "high": 102.276307,
+          "low": 101.390476,
+          "close": 101.745
+        },
+        {
+          "timestamp_ms": 1784880000000,
+          "open": 101.9275,
+          "high": 102.385714,
+          "low": 101.621,
+          "close": 102.04
+        },
+        {
+          "timestamp_ms": 1784883600000,
+          "open": 102.04,
+          "high": 102.235,
+          "low": 101.619048,
+          "close": 101.82
+        },
+        {
+          "timestamp_ms": 1784887200000,
+          "open": 101.82,
+          "high": 101.83,
+          "low": 101.125806,
+          "close": 101.56
+        },
+        {
+          "timestamp_ms": 1784890800000,
+          "open": 101.505,
+          "high": 101.99,
+          "low": 101.465,
+          "close": 101.896667
+        },
+        {
+          "timestamp_ms": 1784894400000,
+          "open": 101.896667,
+          "high": 102.0,
+          "low": 100.925,
+          "close": 100.925
+        },
+        {
+          "timestamp_ms": 1784898000000,
+          "open": 100.925,
+          "high": 101.292,
+          "low": 94.82,
+          "close": 95.460909
+        },
+        {
+          "timestamp_ms": 1784901600000,
+          "open": 95.635,
+          "high": 96.006667,
+          "low": 93.063333,
+          "close": 94.37
+        },
+        {
+          "timestamp_ms": 1784905200000,
+          "open": 94.406667,
+          "high": 95.605,
+          "low": 93.726667,
+          "close": 95.184286
+        },
+        {
+          "timestamp_ms": 1784908800000,
+          "open": 95.196667,
+          "high": 95.83625,
+          "low": 94.722,
+          "close": 94.89
+        },
+        {
+          "timestamp_ms": 1784912400000,
+          "open": 94.8975,
+          "high": 96.186667,
+          "low": 94.575,
+          "close": 95.526
+        },
+        {
+          "timestamp_ms": 1784916000000,
+          "open": 95.54,
+          "high": 95.626667,
+          "low": 94.38,
+          "close": 94.772
+        },
+        {
+          "timestamp_ms": 1784919600000,
+          "open": 94.79,
+          "high": 95.081795,
+          "low": 94.076,
+          "close": 94.861096
+        },
+        {
+          "timestamp_ms": 1784923200000,
+          "open": 94.891181,
+          "high": 95.127273,
+          "low": 94.824545,
+          "close": 94.944
+        },
+        {
+          "timestamp_ms": 1784926800000,
+          "open": 94.944,
+          "high": 95.115455,
+          "low": 94.745294,
+          "close": 94.8875
+        },
+        {
+          "timestamp_ms": 1784930400000,
+          "open": 94.8875,
+          "high": 95.003333,
+          "low": 94.605,
+          "close": 94.855
+        },
+        {
+          "timestamp_ms": 1784934000000,
+          "open": 94.855,
+          "high": 94.916667,
+          "low": 94.61,
+          "close": 94.61
+        }
+      ],
+      "smart_signal_direction": null,
+      "smart_signal_count": null,
+      "smart_signal_value_usd": null,
+      "smart_signal_time_ms": null,
+      "smart_signal_status": null,
+      "rsi14": 17.603967898362797,
+      "sma6": 94.82159933333334,
+      "sma24": 98.45042720833334,
+      "range_24h_pct": 8.127582918300313,
+      "onchain_volume_24h_usd": 2308960569.2484736,
+      "buy_volume_24h_usd": 0.0,
+      "sell_volume_24h_usd": 0.0,
+      "net_buy_24h_usd": 0.0,
+      "liquidity_usd": null,
+      "top10_holders_pct": 93.12114845485783,
+      "smart_money_holders": 0,
+      "smart_money_holding_pct": 0.0
+    },
+    {
+      "ticker": "RIOT",
+      "symbol": "RIOTon",
+      "chain_id": "56",
+      "contract_address": "0xc4a88a72b848255fd24da3c1ad6755d980535fb1",
+      "price_usd": 22.511111,
+      "change_24h_pct": -6.171341098400523,
+      "holders": 208,
+      "market_cap_usd": 10213.214160995693,
+      "shares_multiplier": 1.0,
+      "stock_price_usd": 22.511111,
+      "reference_price_usd": 22.511111,
+      "premium_pct": null,
+      "premium_status": "unavailable_reference_frozen",
+      "market_status": "closed",
+      "reason_code": "MARKET_CLOSED",
+      "reason_msg": "Weekend or Holiday",
+      "pe_ttm": null,
+      "kline_1h": [
+        {
+          "timestamp_ms": 1784764800000,
+          "open": 23.804286,
+          "high": 23.804286,
+          "low": 23.115581,
+          "close": 23.615595
+        },
+        {
+          "timestamp_ms": 1784768400000,
+          "open": 23.615595,
+          "high": 23.649694,
+          "low": 23.510259,
+          "close": 23.53794
+        },
+        {
+          "timestamp_ms": 1784772000000,
+          "open": 23.53794,
+          "high": 23.55475,
+          "low": 23.30533,
+          "close": 23.34355
+        },
+        {
+          "timestamp_ms": 1784775600000,
+          "open": 23.34355,
+          "high": 23.49693,
+          "low": 23.258571,
+          "close": 23.417368
+        },
+        {
+          "timestamp_ms": 1784779200000,
+          "open": 23.424211,
+          "high": 23.689259,
+          "low": 23.372,
+          "close": 23.400822
+        },
+        {
+          "timestamp_ms": 1784782800000,
+          "open": 23.400822,
+          "high": 23.709843,
+          "low": 23.361005,
+          "close": 23.699801
+        },
+        {
+          "timestamp_ms": 1784786400000,
+          "open": 23.699801,
+          "high": 23.849881,
+          "low": 23.679253,
+          "close": 23.823421
+        },
+        {
+          "timestamp_ms": 1784790000000,
+          "open": 23.823421,
+          "high": 23.823421,
+          "low": 23.526091,
+          "close": 23.577759
+        },
+        {
+          "timestamp_ms": 1784793600000,
+          "open": 23.503333,
+          "high": 23.708333,
+          "low": 23.242857,
+          "close": 23.6425
+        },
+        {
+          "timestamp_ms": 1784797200000,
+          "open": 23.6425,
+          "high": 23.76375,
+          "low": 23.607273,
+          "close": 23.64
+        },
+        {
+          "timestamp_ms": 1784800800000,
+          "open": 23.64,
+          "high": 24.245,
+          "low": 23.64,
+          "close": 24.212
+        },
+        {
+          "timestamp_ms": 1784804400000,
+          "open": 24.212,
+          "high": 24.212,
+          "low": 23.561667,
+          "close": 23.572222
+        },
+        {
+          "timestamp_ms": 1784808000000,
+          "open": 23.572222,
+          "high": 23.635278,
+          "low": 23.025,
+          "close": 23.2
+        },
+        {
+          "timestamp_ms": 1784811600000,
+          "open": 23.2,
+          "high": 25.164,
+          "low": 22.896,
+          "close": 24.622
+        },
+        {
+          "timestamp_ms": 1784815200000,
+          "open": 24.655,
+          "high": 24.962353,
+          "low": 24.15,
+          "close": 24.161667
+        },
+        {
+          "timestamp_ms": 1784818800000,
+          "open": 24.1575,
+          "high": 24.5475,
+          "low": 24.013333,
+          "close": 24.287778
+        },
+        {
+          "timestamp_ms": 1784822400000,
+          "open": 24.2975,
+          "high": 24.331667,
+          "low": 24.011667,
+          "close": 24.106
+        },
+        {
+          "timestamp_ms": 1784826000000,
+          "open": 24.082,
+          "high": 24.52125,
+          "low": 24.011429,
+          "close": 24.235
+        },
+        {
+          "timestamp_ms": 1784829600000,
+          "open": 24.234,
+          "high": 24.268571,
+          "low": 24.010833,
+          "close": 24.025
+        },
+        {
+          "timestamp_ms": 1784833200000,
+          "open": 24.0475,
+          "high": 24.058,
+          "low": 23.701667,
+          "close": 23.870315
+        },
+        {
+          "timestamp_ms": 1784836800000,
+          "open": 23.865,
+          "high": 24.1875,
+          "low": 23.578182,
+          "close": 24.050909
+        },
+        {
+          "timestamp_ms": 1784840400000,
+          "open": 24.050909,
+          "high": 24.07,
+          "low": 23.914706,
+          "close": 23.959524
+        },
+        {
+          "timestamp_ms": 1784844000000,
+          "open": 23.959524,
+          "high": 24.021287,
+          "low": 23.959524,
+          "close": 23.991584
+        },
+        {
+          "timestamp_ms": 1784847600000,
+          "open": 23.991584,
+          "high": 24.105,
+          "low": 23.991584,
+          "close": 24.01875
+        },
+        {
+          "timestamp_ms": 1784851200000,
+          "open": 23.867632,
+          "high": 24.087073,
+          "low": 23.867632,
+          "close": 23.912
+        },
+        {
+          "timestamp_ms": 1784854800000,
+          "open": 23.941333,
+          "high": 24.064884,
+          "low": 23.941333,
+          "close": 24.033529
+        },
+        {
+          "timestamp_ms": 1784858400000,
+          "open": 24.034615,
+          "high": 24.064286,
+          "low": 23.652,
+          "close": 23.869167
+        },
+        {
+          "timestamp_ms": 1784862000000,
+          "open": 23.869167,
+          "high": 23.91939,
+          "low": 23.280328,
+          "close": 23.630906
+        },
+        {
+          "timestamp_ms": 1784865600000,
+          "open": 23.630906,
+          "high": 23.630906,
+          "low": 23.499559,
+          "close": 23.620748
+        },
+        {
+          "timestamp_ms": 1784869200000,
+          "open": 23.620748,
+          "high": 23.950588,
+          "low": 23.620748,
+          "close": 23.860362
+        },
+        {
+          "timestamp_ms": 1784872800000,
+          "open": 23.860362,
+          "high": 23.963682,
+          "low": 23.760071,
+          "close": 23.834877
+        },
+        {
+          "timestamp_ms": 1784876400000,
+          "open": 23.834877,
+          "high": 23.96431,
+          "low": 23.701548,
+          "close": 23.701548
+        },
+        {
+          "timestamp_ms": 1784880000000,
+          "open": 23.885,
+          "high": 24.12,
+          "low": 23.746,
+          "close": 24.0
+        },
+        {
+          "timestamp_ms": 1784883600000,
+          "open": 24.0,
+          "high": 24.1,
+          "low": 23.84125,
+          "close": 23.873333
+        },
+        {
+          "timestamp_ms": 1784887200000,
+          "open": 23.873333,
+          "high": 23.99876,
+          "low": 23.843333,
+          "close": 23.915
+        },
+        {
+          "timestamp_ms": 1784890800000,
+          "open": 23.915,
+          "high": 24.084783,
+          "low": 23.915,
+          "close": 24.084783
+        },
+        {
+          "timestamp_ms": 1784894400000,
+          "open": 24.084783,
+          "high": 24.084783,
+          "low": 23.898333,
+          "close": 23.898333
+        },
+        {
+          "timestamp_ms": 1784898000000,
+          "open": 23.898333,
+          "high": 23.978571,
+          "low": 22.700909,
+          "close": 22.98
+        },
+        {
+          "timestamp_ms": 1784901600000,
+          "open": 23.01,
+          "high": 23.674,
+          "low": 22.8125,
+          "close": 23.258571
+        },
+        {
+          "timestamp_ms": 1784905200000,
+          "open": 23.258571,
+          "high": 23.5075,
+          "low": 23.08,
+          "close": 23.3925
+        },
+        {
+          "timestamp_ms": 1784908800000,
+          "open": 23.393077,
+          "high": 23.446,
+          "low": 22.985,
+          "close": 23.038519
+        },
+        {
+          "timestamp_ms": 1784912400000,
+          "open": 23.037966,
+          "high": 23.206667,
+          "low": 22.87125,
+          "close": 22.942727
+        },
+        {
+          "timestamp_ms": 1784916000000,
+          "open": 22.934,
+          "high": 22.947778,
+          "low": 22.438333,
+          "close": 22.6175
+        },
+        {
+          "timestamp_ms": 1784919600000,
+          "open": 22.616667,
+          "high": 22.644444,
+          "low": 22.355333,
+          "close": 22.524
+        },
+        {
+          "timestamp_ms": 1784923200000,
+          "open": 22.522,
+          "high": 22.68,
+          "low": 22.428571,
+          "close": 22.63
+        },
+        {
+          "timestamp_ms": 1784926800000,
+          "open": 22.63,
+          "high": 22.653333,
+          "low": 22.481702,
+          "close": 22.481702
+        },
+        {
+          "timestamp_ms": 1784930400000,
+          "open": 22.481702,
+          "high": 22.506711,
+          "low": 22.481702,
+          "close": 22.506711
+        },
+        {
+          "timestamp_ms": 1784934000000,
+          "open": 22.506711,
+          "high": 22.551056,
+          "low": 22.506711,
+          "close": 22.511111
+        }
+      ],
+      "smart_signal_direction": null,
+      "smart_signal_count": null,
+      "smart_signal_value_usd": null,
+      "smart_signal_time_ms": null,
+      "smart_signal_status": null,
+      "rsi14": 26.358028976653458,
+      "sma6": 22.545170666666667,
+      "sma24": 23.379913625000004,
+      "range_24h_pct": 7.130603368019028,
+      "onchain_volume_24h_usd": 327007375.1240567,
+      "buy_volume_24h_usd": 0.0,
+      "sell_volume_24h_usd": 0.0,
+      "net_buy_24h_usd": 0.0,
+      "liquidity_usd": null,
+      "top10_holders_pct": 88.778452552394,
+      "smart_money_holders": null,
+      "smart_money_holding_pct": null
+    },
+    {
+      "ticker": "MARA",
+      "symbol": "MARAon",
+      "chain_id": "56",
+      "contract_address": "0xd226d8170ee38793430c7dec6903df4b818bb74c",
+      "price_usd": 12.161429,
+      "change_24h_pct": -4.554169660770754,
+      "holders": 250,
+      "market_cap_usd": 50601.83866131004,
+      "shares_multiplier": 1.0,
+      "stock_price_usd": 12.161429,
+      "reference_price_usd": 12.161429,
+      "premium_pct": null,
+      "premium_status": "unavailable_reference_frozen",
+      "market_status": "closed",
+      "reason_code": "MARKET_CLOSED",
+      "reason_msg": "Weekend or Holiday",
+      "pe_ttm": null,
+      "kline_1h": [
+        {
+          "timestamp_ms": 1784764800000,
+          "open": 12.086364,
+          "high": 12.853399,
+          "low": 12.086364,
+          "close": 12.439485
+        },
+        {
+          "timestamp_ms": 1784768400000,
+          "open": 12.439485,
+          "high": 12.485735,
+          "low": 12.414316,
+          "close": 12.419937
+        },
+        {
+          "timestamp_ms": 1784772000000,
+          "open": 12.419937,
+          "high": 12.425333,
+          "low": 12.370126,
+          "close": 12.40574
+        },
+        {
+          "timestamp_ms": 1784775600000,
+          "open": 12.40574,
+          "high": 12.408749,
+          "low": 12.343333,
+          "close": 12.385147
+        },
+        {
+          "timestamp_ms": 1784779200000,
+          "open": 12.385147,
+          "high": 12.42747,
+          "low": 12.374829,
+          "close": 12.413951
+        },
+        {
+          "timestamp_ms": 1784782800000,
+          "open": 12.413951,
+          "high": 12.422889,
+          "low": 12.372083,
+          "close": 12.372083
+        },
+        {
+          "timestamp_ms": 1784786400000,
+          "open": 12.372083,
+          "high": 12.419714,
+          "low": 12.372083,
+          "close": 12.414867
+        },
+        {
+          "timestamp_ms": 1784790000000,
+          "open": 12.414867,
+          "high": 12.414867,
+          "low": 12.320588,
+          "close": 12.369608
+        },
+        {
+          "timestamp_ms": 1784793600000,
+          "open": 12.427692,
+          "high": 12.487037,
+          "low": 12.305,
+          "close": 12.487037
+        },
+        {
+          "timestamp_ms": 1784797200000,
+          "open": 12.487037,
+          "high": 12.493333,
+          "low": 12.444865,
+          "close": 12.475
+        },
+        {
+          "timestamp_ms": 1784800800000,
+          "open": 12.504375,
+          "high": 12.528462,
+          "low": 12.438571,
+          "close": 12.528462
+        },
+        {
+          "timestamp_ms": 1784804400000,
+          "open": 12.528462,
+          "high": 12.537692,
+          "low": 12.3275,
+          "close": 12.375
+        },
+        {
+          "timestamp_ms": 1784808000000,
+          "open": 12.375,
+          "high": 12.378,
+          "low": 12.171429,
+          "close": 12.175
+        },
+        {
+          "timestamp_ms": 1784811600000,
+          "open": 12.185,
+          "high": 12.990286,
+          "low": 12.025,
+          "close": 12.728621
+        },
+        {
+          "timestamp_ms": 1784815200000,
+          "open": 12.747313,
+          "high": 12.950377,
+          "low": 12.506752,
+          "close": 12.524386
+        },
+        {
+          "timestamp_ms": 1784818800000,
+          "open": 12.512308,
+          "high": 12.764754,
+          "low": 12.411386,
+          "close": 12.655172
+        },
+        {
+          "timestamp_ms": 1784822400000,
+          "open": 12.661807,
+          "high": 12.746522,
+          "low": 12.570149,
+          "close": 12.695246
+        },
+        {
+          "timestamp_ms": 1784826000000,
+          "open": 12.693111,
+          "high": 13.14806,
+          "low": 12.647568,
+          "close": 13.022931
+        },
+        {
+          "timestamp_ms": 1784829600000,
+          "open": 13.022667,
+          "high": 13.057015,
+          "low": 12.878261,
+          "close": 12.914111
+        },
+        {
+          "timestamp_ms": 1784833200000,
+          "open": 12.927848,
+          "high": 13.045985,
+          "low": 12.731972,
+          "close": 12.766919
+        },
+        {
+          "timestamp_ms": 1784836800000,
+          "open": 12.767917,
+          "high": 12.836667,
+          "low": 12.75125,
+          "close": 12.835714
+        },
+        {
+          "timestamp_ms": 1784840400000,
+          "open": 12.835714,
+          "high": 12.845,
+          "low": 12.750161,
+          "close": 12.803333
+        },
+        {
+          "timestamp_ms": 1784844000000,
+          "open": 12.803333,
+          "high": 12.827692,
+          "low": 12.740617,
+          "close": 12.740617
+        },
+        {
+          "timestamp_ms": 1784847600000,
+          "open": 12.740617,
+          "high": 12.779091,
+          "low": 12.740617,
+          "close": 12.742857
+        },
+        {
+          "timestamp_ms": 1784851200000,
+          "open": 12.798465,
+          "high": 12.806038,
+          "low": 12.712,
+          "close": 12.741708
+        },
+        {
+          "timestamp_ms": 1784854800000,
+          "open": 12.742778,
+          "high": 12.794044,
+          "low": 12.7419,
+          "close": 12.762488
+        },
+        {
+          "timestamp_ms": 1784858400000,
+          "open": 12.762914,
+          "high": 12.788395,
+          "low": 12.754255,
+          "close": 12.757149
+        },
+        {
+          "timestamp_ms": 1784862000000,
+          "open": 12.757149,
+          "high": 12.775829,
+          "low": 12.72402,
+          "close": 12.749535
+        },
+        {
+          "timestamp_ms": 1784865600000,
+          "open": 12.768415,
+          "high": 12.778455,
+          "low": 12.733431,
+          "close": 12.7468
+        },
+        {
+          "timestamp_ms": 1784869200000,
+          "open": 12.7468,
+          "high": 12.798961,
+          "low": 12.742963,
+          "close": 12.798899
+        },
+        {
+          "timestamp_ms": 1784872800000,
+          "open": 12.798899,
+          "high": 12.805227,
+          "low": 12.752683,
+          "close": 12.8
+        },
+        {
+          "timestamp_ms": 1784876400000,
+          "open": 12.8,
+          "high": 12.899291,
+          "low": 12.798636,
+          "close": 12.835385
+        },
+        {
+          "timestamp_ms": 1784880000000,
+          "open": 12.956667,
+          "high": 12.956667,
+          "low": 12.786667,
+          "close": 12.843077
+        },
+        {
+          "timestamp_ms": 1784883600000,
+          "open": 12.843077,
+          "high": 12.91,
+          "low": 12.814545,
+          "close": 12.904444
+        },
+        {
+          "timestamp_ms": 1784887200000,
+          "open": 12.904444,
+          "high": 12.904444,
+          "low": 12.874545,
+          "close": 12.895556
+        },
+        {
+          "timestamp_ms": 1784890800000,
+          "open": 12.895556,
+          "high": 12.895556,
+          "low": 12.783125,
+          "close": 12.845
+        },
+        {
+          "timestamp_ms": 1784894400000,
+          "open": 12.845,
+          "high": 12.873077,
+          "low": 12.782941,
+          "close": 12.796667
+        },
+        {
+          "timestamp_ms": 1784898000000,
+          "open": 12.796667,
+          "high": 12.8085,
+          "low": 12.1705,
+          "close": 12.303333
+        },
+        {
+          "timestamp_ms": 1784901600000,
+          "open": 12.339091,
+          "high": 12.594894,
+          "low": 12.20832,
+          "close": 12.478824
+        },
+        {
+          "timestamp_ms": 1784905200000,
+          "open": 12.482805,
+          "high": 12.681304,
+          "low": 12.337708,
+          "close": 12.639556
+        },
+        {
+          "timestamp_ms": 1784908800000,
+          "open": 12.635405,
+          "high": 12.69191,
+          "low": 12.453426,
+          "close": 12.484909
+        },
+        {
+          "timestamp_ms": 1784912400000,
+          "open": 12.483171,
+          "high": 12.726176,
+          "low": 12.362432,
+          "close": 12.552364
+        },
+        {
+          "timestamp_ms": 1784916000000,
+          "open": 12.550656,
+          "high": 12.550656,
+          "low": 12.194884,
+          "close": 12.283077
+        },
+        {
+          "timestamp_ms": 1784919600000,
+          "open": 12.283077,
+          "high": 12.303235,
+          "low": 12.120918,
+          "close": 12.143149
+        },
+        {
+          "timestamp_ms": 1784923200000,
+          "open": 12.14276,
+          "high": 12.1875,
+          "low": 12.122243,
+          "close": 12.163846
+        },
+        {
+          "timestamp_ms": 1784926800000,
+          "open": 12.163846,
+          "high": 12.214286,
+          "low": 12.156327,
+          "close": 12.188889
+        },
+        {
+          "timestamp_ms": 1784930400000,
+          "open": 12.188889,
+          "high": 12.188889,
+          "low": 12.140727,
+          "close": 12.161818
+        },
+        {
+          "timestamp_ms": 1784934000000,
+          "open": 12.161818,
+          "high": 12.185,
+          "low": 12.160909,
+          "close": 12.161429
+        }
+      ],
+      "smart_signal_direction": null,
+      "smart_signal_count": null,
+      "smart_signal_value_usd": null,
+      "smart_signal_time_ms": null,
+      "smart_signal_status": null,
+      "rsi14": 27.37264221905646,
+      "sma6": 12.183701333333332,
+      "sma24": 12.584912583333333,
+      "range_24h_pct": 6.269337549922183,
+      "onchain_volume_24h_usd": 686546528.619737,
+      "buy_volume_24h_usd": 0.0,
+      "sell_volume_24h_usd": 0.0,
+      "net_buy_24h_usd": 0.0,
+      "liquidity_usd": null,
+      "top10_holders_pct": 95.96243008597588,
+      "smart_money_holders": null,
+      "smart_money_holding_pct": null
+    },
+    {
+      "ticker": "COIN",
+      "symbol": "COINon",
+      "chain_id": "56",
+      "contract_address": "0xf8589b526fdd65f7f301c605a6e04f0f1b4b3620",
+      "price_usd": 157.755,
+      "change_24h_pct": -2.7114798683807906,
+      "holders": 1301,
+      "market_cap_usd": 8602604.451463405,
+      "shares_multiplier": 1.0,
+      "stock_price_usd": 157.755,
+      "reference_price_usd": 157.755,
+      "premium_pct": null,
+      "premium_status": "unavailable_reference_frozen",
+      "market_status": "closed",
+      "reason_code": "MARKET_CLOSED",
+      "reason_msg": "Weekend or Holiday",
+      "pe_ttm": 52.09,
+      "kline_1h": [
+        {
+          "timestamp_ms": 1784764800000,
+          "open": 166.734,
+          "high": 167.998696,
+          "low": 166.336,
+          "close": 167.858493
+        },
+        {
+          "timestamp_ms": 1784768400000,
+          "open": 167.842308,
+          "high": 168.258914,
+          "low": 167.521374,
+          "close": 167.864217
+        },
+        {
+          "timestamp_ms": 1784772000000,
+          "open": 167.852052,
+          "high": 167.868559,
+          "low": 167.111356,
+          "close": 167.7
+        },
+        {
+          "timestamp_ms": 1784775600000,
+          "open": 167.7,
+          "high": 167.728429,
+          "low": 166.981837,
+          "close": 167.639063
+        },
+        {
+          "timestamp_ms": 1784779200000,
+          "open": 167.639063,
+          "high": 168.118485,
+          "low": 167.268235,
+          "close": 167.940566
+        },
+        {
+          "timestamp_ms": 1784782800000,
+          "open": 167.940566,
+          "high": 168.188125,
+          "low": 167.248547,
+          "close": 167.375642
+        },
+        {
+          "timestamp_ms": 1784786400000,
+          "open": 167.44,
+          "high": 167.995246,
+          "low": 167.242571,
+          "close": 167.605
+        },
+        {
+          "timestamp_ms": 1784790000000,
+          "open": 167.605,
+          "high": 167.606796,
+          "low": 166.551084,
+          "close": 166.588873
+        },
+        {
+          "timestamp_ms": 1784793600000,
+          "open": 167.1,
+          "high": 167.755,
+          "low": 166.79,
+          "close": 167.65875
+        },
+        {
+          "timestamp_ms": 1784797200000,
+          "open": 167.65875,
+          "high": 167.91,
+          "low": 167.28,
+          "close": 167.485
+        },
+        {
+          "timestamp_ms": 1784800800000,
+          "open": 167.495,
+          "high": 167.736667,
+          "low": 166.913333,
+          "close": 167.195
+        },
+        {
+          "timestamp_ms": 1784804400000,
+          "open": 167.32,
+          "high": 167.37,
+          "low": 165.826667,
+          "close": 166.446667
+        },
+        {
+          "timestamp_ms": 1784808000000,
+          "open": 166.446667,
+          "high": 166.605,
+          "low": 162.9,
+          "close": 164.224615
+        },
+        {
+          "timestamp_ms": 1784811600000,
+          "open": 164.316923,
+          "high": 165.646,
+          "low": 161.23,
+          "close": 162.356667
+        },
+        {
+          "timestamp_ms": 1784815200000,
+          "open": 162.36,
+          "high": 163.803333,
+          "low": 160.22,
+          "close": 160.38
+        },
+        {
+          "timestamp_ms": 1784818800000,
+          "open": 160.33,
+          "high": 160.91,
+          "low": 159.13,
+          "close": 160.4
+        },
+        {
+          "timestamp_ms": 1784822400000,
+          "open": 160.4,
+          "high": 162.9325,
+          "low": 160.04,
+          "close": 162.826667
+        },
+        {
+          "timestamp_ms": 1784826000000,
+          "open": 162.7575,
+          "high": 164.34,
+          "low": 162.605,
+          "close": 162.73
+        },
+        {
+          "timestamp_ms": 1784829600000,
+          "open": 162.73,
+          "high": 163.348,
+          "low": 162.165,
+          "close": 162.67
+        },
+        {
+          "timestamp_ms": 1784833200000,
+          "open": 162.676667,
+          "high": 162.8825,
+          "low": 160.355,
+          "close": 161.176667
+        },
+        {
+          "timestamp_ms": 1784836800000,
+          "open": 161.15431,
+          "high": 162.796512,
+          "low": 161.0525,
+          "close": 162.04
+        },
+        {
+          "timestamp_ms": 1784840400000,
+          "open": 162.026667,
+          "high": 162.42,
+          "low": 161.75,
+          "close": 161.9525
+        },
+        {
+          "timestamp_ms": 1784844000000,
+          "open": 161.9525,
+          "high": 162.255,
+          "low": 161.674286,
+          "close": 162.058333
+        },
+        {
+          "timestamp_ms": 1784847600000,
+          "open": 162.058333,
+          "high": 162.101667,
+          "low": 161.619109,
+          "close": 162.093333
+        },
+        {
+          "timestamp_ms": 1784851200000,
+          "open": 161.91,
+          "high": 164.526,
+          "low": 161.351852,
+          "close": 162.099067
+        },
+        {
+          "timestamp_ms": 1784854800000,
+          "open": 162.229448,
+          "high": 162.8365,
+          "low": 162.166173,
+          "close": 162.4725
+        },
+        {
+          "timestamp_ms": 1784858400000,
+          "open": 162.4725,
+          "high": 162.744211,
+          "low": 161.537961,
+          "close": 161.767647
+        },
+        {
+          "timestamp_ms": 1784862000000,
+          "open": 161.872222,
+          "high": 162.596066,
+          "low": 161.714,
+          "close": 162.421188
+        },
+        {
+          "timestamp_ms": 1784865600000,
+          "open": 162.421188,
+          "high": 162.708571,
+          "low": 162.001595,
+          "close": 162.205246
+        },
+        {
+          "timestamp_ms": 1784869200000,
+          "open": 162.205246,
+          "high": 162.415,
+          "low": 161.943333,
+          "close": 162.148
+        },
+        {
+          "timestamp_ms": 1784872800000,
+          "open": 162.148,
+          "high": 162.506957,
+          "low": 161.801801,
+          "close": 162.348571
+        },
+        {
+          "timestamp_ms": 1784876400000,
+          "open": 162.348571,
+          "high": 163.67674,
+          "low": 162.206667,
+          "close": 162.917561
+        },
+        {
+          "timestamp_ms": 1784880000000,
+          "open": 162.9125,
+          "high": 163.717273,
+          "low": 162.9125,
+          "close": 163.28
+        },
+        {
+          "timestamp_ms": 1784883600000,
+          "open": 163.425,
+          "high": 163.5,
+          "low": 162.124,
+          "close": 163.175
+        },
+        {
+          "timestamp_ms": 1784887200000,
+          "open": 163.175,
+          "high": 163.325,
+          "low": 162.26,
+          "close": 162.355
+        },
+        {
+          "timestamp_ms": 1784890800000,
+          "open": 162.3,
+          "high": 162.8,
+          "low": 161.8,
+          "close": 162.73
+        },
+        {
+          "timestamp_ms": 1784894400000,
+          "open": 162.73,
+          "high": 162.785,
+          "low": 160.905,
+          "close": 160.975
+        },
+        {
+          "timestamp_ms": 1784898000000,
+          "open": 160.975,
+          "high": 161.646667,
+          "low": 154.956,
+          "close": 156.093333
+        },
+        {
+          "timestamp_ms": 1784901600000,
+          "open": 156.62,
+          "high": 157.43,
+          "low": 153.795,
+          "close": 156.075
+        },
+        {
+          "timestamp_ms": 1784905200000,
+          "open": 156.075,
+          "high": 158.526,
+          "low": 155.55,
+          "close": 157.6575
+        },
+        {
+          "timestamp_ms": 1784908800000,
+          "open": 157.6575,
+          "high": 158.94,
+          "low": 156.955,
+          "close": 157.734
+        },
+        {
+          "timestamp_ms": 1784912400000,
+          "open": 157.734,
+          "high": 160.2575,
+          "low": 157.397273,
+          "close": 159.015
+        },
+        {
+          "timestamp_ms": 1784916000000,
+          "open": 159.015,
+          "high": 159.0775,
+          "low": 157.47,
+          "close": 157.873333
+        },
+        {
+          "timestamp_ms": 1784919600000,
+          "open": 157.905,
+          "high": 158.393333,
+          "low": 156.9625,
+          "close": 158.343333
+        },
+        {
+          "timestamp_ms": 1784923200000,
+          "open": 158.357143,
+          "high": 158.551176,
+          "low": 157.94875,
+          "close": 158.396667
+        },
+        {
+          "timestamp_ms": 1784926800000,
+          "open": 158.445,
+          "high": 158.560588,
+          "low": 158.255,
+          "close": 158.493333
+        },
+        {
+          "timestamp_ms": 1784930400000,
+          "open": 158.493333,
+          "high": 158.493333,
+          "low": 157.344,
+          "close": 157.77
+        },
+        {
+          "timestamp_ms": 1784934000000,
+          "open": 157.77,
+          "high": 158.166667,
+          "low": 157.45,
+          "close": 157.755
+        }
+      ],
+      "smart_signal_direction": null,
+      "smart_signal_count": null,
+      "smart_signal_value_usd": null,
+      "smart_signal_time_ms": null,
+      "smart_signal_status": null,
+      "rsi14": 29.60872836719335,
+      "sma6": 158.10527766666667,
+      "sma24": 160.2542199583333,
+      "range_24h_pct": 4.616370334774955,
+      "onchain_volume_24h_usd": 847469009.6235684,
+      "buy_volume_24h_usd": 0.0,
+      "sell_volume_24h_usd": 0.0,
+      "net_buy_24h_usd": 0.0,
+      "liquidity_usd": null,
+      "top10_holders_pct": 94.85780372941073,
+      "smart_money_holders": 0,
+      "smart_money_holding_pct": 0.0
+    },
+    {
+      "ticker": "MSTR",
+      "symbol": "MSTRon",
+      "chain_id": "56",
+      "contract_address": "0x7313ea16493b2f55054df0131a3a14b043ec8992",
+      "price_usd": 91.275,
+      "change_24h_pct": -2.6430167683870702,
+      "holders": 1599,
+      "market_cap_usd": 12989704.403647888,
+      "shares_multiplier": 1.0,
+      "stock_price_usd": 91.275,
+      "reference_price_usd": 91.275,
+      "premium_pct": null,
+      "premium_status": "unavailable_reference_frozen",
+      "market_status": "closed",
+      "reason_code": "MARKET_CLOSED",
+      "reason_msg": "Weekend or Holiday",
+      "pe_ttm": null,
+      "kline_1h": [
+        {
+          "timestamp_ms": 1784764800000,
+          "open": 99.967393,
+          "high": 100.959882,
+          "low": 99.373226,
+          "close": 100.256164
+        },
+        {
+          "timestamp_ms": 1784768400000,
+          "open": 100.256164,
+          "high": 100.506667,
+          "low": 99.451489,
+          "close": 99.628041
+        },
+        {
+          "timestamp_ms": 1784772000000,
+          "open": 99.525,
+          "high": 99.636585,
+          "low": 99.165172,
+          "close": 99.508421
+        },
+        {
+          "timestamp_ms": 1784775600000,
+          "open": 99.508421,
+          "high": 99.555674,
+          "low": 99.069187,
+          "close": 99.417841
+        },
+        {
+          "timestamp_ms": 1784779200000,
+          "open": 99.345714,
+          "high": 99.632069,
+          "low": 99.150643,
+          "close": 99.367377
+        },
+        {
+          "timestamp_ms": 1784782800000,
+          "open": 99.367377,
+          "high": 99.576275,
+          "low": 99.175063,
+          "close": 99.375714
+        },
+        {
+          "timestamp_ms": 1784786400000,
+          "open": 99.375714,
+          "high": 99.706098,
+          "low": 99.303212,
+          "close": 99.676452
+        },
+        {
+          "timestamp_ms": 1784790000000,
+          "open": 99.647778,
+          "high": 99.658235,
+          "low": 98.662019,
+          "close": 98.896923
+        },
+        {
+          "timestamp_ms": 1784793600000,
+          "open": 98.935455,
+          "high": 99.455,
+          "low": 98.676,
+          "close": 99.37
+        },
+        {
+          "timestamp_ms": 1784797200000,
+          "open": 99.37,
+          "high": 99.738,
+          "low": 99.2,
+          "close": 99.205
+        },
+        {
+          "timestamp_ms": 1784800800000,
+          "open": 99.226667,
+          "high": 99.68,
+          "low": 99.133636,
+          "close": 99.53
+        },
+        {
+          "timestamp_ms": 1784804400000,
+          "open": 99.545,
+          "high": 99.57,
+          "low": 98.62,
+          "close": 98.87
+        },
+        {
+          "timestamp_ms": 1784808000000,
+          "open": 98.87,
+          "high": 98.949231,
+          "low": 97.201875,
+          "close": 97.618125
+        },
+        {
+          "timestamp_ms": 1784811600000,
+          "open": 97.57125,
+          "high": 97.752857,
+          "low": 95.383333,
+          "close": 95.4
+        },
+        {
+          "timestamp_ms": 1784815200000,
+          "open": 95.435,
+          "high": 96.165,
+          "low": 93.333333,
+          "close": 93.55
+        },
+        {
+          "timestamp_ms": 1784818800000,
+          "open": 93.504,
+          "high": 93.55,
+          "low": 92.353333,
+          "close": 93.223333
+        },
+        {
+          "timestamp_ms": 1784822400000,
+          "open": 93.236667,
+          "high": 93.655,
+          "low": 92.665,
+          "close": 93.33
+        },
+        {
+          "timestamp_ms": 1784826000000,
+          "open": 93.296667,
+          "high": 94.37,
+          "low": 93.245,
+          "close": 93.876667
+        },
+        {
+          "timestamp_ms": 1784829600000,
+          "open": 93.873333,
+          "high": 95.173333,
+          "low": 93.513333,
+          "close": 94.833333
+        },
+        {
+          "timestamp_ms": 1784833200000,
+          "open": 94.84,
+          "high": 94.956667,
+          "low": 93.332857,
+          "close": 93.632093
+        },
+        {
+          "timestamp_ms": 1784836800000,
+          "open": 93.648571,
+          "high": 94.7525,
+          "low": 93.648571,
+          "close": 94.522
+        },
+        {
+          "timestamp_ms": 1784840400000,
+          "open": 94.522,
+          "high": 94.84,
+          "low": 94.028889,
+          "close": 94.144444
+        },
+        {
+          "timestamp_ms": 1784844000000,
+          "open": 94.305,
+          "high": 94.44,
+          "low": 94.04,
+          "close": 94.397143
+        },
+        {
+          "timestamp_ms": 1784847600000,
+          "open": 94.397143,
+          "high": 94.525714,
+          "low": 94.005455,
+          "close": 94.02
+        },
+        {
+          "timestamp_ms": 1784851200000,
+          "open": 95.147143,
+          "high": 95.147143,
+          "low": 93.260205,
+          "close": 93.80291
+        },
+        {
+          "timestamp_ms": 1784854800000,
+          "open": 93.80291,
+          "high": 94.195333,
+          "low": 93.764762,
+          "close": 93.905909
+        },
+        {
+          "timestamp_ms": 1784858400000,
+          "open": 93.965,
+          "high": 94.235794,
+          "low": 93.248,
+          "close": 93.544196
+        },
+        {
+          "timestamp_ms": 1784862000000,
+          "open": 93.544196,
+          "high": 94.737903,
+          "low": 93.457568,
+          "close": 94.603105
+        },
+        {
+          "timestamp_ms": 1784865600000,
+          "open": 94.603105,
+          "high": 94.769156,
+          "low": 94.350424,
+          "close": 94.507115
+        },
+        {
+          "timestamp_ms": 1784869200000,
+          "open": 94.507115,
+          "high": 94.692703,
+          "low": 94.321,
+          "close": 94.351579
+        },
+        {
+          "timestamp_ms": 1784872800000,
+          "open": 94.351579,
+          "high": 94.609903,
+          "low": 94.061579,
+          "close": 94.338623
+        },
+        {
+          "timestamp_ms": 1784876400000,
+          "open": 94.338623,
+          "high": 95.734083,
+          "low": 94.338623,
+          "close": 95.346
+        },
+        {
+          "timestamp_ms": 1784880000000,
+          "open": 95.275,
+          "high": 95.4375,
+          "low": 94.714286,
+          "close": 94.825
+        },
+        {
+          "timestamp_ms": 1784883600000,
+          "open": 94.875,
+          "high": 95.176667,
+          "low": 94.375,
+          "close": 95.115
+        },
+        {
+          "timestamp_ms": 1784887200000,
+          "open": 95.12,
+          "high": 95.165,
+          "low": 94.28,
+          "close": 94.425
+        },
+        {
+          "timestamp_ms": 1784890800000,
+          "open": 94.445,
+          "high": 94.816667,
+          "low": 94.101667,
+          "close": 94.68
+        },
+        {
+          "timestamp_ms": 1784894400000,
+          "open": 94.68,
+          "high": 94.775,
+          "low": 93.4775,
+          "close": 93.53
+        },
+        {
+          "timestamp_ms": 1784898000000,
+          "open": 93.53,
+          "high": 93.55,
+          "low": 90.4,
+          "close": 90.83
+        },
+        {
+          "timestamp_ms": 1784901600000,
+          "open": 90.866667,
+          "high": 91.815,
+          "low": 89.768333,
+          "close": 91.412857
+        },
+        {
+          "timestamp_ms": 1784905200000,
+          "open": 91.44,
+          "high": 93.228,
+          "low": 91.014286,
+          "close": 92.9075
+        },
+        {
+          "timestamp_ms": 1784908800000,
+          "open": 92.894,
+          "high": 93.663333,
+          "low": 92.44,
+          "close": 92.7625
+        },
+        {
+          "timestamp_ms": 1784912400000,
+          "open": 92.735,
+          "high": 93.425,
+          "low": 92.51,
+          "close": 93.046667
+        },
+        {
+          "timestamp_ms": 1784916000000,
+          "open": 93.046667,
+          "high": 93.19,
+          "low": 92.278,
+          "close": 92.83
+        },
+        {
+          "timestamp_ms": 1784919600000,
+          "open": 92.855,
+          "high": 92.9,
+          "low": 91.62375,
+          "close": 91.679
+        },
+        {
+          "timestamp_ms": 1784923200000,
+          "open": 91.705455,
+          "high": 91.978182,
+          "low": 90.965,
+          "close": 91.41
+        },
+        {
+          "timestamp_ms": 1784926800000,
+          "open": 91.41,
+          "high": 91.436667,
+          "low": 91.2025,
+          "close": 91.365
+        },
+        {
+          "timestamp_ms": 1784930400000,
+          "open": 91.365,
+          "high": 91.466154,
+          "low": 91.133333,
+          "close": 91.2525
+        },
+        {
+          "timestamp_ms": 1784934000000,
+          "open": 91.2525,
+          "high": 91.468571,
+          "low": 91.173,
+          "close": 91.275
+        }
+      ],
+      "smart_signal_direction": null,
+      "smart_signal_count": null,
+      "smart_signal_value_usd": null,
+      "smart_signal_time_ms": null,
+      "smart_signal_status": null,
+      "rsi14": 28.943521919684116,
+      "sma6": 91.63525,
+      "sma24": 93.23939420833335,
+      "range_24h_pct": 4.97192557525048,
+      "onchain_volume_24h_usd": 1194616758.7647,
+      "buy_volume_24h_usd": 0.0,
+      "sell_volume_24h_usd": 0.0,
+      "net_buy_24h_usd": 0.0,
+      "liquidity_usd": null,
+      "top10_holders_pct": 88.05727189600324,
+      "smart_money_holders": 0,
+      "smart_money_holding_pct": 0.0
+    }
+  ],
+  "taoli_binance_margin_rates": [
+    {
+      "asset": "BTC",
+      "daily_rate_pct": 0.001052,
+      "annual_rate_pct": 0.38397999999999993,
+      "borrow_limit": 100.0,
+      "source": "taoli",
+      "updated_at": "2026-07-26T01:27:22.105646+00:00"
+    },
+    {
+      "asset": "ETH",
+      "daily_rate_pct": 0.006121000000000001,
+      "annual_rate_pct": 2.234165,
+      "borrow_limit": 2000.0,
+      "source": "taoli",
+      "updated_at": "2026-07-26T01:27:22.105686+00:00"
+    },
+    {
+      "asset": "USDC",
+      "daily_rate_pct": 0.012184,
+      "annual_rate_pct": 4.44716,
+      "borrow_limit": 500000.0,
+      "source": "taoli",
+      "updated_at": "2026-07-26T01:27:22.105385+00:00"
+    },
+    {
+      "asset": "USDT",
+      "daily_rate_pct": 0.010482,
+      "annual_rate_pct": 3.8259300000000005,
+      "borrow_limit": 500000.0,
+      "source": "taoli",
+      "updated_at": "2026-07-26T01:27:22.105125+00:00"
+    }
+  ],
+  "smartmoney_traders": [],
+  "smartmoney_signals": {},
+  "smartmoney_positions": {
+    "trader_count": 0,
+    "position_count": 0,
+    "rows": []
+  },
+  "okx_news_sentiment": {
+    "rows": []
+  }
+}
