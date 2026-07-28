@@ -1,0 +1,10 @@
+metric,value
+btc_share,58.6387
+top2_to_10_share,33.23397601201874
+outside_top10_share,8.127323987981256
+top10_share,91.87267601201874
+definition,market_cap_concentration_top10_including_stable_and_staked_assets
+risk_breadth_definition,top_market_cap_directional_assets_excluding_stablecoins_staked_and_credit_mappings
+risk_asset_count,7
+risk_asset_symbols,"BTC,ETH,BNB,XRP,SOL,TRX,HYPE"
+excluded_symbols,"USDT,USDC,FIGR_HELOC"

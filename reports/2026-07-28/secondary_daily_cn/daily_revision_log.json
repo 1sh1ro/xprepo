@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "date": "2026-07-28",
+  "review_report_sha256": "a09d4f14bb4ae8861425b57cec3a105015950e51895624630129d14250448858",
+  "final_report_sha256": "958418aaec3fcab8329dbeb476d3038646f29359b62357d2906da87edf2f3fb8",
+  "decisions": [
+    {
+      "finding_id": "F1",
+      "action": "accepted",
+      "rationale": "交易所样本底稿和正文第 49 行均显示 10 家上涨、0 家下跌、均值 +39.63%，因此将收缩改为回暖。"
+    },
+    {
+      "finding_id": "F2",
+      "action": "accepted",
+      "rationale": "INTW 属于 bStocks/特殊映射扩展池；正文已改写为扩展池异动，并补充核心美股映射 Top5 以 AMD、RIOT、MARA 等为主。"
+    },
+    {
+      "finding_id": "F3",
+      "action": "accepted",
+      "rationale": "F&G 29 只能说明当前不在极端恐惧，无法证明状态切换；正文已删除状态变化暗示。"
+    }
+  ],
+  "selected_focus_actions": [
+    {
+      "id": "rwa",
+      "action": "rewritten",
+      "rationale": "保留 RWA 差异化重点，但改写扩展池/核心池边界，避免口径混淆。"
+    },
+    {
+      "id": "carry",
+      "action": "kept",
+      "rationale": "Funding 和 carry 表述有底稿支撑，并明确仍需检查手续费、滑点、保证金和持续性。"
+    },
+    {
+      "id": "yields",
+      "action": "kept",
+      "rationale": "稳定币收益与资金成本段落有 APY、利用率和成本差底稿支撑，且未直接写成套利利差。"
+    }
+  ],
+  "final_status": "ready"
+}

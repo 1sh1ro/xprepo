@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "date": "2026-07-28",
+  "fixed_framework": [
+    "快速结论",
+    "市场主线",
+    "BTC/ETH 24h 趋势",
+    "市场结构与交易状态",
+    "今日差异化重点",
+    "未来24小时观察",
+    "交易与风控含义"
+  ],
+  "selection_constraints": {
+    "min_focus_sections": 1,
+    "max_focus_sections": 3,
+    "allow_extra_subsection": true,
+    "extra_subsection_location": "今日差异化重点",
+    "extra_subsection_requires_module_evidence": true
+  },
+  "public_copy_rules": {
+    "hide_engineering_metadata": true,
+    "forbidden_markers": [
+      "## 数据时点与口径",
+      "as_of",
+      "as of",
+      "coverage_status",
+      "source_warnings",
+      "data_gaps",
+      "manifest",
+      "fallback",
+      "采集完成时间"
+    ],
+    "exclude_from_public_markdown": [
+      "daily_data_pack.md",
+      "daily_manifest.json",
+      "daily_editorial_packet.json",
+      "daily_subagent_review.json",
+      "daily_revision_log.json",
+      "data/"
+    ],
+    "publisher_may_copy_for_backend_validation": [
+      "daily_manifest.json"
+    ]
+  },
+  "candidates": [
+    {
+      "id": "yields",
+      "title": "稳定币收益与资金成本",
+      "score": 69.39,
+      "strength": "strong",
+      "eligible": true,
+      "differentiator": true,
+      "selection_reason": "收益、利用率或跨平台借币成本出现可读分化",
+      "summary_markdown": [
+        "- 收益端：本期可得协议样本中，Aave-USDC 的 Total APY 为 4.70%，需继续区分原生利率与奖励补贴。",
+        "- 资金需求：本期可得样本最高利用率 90.27%；高利用率意味着借款需求较强，也可能压缩退出流动性。",
+        "- 跨平台成本：本期可得报价中，USDC 借币年化样本差约 2.12pct，适合继续核对额度、期限和地区准入，不直接视为套利利差。"
+      ]
+    },
+    {
+      "id": "rwa",
+      "title": "RWA 与 24×7 映射交易",
+      "score": 80.0,
+      "strength": "strong",
+      "eligible": true,
+      "differentiator": true,
+      "selection_reason": "RWA 映射波动、类别增长或聪明钱信号达到关注条件",
+      "summary_markdown": [
+        "- 映射异动：INTW 24h -14.22%，属于今日 RWA 观察池中幅度较大的标的。",
+        "- 类别结构：当前可得类别快照中，Tokenized Stocks 规模约 $1.87B，7D +29.37%；该变化用于判断产品线活跃度，不直接外推大盘方向。",
+        "- 链上验证：公开聪明钱信号页在已覆盖标的中未命中活跃记录；这不等于不存在相关持仓或交易，异动仍需结合底层价格、成交与事件证据确认。"
+      ]
+    },
+    {
+      "id": "carry",
+      "title": "跨交易所 Funding 与 Carry",
+      "score": 78.0,
+      "strength": "strong",
+      "eligible": true,
+      "differentiator": true,
+      "selection_reason": "Funding、basis 或平台间资金成本出现分化",
+      "summary_markdown": [
+        "- Funding：样本高位为 Binance-BTC，年化约 4.37%。",
+        "- 平台分化：样本低位为 Binance-ETH，年化约 -3.91%。",
+        "- 可执行性：Funding 与 basis 均有记录的样本可进入 carry 复核，但仍需检查手续费、滑点、保证金和持续性。"
+      ]
+    },
+    {
+      "id": "smartmoney",
+      "title": "聪明钱与仓位结构",
+      "score": 0.0,
+      "strength": "background",
+      "eligible": false,
+      "differentiator": true,
+      "selection_reason": "没有达到正文展示条件的活跃信号或仓位",
+      "summary_markdown": []
+    },
+    {
+      "id": "events",
+      "title": "事件驱动与市场响应",
+      "score": 52.0,
+      "strength": "active",
+      "eligible": true,
+      "differentiator": true,
+      "selection_reason": "出现跨源新闻热点或可验证事件窗口响应",
+      "summary_markdown": [
+        "- 事件主线：rwa 相关新闻在 8 条样本中出现，涉及 BNB, BTC, COIN, ETH, HOOD。当前仅作为事件背景和验证线索，不单独解释价格或资金流。代表标题：链上美股成版本主线，ONDO 三周涨 30%，资金在炒作什么催化剂？；5 美元买下全球资产配置权：币安九年，让「金融」触手可及",
+        "- 市场响应：ETH 在事件后 4 小时收益 -0.48%，相对基准异常收益 -0.67%；多信号关系为 opposed，归因等级 L2，不等同于因果证明。",
+        "- 归因纪律：事件窗口、异常收益和资金信号用于验证相关性；自动流程最高到 L3，不把同步波动写成已证明因果。"
+      ]
+    }
+  ],
+  "default_focus_ids": [
+    "rwa",
+    "carry",
+    "yields"
+  ],
+  "selected_focus_ids": [
+    "rwa",
+    "carry",
+    "yields"
+  ]
+}

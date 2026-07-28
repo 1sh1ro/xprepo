@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "date": "2026-07-28",
+  "reviewer": "subagent",
+  "report_sha256": "a09d4f14bb4ae8861425b57cec3a105015950e51895624630129d14250448858",
+  "verdict": "revise",
+  "summary": "发现 1 处成交方向事实矛盾，并建议收窄 RWA 观察池与情绪状态表述；未发现公开正文泄露工程错误。",
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "high",
+      "category": "facts",
+      "location": "line 7",
+      "quote": "前排交易所样本成交普遍收缩：上涨 10 家、下跌 0 家，24h 变化均值 +39.63%。",
+      "problem": "成交方向表述与同句数字、交易所样本底稿和正文后文相反。",
+      "replacement": "前排交易所样本成交普遍回暖：上涨 10 家、下跌 0 家，24h 变化均值 +39.63%。"
+    },
+    {
+      "id": "F2",
+      "severity": "medium",
+      "category": "focus",
+      "location": "今日差异化重点 / RWA 与 24×7 映射交易",
+      "quote": "映射异动：INTW 24h -14.22%，属于今日 RWA 观察池中幅度较大的标的。",
+      "problem": "INTW 属于 bStocks/特殊映射扩展池，容易与核心美股映射 Top5 口径混淆。",
+      "replacement": "bStocks/特殊映射池异动：INTW 24h -14.22%，为今日 RWA 扩展观察池中跌幅较大的标的；核心美股映射 Top5 仍以 AMD、RIOT、MARA 等为主。"
+    },
+    {
+      "id": "F3",
+      "severity": "medium",
+      "category": "logic",
+      "location": "情绪与波动当日快照",
+      "quote": "情绪仍在恐惧区但已脱离极端恐惧，是否修复仍需成交和广度确认。",
+      "problem": "正文只给出当日 F&G 29 和较前一观测日 -1，不能证明从极端恐惧切换而来。",
+      "replacement": "情绪仍在恐惧区，当前读数未处于极端恐惧；是否修复仍需成交和广度确认。"
+    }
+  ],
+  "selected_focus_review": [
+    {
+      "id": "rwa",
+      "justified": true,
+      "reason": "RWA 类别规模和映射异动有底稿支持，但需区分扩展池与核心 Top5 口径。"
+    },
+    {
+      "id": "carry",
+      "justified": true,
+      "reason": "Funding 样本分化明确，正文已保留执行成本与持续性边界。"
+    },
+    {
+      "id": "yields",
+      "justified": true,
+      "reason": "稳定币 APY、利用率和跨平台成本差均有当日样本支持，未写成确定套利。"
+    }
+  ],
+  "numeric_consistency": {
+    "status": "issues",
+    "issues": [
+      "line 7 成交方向文字与 +39.63% 及上涨 10 家/下跌 0 家不一致"
+    ]
+  }
+}
