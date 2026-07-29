@@ -1,0 +1,8 @@
+asset,provider,apy_pct,source,source_url,retrieved_at,verification_status,is_extreme_apy
+DAI,Nexo,10.5,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-29T12:04:34.751984+00:00,aggregator_quote_unverified,False
+PYUSD,Kamino,4.82,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-29T12:04:40.978226+00:00,aggregator_quote_unverified,False
+SUSDS,Pendle,5.32,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-29T12:04:38.301318+00:00,aggregator_quote_unverified,False
+USDC,OKX,35.41,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-29T12:04:31.225620+00:00,aggregator_quote_unverified,True
+USDE,Pendle,7.56,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-29T12:04:38.301428+00:00,aggregator_quote_unverified,False
+USDS,Compound V3,5.48,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-29T12:04:34.751918+00:00,aggregator_quote_unverified,False
+USDT,Lune.fi,29.5,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-07-29T12:04:31.225594+00:00,aggregator_quote_unverified,True

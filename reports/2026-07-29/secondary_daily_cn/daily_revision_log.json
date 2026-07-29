@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "date": "2026-07-29",
+  "review_report_sha256": "35a9a7858815833728ee37372799d94bbac85319a06824fa9bd5b1aabe19bacd",
+  "final_report_sha256": "7b5cb801edfa3abf172356140da880a4c38ed0f76504713ce0915abbe1e4b4b4",
+  "decisions": [
+    {
+      "finding_id": "F1",
+      "action": "accepted",
+      "rationale": "改写只降低句子密度并收紧期权风险定价措辞，不改变数字事实或结论方向。"
+    },
+    {
+      "finding_id": "F2",
+      "action": "accepted",
+      "rationale": "成交下降背景下，降低短线延续判断语气更符合底稿证据边界。"
+    },
+    {
+      "finding_id": "F3",
+      "action": "accepted",
+      "rationale": "衍生品占比只能证明成交结构偏向衍生品，不能直接说明杠杆风险已经确认上升。"
+    }
+  ],
+  "selected_focus_actions": [
+    {
+      "id": "yields",
+      "action": "kept",
+      "rationale": "收益端、利用率和借币成本差均可验证，并已明确不直接等同套利利差。"
+    },
+    {
+      "id": "carry",
+      "action": "kept",
+      "rationale": "Funding 与 basis 样本支持展示，正文保留费用、滑点、保证金和持续性边界。"
+    },
+    {
+      "id": "rwa",
+      "action": "kept",
+      "rationale": "当日 RWA 异动、类别结构和聪明钱信号覆盖状态均有底稿支撑。"
+    }
+  ],
+  "final_status": "ready"
+}

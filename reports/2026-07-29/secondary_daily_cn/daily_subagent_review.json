@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "date": "2026-07-29",
+  "reviewer": "subagent",
+  "report_sha256": "35a9a7858815833728ee37372799d94bbac85319a06824fa9bd5b1aabe19bacd",
+  "verdict": "pass",
+  "summary": "稿件可发布，仅有低优先级语言密度和边界表达优化建议；未发现数字事实、工程信息泄漏或因果越界阻断项。",
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "low",
+      "category": "readability",
+      "location": "line 13",
+      "quote": "交易所成交方面，多数平台样本成交回升，但盘口深度、报价连续性与滑点尚未验证，不能直接等同于流动性改善；杠杆方面，当前资金费率未显示极端拥挤，但单一平台样本不足以概括整体杠杆状态；期权定价方面，隐含波动率处于相对低位，但单凭 DVOL 不足以判断期权保护成本是否便宜；情绪方面，情绪与价格修复节奏尚未完全同步。",
+      "problem": "单句承载四个维度，信息密度偏高；“保护成本是否便宜”略口语化，专业日报中可改为更中性的风险定价表述。",
+      "replacement": "交易所成交方面，多数平台样本成交回升，但盘口深度、报价连续性与滑点尚未验证，不能直接等同于流动性改善。杠杆方面，当前资金费率未显示极端拥挤，但单一平台样本不足以概括整体杠杆状态。期权定价方面，DVOL 处于相对低位，但单凭该指标仍不足以判断期权保护成本是否处于低估区间。"
+    },
+    {
+      "id": "F2",
+      "severity": "low",
+      "category": "logic",
+      "location": "line 21",
+      "quote": "简评：BTC 与 ETH 同步偏强，短线仍有上行动能。",
+      "problem": "“仍有上行动能”语气略强，前文已说明成交下降、修复尚未得到交易活跃度确认；建议保留方向判断但降低结论强度。",
+      "replacement": "简评：BTC 与 ETH 同步偏强，短线价格仍偏上方，但延续性仍需成交确认。"
+    },
+    {
+      "id": "F3",
+      "severity": "low",
+      "category": "logic",
+      "location": "line 96",
+      "quote": "若衍生品占比继续上升而 funding 仍中性，只能确认交易向杠杆侧集中；是否放大波动仍需结合 DVOL 与成交验证。",
+      "problem": "“杠杆侧集中”容易被读者理解为杠杆风险已经上升；更严谨的说法应先限定为衍生品成交结构变化。",
+      "replacement": "若衍生品占比继续上升而 Funding 仍中性，只能确认成交结构进一步偏向衍生品；是否放大波动仍需结合 DVOL、强平和成交验证。"
+    }
+  ],
+  "selected_focus_review": [
+    {
+      "id": "yields",
+      "justified": true,
+      "reason": "收益、利用率与平台借币成本差均有底稿支持，且正文明确不直接视为套利利差。"
+    },
+    {
+      "id": "carry",
+      "justified": true,
+      "reason": "Funding 高低位与可进入 carry 复核的样本有内部事实层支持。"
+    },
+    {
+      "id": "rwa",
+      "justified": true,
+      "reason": "RWA 异动标的、Tokenized Stocks 类别规模和聪明钱覆盖状态均可从当日底稿验证。"
+    }
+  ],
+  "numeric_consistency": {
+    "status": "pass",
+    "issues": []
+  }
+}

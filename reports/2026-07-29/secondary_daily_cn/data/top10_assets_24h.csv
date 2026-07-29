@@ -1,0 +1,11 @@
+symbol,name,price_usd,market_cap_usd,change_24h_pct,source,as_of
+BTC,Bitcoin,64444.0,1292751491911.0,1.6,CoinGecko demo,
+ETH,Ethereum,1913.35,230869232001.0,1.9,CoinGecko demo,
+USDT,Tether,0.999138,183890872750.0,0.0,CoinGecko demo,
+BNB,BNB,570.11,75912946520.0,0.9,CoinGecko demo,
+USDC,USDC,0.999725,72184118449.0,0.0,CoinGecko demo,
+XRP,XRP,1.083,67741110730.0,2.8,CoinGecko demo,
+SOL,Solana,73.89,42820770590.0,1.2,CoinGecko demo,
+TRX,TRON,0.326722,30998156374.0,0.3,CoinGecko demo,
+FIGR_HELOC,Figure Heloc,1.001,20590412112.0,-3.0,CoinGecko demo,
+WBT,WhiteBIT Coin,56.32,16554435593.0,1.6,CoinGecko demo,
