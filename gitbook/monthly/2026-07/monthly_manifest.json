@@ -188,8 +188,8 @@
       "sha256": "63ebdcd39270b5a81118cd80aaacde409c0bc26389fff30c8ad4a053ea529bf0"
     },
     "charts/core_chart_5_realized_vol.png": {
-      "size": 24790,
-      "sha256": "b34b8e3704cbeca870f239fc64e1740e9d683c49ca9d118314cb57e944b90ac3"
+      "size": 92215,
+      "sha256": "7a7ce8735683b5b0c635e70099e6ebb4b6f988104f09ad3525f1f622a15b183b"
     },
     "charts/fig2_top10_monthly_performance.png": {
       "size": 49261,
@@ -236,8 +236,8 @@
       "sha256": "63ebdcd39270b5a81118cd80aaacde409c0bc26389fff30c8ad4a053ea529bf0"
     },
     "packages/core_report/charts/chart_5_realized_vol.png": {
-      "size": 24790,
-      "sha256": "b34b8e3704cbeca870f239fc64e1740e9d683c49ca9d118314cb57e944b90ac3"
+      "size": 92215,
+      "sha256": "7a7ce8735683b5b0c635e70099e6ebb4b6f988104f09ad3525f1f622a15b183b"
     },
     "packages/core_report/run.log": {
       "size": 847,
