@@ -176,11 +176,11 @@
       "sha256": "3e14c0ada4dec863a09a956a482b1a8c74409c9211fe59fd96768df1558050cb"
     },
     "charts/core_chart_1_marketcap.png": {
-      "size": 58458,
+      "size": 54560,
       "sha256": "322fc3098804a0d4356ed70209efdb03cd00cfbe4abc2d1a7f8ba7b5438e97d6"
     },
     "charts/core_chart_2_btc_dom.png": {
-      "size": 58434,
+      "size": 58169,
       "sha256": "4981088730af0b0d22c847056ed5abaf163e567cd4ef0dd22fb0e8af22433584"
     },
     "charts/core_chart_4_fng.png": {
@@ -220,11 +220,11 @@
       "sha256": "0da6868b274666fc394d5cf1cb6a16274e788c2a25521acb211dfc9d149c198e"
     },
     "packages/core_report/charts/chart_1_marketcap.png": {
-      "size": 58458,
+      "size": 54560,
       "sha256": "322fc3098804a0d4356ed70209efdb03cd00cfbe4abc2d1a7f8ba7b5438e97d6"
     },
     "packages/core_report/charts/chart_2_btc_dom.png": {
-      "size": 58434,
+      "size": 58169,
       "sha256": "4981088730af0b0d22c847056ed5abaf163e567cd4ef0dd22fb0e8af22433584"
     },
     "packages/core_report/charts/chart_3_exchange_30d_change.png": {
