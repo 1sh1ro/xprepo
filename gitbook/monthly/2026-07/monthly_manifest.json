@@ -1,6 +1,11 @@
 {
   "month": "2026-07",
   "generated_at_utc": "2026-08-01T06:41:50.900798+00:00",
+  "revision": {
+    "revised_at_utc": "2026-08-01T08:00:00+00:00",
+    "reason": "add RWA section and reader-facing language polish",
+    "report_sha256": "253751c1faa8a9a685183b6d8388c96255abb0af378b2fedbd92ca7750247fab"
+  },
   "status": "partial",
   "tasks": {
     "fig2": {
@@ -58,6 +63,12 @@
       "CoinMarketCap global historical",
       "Alternative.me F&G",
       "CoinGecko price history"
+    ]
+  },
+  "supplemental_sources": {
+    "rwa": [
+      "RWA.xyz public asset-class snapshots from July daily reports",
+      "Binance Web3 public tokenized-stock movers (month-end observation only)"
     ]
   },
   "coverage": {
@@ -142,7 +153,14 @@
     "fig2_row_count": 10,
     "nft_volume_usd": 220578865.27640003,
     "exchange_history_status": "unavailable_current_snapshot_rejected",
-    "oi_snapshot_used": true
+    "oi_snapshot_used": true,
+    "rwa": {
+      "source_dates": 15,
+      "first_source_date": "2026-07-01",
+      "last_source_date": "2026-07-30",
+      "asset_class_chart": "charts/chart_rwa_asset_class_monthly.png",
+      "interpretation_boundary": "Active Strategies jump and tokenized-stock flow units are not treated as verified monthly net flows"
+    }
   },
   "files": {
     "charts/chart_deribit_dvol.png": {
@@ -189,9 +207,13 @@
       "size": 68385,
       "sha256": "8af21c89e46e1637bcd5f9a55ddbf0740acc1b5472f27aa040c93f163bc327d2"
     },
+    "charts/chart_rwa_asset_class_monthly.png": {
+      "size": 85586,
+      "sha256": "37da03f01edfb2a1507ecf39109b50eaa9bd354554f8a44d6173654f9c32f84e"
+    },
     "orchestrated_secondary_report.md": {
-      "size": 4619,
-      "sha256": "c4355860b0dbe2a5aff517d0ce5a69efd559ab3303b38004ecc8001263bff459"
+      "size": 6143,
+      "sha256": "253751c1faa8a9a685183b6d8388c96255abb0af378b2fedbd92ca7750247fab"
     },
     "orchestrator_manifest.csv": {
       "size": 507,
