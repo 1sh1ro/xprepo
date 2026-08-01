@@ -18,6 +18,7 @@
 - [2026-07-30](daily/2026-07-30/README.md)
 - [2026-07-29](daily/2026-07-29/README.md)
 - [2026-07-28](daily/2026-07-28/README.md)
+- [2026-07-27](daily/2026-07-27/README.md)
 - [2026-07-26](daily/2026-07-26/README.md)
 - [2026-07-25](daily/2026-07-25/README.md)
 - [2026-07-21](daily/2026-07-21/README.md)
