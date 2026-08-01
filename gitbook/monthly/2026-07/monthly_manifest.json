@@ -2,9 +2,9 @@
   "month": "2026-07",
   "generated_at_utc": "2026-08-01T06:41:50.900798+00:00",
   "revision": {
-    "revised_at_utc": "2026-08-01T08:00:00+00:00",
-    "reason": "add RWA section and reader-facing language polish",
-    "report_sha256": "253751c1faa8a9a685183b6d8388c96255abb0af378b2fedbd92ca7750247fab"
+    "revised_at_utc": "2026-08-01T11:27:11+00:00",
+    "reason": "rename report title, expand monthly summary, and add Chinese chart captions",
+    "report_sha256": "75cef3ad749472e6cc703ffa45ddf3e9f6f0c1c6f0c18774725d5bb3bfed4703"
   },
   "status": "partial",
   "tasks": {
