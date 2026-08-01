@@ -2,9 +2,9 @@
   "month": "2026-07",
   "generated_at_utc": "2026-08-01T06:41:50.900798+00:00",
   "revision": {
-    "revised_at_utc": "2026-08-01T15:59:58+00:00",
-    "reason": "tighten evidence boundaries, correct chart date boundary, and complete language review",
-    "report_sha256": "7c881d51f3eba7fd53e4fa9872190818501135e89eefcbe0b7ef3d8abcf27755"
+    "revised_at_utc": "2026-08-01T16:51:05+00:00",
+    "reason": "remove calculation aside and preserve complete monthly summary text",
+    "report_sha256": "249444e0d87bf79289814c17e757440f3342f7b107b09c987dfb0d35b39b0206"
   },
   "status": "partial",
   "tasks": {
@@ -212,8 +212,8 @@
       "sha256": "37da03f01edfb2a1507ecf39109b50eaa9bd354554f8a44d6173654f9c32f84e"
     },
     "orchestrated_secondary_report.md": {
-      "size": 7591,
-      "sha256": "7c881d51f3eba7fd53e4fa9872190818501135e89eefcbe0b7ef3d8abcf27755"
+      "size": 7543,
+      "sha256": "249444e0d87bf79289814c17e757440f3342f7b107b09c987dfb0d35b39b0206"
     },
     "orchestrator_manifest.csv": {
       "size": 507,
