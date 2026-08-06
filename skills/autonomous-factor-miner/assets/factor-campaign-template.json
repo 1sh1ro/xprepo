@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "campaign": {
+    "id": "replace-with-unique-campaign-id",
+    "created_at": "2026-08-06T12:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "mode": "campaign",
+    "stage": "draft"
+  },
+  "research_question": "State one falsifiable cross-sectional or event prediction.",
+  "seed_lineage": {
+    "returns_visible": false,
+    "source_id": "replace-with-seed-source-or-blank-slate",
+    "seed_id": "replace-with-seed-id-or-blank-slate",
+    "selection_reason": "Causal fit, data feasibility, novelty, execution plausibility, and falsifiability only."
+  },
+  "mechanism": {
+    "family": "replace-with-mechanism-family",
+    "market_failure": "Describe the risk, behavior, information delay, or microstructure friction.",
+    "causal_chain": [
+      "Cause changes observable information or trading pressure.",
+      "The market incorporates it slowly or with a predictable distortion.",
+      "The distortion predicts returns over the frozen horizon."
+    ],
+    "falsifiable_prediction": "State subset, direction, signal time, and horizon.",
+    "expected_direction": "positive",
+    "alternative_explanations": [
+      "Broad market beta",
+      "Liquidity or stale-price artifact"
+    ]
+  },
+  "registry_screen": {
+    "path": "config/rejected_factor_registry.json",
+    "scope": "replace-with-data-scope",
+    "decision": "new_mechanism",
+    "matched_entries": [],
+    "allowed_retest_condition": null
+  },
+  "data_contract": {
+    "universe": "Contract-verified tokenized U.S. stocks",
+    "identity_rule": "Venue name, category, chain, and contract address agree with the issuer mapping.",
+    "bar_interval": "30m",
+    "sources": [
+      {
+        "name": "replace-with-source",
+        "fields": ["symbol", "event_time", "available_at", "close"],
+        "event_time_field": "event_time",
+        "availability_time_field": "available_at",
+        "point_in_time_rule": "available_at <= signal_time"
+      }
+    ],
+    "signal_time_rule": "Use only fields available before rebalance.",
+    "entry_rule": "First permitted executable bar after frozen delay.",
+    "exit_rule": "First permitted executable bar at or after holding horizon.",
+    "minimum_assets": 12
+  },
+  "candidate_variants": [
+    {
+      "id": "replace-with-factor-id",
+      "expression": "replace_with_point_in_time_expression",
+      "direction": "positive",
+      "robustness_reason": "Core implementation of the mechanism.",
+      "rebalance_rule": "weekly",
+      "signal_delay_bars": 1,
+      "holding_period": "7D"
+    }
+  ],
+  "evaluation": {
+    "split_method": "chronological_walk_forward",
+    "train": {"start": "2025-01-01", "end": "2025-09-30"},
+    "validation": {"start": "2025-10-02", "end": "2025-12-31"},
+    "test": {"start": "2026-01-02", "end": "2026-06-30"},
+    "purge_days": 1,
+    "baseline_one_way_cost_bps": 15,
+    "stress_one_way_cost_bps": 30,
+    "gates": {
+      "minimum_oos_days": 20,
+      "fdr_q_lte": 0.1,
+      "maximum_abs_signal_correlation": 0.9
+    }
+  },
+  "falsification": {
+    "reject_if": [
+      "Any future join or same-bar execution is detected.",
+      "Baseline or stress cost gate fails.",
+      "The result is redundant with an existing signal."
+    ],
+    "retest_only_if": [
+      "A new independent venue is available.",
+      "A previously missing first-party field becomes available."
+    ]
+  },
+  "governance": {
+    "max_variants": 5,
+    "test_feedback_policy": "no_revision_same_campaign",
+    "frozen_fields": [
+      "seed_lineage",
+      "mechanism",
+      "data_contract",
+      "candidate_variants",
+      "evaluation",
+      "falsification"
+    ],
+    "live_trading_allowed": false,
+    "publish_allowed": false
+  },
+  "forward_tracking": {
+    "historical_rows_excluded": true,
+    "preserve_state_on_refresh_failure": true
+  },
+  "lock": {
+    "status": "draft",
+    "frozen_at": null,
+    "proposal_sha256": null
+  }
+}
