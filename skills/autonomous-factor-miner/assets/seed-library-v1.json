@@ -24,6 +24,13 @@
       "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
       "license": "Public filing data and documentation",
       "reuse_boundary": "Use as a first-party field and timing definition. A filing event alone is not evidence that the mechanism transfers."
+    },
+    {
+      "id": "worldquant-alpha101",
+      "name": "WorldQuant Alpha101 public implementations",
+      "url": "https://github.com/Harvey-Sun/World_Quant_Alphas",
+      "license": "Repository-specific; inspect before reuse",
+      "reuse_boundary": "Use formula vocabulary only as a hypothesis seed. Do not import rankings, parameters, data, or published performance; every local adaptation requires a point-in-time and venue audit."
     }
   ],
   "seeds": [
@@ -161,6 +168,21 @@
       "novelty_requirement": "Use a documented liquidity-provision channel and executable data; volume-only substitutes are not enough.",
       "data_status": "blocked_until_orderbook_data",
       "forbidden_mutations": ["bar-volume proxy", "spread threshold sweep", "sign flip", "cost-free evaluation"]
+    },
+    {
+      "id": "geometric-midpoint-dislocation",
+      "family": "cross-venue-price-formation",
+      "source_id": "worldquant-alpha101",
+      "source_terms": ["geometric high-low midpoint", "vwap dislocation", "intrabar price formation"],
+      "mechanism": "A source-market bar can close away from its geometric high-low midpoint; a tokenized wrapper may absorb that issuer-specific intrabar dislocation with a different delay or liquidity path.",
+      "prediction": "A fixed, point-in-time geometric midpoint dislocation should predict subsequent token returns beyond an identical-universe price anchor if cross-venue information transport is incomplete.",
+      "required_observables": ["underlying high", "underlying low", "underlying close or vwap", "available_at", "issuer-token identity", "token execution bars"],
+      "point_in_time_constraints": ["Use only the latest completed underlying bar", "define any close-for-vwap adaptation explicitly", "apply a fixed staleness limit and execution delay"],
+      "token_transfer": "The test is native to tokenized stocks only when the source bar and token venue are independently timestamped; underlying-equity returns cannot substitute for token returns.",
+      "nearest_rejected_families": ["intrabar-price-pressure", "high-low-range", "token-underlying-correlation"],
+      "novelty_requirement": "The geometric midpoint channel must remain distinct from close-open range, upper-shadow, and volume-correlation signals; an unavailable vwap cannot be silently imputed.",
+      "data_status": "requires_point_in_time_ohlc_and_vwap_audit",
+      "forbidden_mutations": ["vwap substitution without disclosure", "window sweep", "sign flip", "same-bar execution", "underlying return replacement"]
     }
   ]
 }
