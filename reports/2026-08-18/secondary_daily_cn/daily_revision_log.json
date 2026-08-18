@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "review_report_sha256": "9d5f054abfbcb7a3e3680a6849a7555b19656bd69df523752c6a63be86476f64",
+  "final_report_sha256": "723346aafba147ad44f1889c04e5f1374d061fc67d37d09d60c61a9a8ef5b468",
+  "decisions": [
+    {"finding_id":"F1","action":"accepted","rationale":"公开正文与内部底稿均为上涨3、下跌3、平盘1，已改为涨跌家数相当。"},
+    {"finding_id":"F2","action":"accepted","rationale":"广度、盘口深度和资金路径均未完成验证，已降低市场脉冲表述强度。"},
+    {"finding_id":"F3","action":"accepted","rationale":"已改为中文滚动24小时行情口径，数值与窗口保持不变。"}
+  ],
+  "selected_focus_actions": [
+    {"id":"carry","action":"kept","rationale":"Funding 与 basis 均有可核验记录，正文保留执行限制。"},
+    {"id":"yields","action":"kept","rationale":"收益与资金成本数据可核验，未宣称套利。"},
+    {"id":"rwa","action":"kept","rationale":"异动、类别规模及聪明钱覆盖状态可核验。"}
+  ],
+  "final_status": "ready"
+}

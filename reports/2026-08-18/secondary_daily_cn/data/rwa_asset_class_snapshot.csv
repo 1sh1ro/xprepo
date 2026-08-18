@@ -1,0 +1,7 @@
+asset_class,value_usd,change_7d_pct,as_of,retrieved_at,freshness_status,source,source_type
+U.S. Treasuries,16209997427.955568,2.0791230336449114,2026-08-17,2026-08-18T12:24:27.398954+00:00,source_dated,https://app.rwa.xyz/treasuries,RWA.xyz public page (undocumented page payload)
+Credit,7271120263.360103,-1.57263171396752,2026-08-17,2026-08-18T12:24:29.040559+00:00,source_dated,https://app.rwa.xyz/credit,RWA.xyz public page (undocumented page payload)
+Active Strategies,3552135618.266658,2.5707742056596903,2026-08-17,2026-08-18T12:24:34.545764+00:00,source_dated,https://app.rwa.xyz/active-strategies,RWA.xyz public page (undocumented page payload)
+Tokenized Stocks,2335858240.968799,3.8270344407010404,2026-08-17,2026-08-18T12:24:31.188084+00:00,source_dated,https://app.rwa.xyz/stocks,RWA.xyz public page (undocumented page payload)
+Non-U.S. Government Debt,1247586430.4167805,-8.97004593073599,2026-08-17,2026-08-18T12:24:32.696138+00:00,source_dated,https://app.rwa.xyz/government-bonds,RWA.xyz public page (undocumented page payload)
+Real Estate,224053589.4544567,10.418622178039556,2026-08-17,2026-08-18T12:24:36.412118+00:00,source_dated,https://app.rwa.xyz/real-estate,RWA.xyz public page (undocumented page payload)

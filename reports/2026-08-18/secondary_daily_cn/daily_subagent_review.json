@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-18",
+  "reviewer": "subagent",
+  "report_sha256": "9d5f054abfbcb7a3e3680a6849a7555b19656bd69df523752c6a63be86476f64",
+  "verdict": "revise",
+  "summary": "结构、重点和大多数数字均与内部底稿一致，但市场广度结论把持平样本误写为下跌占优，需修订后发布。",
+  "findings": [
+    {"id":"F1","severity":"high","category":"facts","location":"市场结构与交易状态／资产与交易结构","quote":"下跌家数占优，风险偏好修复仍较脆弱，短线追高性价比一般。","problem":"上涨3、下跌3、平盘1，涨跌家数相等。","replacement":"涨跌家数相当，风险偏好修复仍较脆弱，短线追高性价比一般。"},
+    {"id":"F2","severity":"medium","category":"logic","location":"市场结构与交易状态／市场脉冲","quote":"价格与成交同步上行，属于健康修复结构；若次日成交不掉队，修复延续概率更高。","problem":"广度有限、盘口深度与资金路径未验证，判断强度超出快照证据。","replacement":"价格与成交同步上行，反映交易活跃度回升；但广度、盘口深度与资金路径仍待验证，暂仅视为交易性修复观察。"},
+    {"id":"F3","severity":"low","category":"terminology","location":"BTC/ETH 24h趋势","quote":"文字涨跌来自交易所 rolling 24h ticker","problem":"中英术语混写。","replacement":"文字涨跌来自交易所滚动24小时行情。"}
+  ],
+  "selected_focus_review": [
+    {"id":"carry","justified":true,"reason":"Funding、basis均有可用记录，且正文保留执行限制。"},
+    {"id":"yields","justified":true,"reason":"收益、利用率和借币成本样本均可在内部底稿核对，未宣称套利。"},
+    {"id":"rwa","justified":true,"reason":"异动、类别规模和聪明钱状态均有底稿支持且边界明确。"}
+  ],
+  "numeric_consistency": {"status":"issues","issues":[{"finding_id":"F1","detail":"上涨3、下跌3、平盘1与下跌家数占优矛盾。"}]}
+}

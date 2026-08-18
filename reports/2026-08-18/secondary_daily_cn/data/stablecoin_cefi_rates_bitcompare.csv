@@ -1,0 +1,5 @@
+asset,provider,apy_pct,source,source_url,retrieved_at,verification_status,is_extreme_apy
+DAI,AQRU,6.0,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-08-18T12:24:22.265126+00:00,aggregator_quote_unverified,False
+USDC,Lune.fi,29.5,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-08-18T12:24:20.996001+00:00,aggregator_quote_unverified,True
+USDS,Kamino,4.12,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-08-18T12:24:22.265079+00:00,aggregator_quote_unverified,False
+USDT,Lune.fi,29.5,Bitcompare (CeFi/DeFi/Hybrid),https://bitcompare.net/lending-rates,2026-08-18T12:24:20.995982+00:00,aggregator_quote_unverified,True
