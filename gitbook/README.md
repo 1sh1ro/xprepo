@@ -3,10 +3,11 @@
 按日、按月归档的二级市场报告。内容来自本地报告脚本产物，并整理为 GitBook 目录结构。
 
 ## 最新日报
-- [2026-08-29](daily/2026-08-29/README.md)
+- [2026-09-02](daily/2026-09-02/README.md)
 
 ## 月度报告
 - [月度报告总览](monthly/README.md)
+- [2026-08 月度报告](monthly/2026-08/README.md)
 - [2026-07 月度报告](monthly/2026-07/README.md)
 - [2026-06 月度报告](monthly/2026-06/README.md)
 - [2026-05 月度报告](monthly/2026-05/README.md)
@@ -14,6 +15,9 @@
 - [2026-03 月度报告](monthly/2026-03/README.md)
 
 ## 日报归档
+- [2026-09-02](daily/2026-09-02/README.md)
+- [2026-09-01](daily/2026-09-01/README.md)
+- [2026-08-31](daily/2026-08-31/README.md)
 - [2026-08-29](daily/2026-08-29/README.md)
 - [2026-08-28](daily/2026-08-28/README.md)
 - [2026-08-27](daily/2026-08-27/README.md)

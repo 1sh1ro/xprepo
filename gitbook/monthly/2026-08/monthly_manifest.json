@@ -1,0 +1,504 @@
+{
+  "month": "2026-08",
+  "generated_at_utc": "2026-09-01T05:15:58+00:00",
+  "status": "partial",
+  "tasks": {
+    "fig2": {
+      "status": "ok",
+      "notes": "",
+      "package_dir": "/Users/my/xp/reports/2026-08/secondary_orchestrated/packages/fig2"
+    },
+    "fig3": {
+      "status": "ok",
+      "notes": "",
+      "package_dir": "/Users/my/xp/reports/2026-08/secondary_orchestrated/packages/fig3"
+    },
+    "fig4": {
+      "status": "ok",
+      "notes": "",
+      "package_dir": "/Users/my/xp/reports/2026-08/secondary_orchestrated/packages/fig4"
+    },
+    "fig6": {
+      "status": "ok",
+      "notes": "",
+      "package_dir": "/Users/my/xp/reports/2026-08/secondary_orchestrated/packages/fig6"
+    },
+    "deribit": {
+      "status": "ok",
+      "notes": "",
+      "package_dir": "/Users/my/xp/reports/2026-08/secondary_orchestrated/packages/deribit"
+    },
+    "core_report": {
+      "status": "ok",
+      "notes": "",
+      "package_dir": "/Users/my/xp/reports/2026-08/secondary_orchestrated/packages/core_report"
+    }
+  },
+  "module_sources": {
+    "fig2": [
+      "CoinGecko /coins/markets",
+      "CoinGecko /coins/{id}/market_chart/range"
+    ],
+    "fig3": [
+      "DefiLlama historicalChainTvl"
+    ],
+    "fig4": [
+      "CryptoSlam global sales web API"
+    ],
+    "fig6": [
+      "CoinMarketCap global historical",
+      "CoinGecko market-cap history"
+    ],
+    "deribit": [
+      "Deribit get_funding_rate_history",
+      "Deribit DVOL",
+      "Deribit current OI with month-end gate"
+    ],
+    "core_report": [
+      "CoinMarketCap global historical",
+      "Alternative.me F&G",
+      "CoinGecko price history"
+    ]
+  },
+  "coverage": {
+    "requested_start": "2026-08-01",
+    "requested_end": "2026-08-31",
+    "market_actual_start": "2026-08-01",
+    "market_actual_end": "2026-08-31",
+    "market_observation_count": 31,
+    "market_exact_calendar_month": true,
+    "fig2_return_method": "exact_market_chart_range",
+    "fig2_universe_method": "current_market_cap_snapshot_survivorship_bias_disclosed",
+    "deribit_funding_source": "public/get_funding_rate_history",
+    "oi_snapshot_used": true,
+    "comparison_context_start": "2026-07",
+    "comparison_context_end": "2026-08",
+    "comparison_context_modules": ["fig3", "fig4", "fig6"]
+  },
+  "data_gaps": [
+    "historical calendar-month exchange volume unavailable; current rolling snapshot rejected",
+    "RWA category data incomplete on 2026-08-30 and 2026-08-31; month-end full-category snapshot unavailable"
+  ],
+  "report_meta": {
+    "market": {
+      "requested_start": "2026-08-01",
+      "requested_end": "2026-08-31",
+      "actual_start": "2026-08-01",
+      "actual_end": "2026-08-31",
+      "observation_count": 31,
+      "cap_start": 2158015614152.83,
+      "cap_end": 2612725888857.46,
+      "cap_chg_pct": 21.07075925320101,
+      "cap_min": 2151457146704.73,
+      "cap_max": 2698660408289.1,
+      "cap_drawdown_pct": -20.276847724285794,
+      "vol_avg": 69927563666.66388,
+      "vol_max": 173432750419.2,
+      "dom_start": 58.405,
+      "dom_end": 59.6967,
+      "dom_chg": 1.2916999999999987,
+      "dom_min": 58.3664,
+      "dom_max": 59.8131,
+      "phase_analysis": {
+        "source": "CoinMarketCap global metrics historical",
+        "early": {
+          "start": "2026-08-01",
+          "end": "2026-08-17",
+          "cap_change_pct": 0.06946364186704024,
+          "avg_volume_usd": 47377025513.57471,
+          "btc_dom_change_pp": -0.01389999999999958
+        },
+        "impulse": {
+          "start": "2026-08-17",
+          "end": "2026-08-22",
+          "cap_change_pct": 22.420854394513178,
+          "avg_volume_usd": 103134512086.162,
+          "btc_dom_change_pp": 1.0786000000000016
+        },
+        "impulse_core": {
+          "start": "2026-08-19",
+          "end": "2026-08-22",
+          "cap_change_pct": 19.951940868478225,
+          "avg_volume_usd": 138877986224.07666
+        },
+        "late": {
+          "start": "2026-08-22",
+          "end": "2026-08-31",
+          "cap_change_pct": -1.1714808955855749,
+          "avg_volume_usd": 94074719945.0,
+          "btc_dom_change_pp": 0.22699999999999676
+        },
+        "peak_date": "2026-08-28",
+        "peak_to_end_drawdown_pct": -3.1843398735049044
+      }
+    },
+    "deribit": {
+      "month": "2026-08",
+      "generated_at_utc": "2026-09-01T04:13:52.732475+00:00",
+      "funding_source": "public/get_funding_rate_history",
+      "funding": [
+        {
+          "currency": "BTC",
+          "instrument": "BTC-PERPETUAL",
+          "observation_count": 743,
+          "actual_start_utc": "2026-08-01T01:00:00+00:00",
+          "actual_end_utc": "2026-08-31T23:00:00+00:00",
+          "average_funding_8h": 3.552035413549943e-05,
+          "minimum_funding_8h": -2.1493187454666546e-06,
+          "maximum_funding_8h": 0.00028397597307494403,
+          "ending_funding_8h": 9.355658424049944e-05
+        },
+        {
+          "currency": "ETH",
+          "instrument": "ETH-PERPETUAL",
+          "observation_count": 743,
+          "actual_start_utc": "2026-08-01T01:00:00+00:00",
+          "actual_end_utc": "2026-08-31T23:00:00+00:00",
+          "average_funding_8h": 3.750681576169414e-05,
+          "minimum_funding_8h": -3.328016802724081e-06,
+          "maximum_funding_8h": 0.00022404404329707294,
+          "ending_funding_8h": 2.525673416617894e-05
+        }
+      ],
+      "dvol": {
+        "btc_observations": 31,
+        "eth_observations": 31,
+        "btc_start": "2026-08-01",
+        "btc_end": "2026-08-31",
+        "eth_start": "2026-08-01",
+        "eth_end": "2026-08-31"
+      },
+      "oi_snapshot": {
+        "source": "public/get_book_summary_by_currency",
+        "snapshot_at_utc": "2026-09-01T04:13:52.732475+00:00",
+        "target_month_end_distance_hours": 4.231592354166667,
+        "usable_as_target_month_end": true
+      }
+    },
+    "fig2_row_count": 10,
+    "nft_volume_usd": 292612928.18350005,
+    "exchange_history_status": "unavailable_current_snapshot_rejected",
+    "oi_snapshot_used": true,
+    "comparative_modules": {
+      "fig3_defi": {
+        "start_month": "2026-07",
+        "end_month": "2026-08",
+        "tvl_start_usd": 75340573672.0,
+        "tvl_end_usd": 86916028176.0,
+        "tvl_change_pct": 15.364170910609843,
+        "ethereum_share_start_pct": 54.9453471846667,
+        "ethereum_share_end_pct": 55.74399532027691,
+        "ethereum_share_change_pp": 0.79864813561021
+      },
+      "fig4_nft": {
+        "start_month": "2026-07",
+        "end_month": "2026-08",
+        "volume_start_usd": 194169000.18640006,
+        "volume_end_usd": 292612928.18350005,
+        "volume_change_pct": 50.70012612857611
+      },
+      "fig6_alt_concentration": {
+        "start_month": "2026-07",
+        "end_month": "2026-08",
+        "outside_share_start_pct": 20.77747140210845,
+        "outside_share_end_pct": 15.28804551922637,
+        "outside_share_change_pp": -5.489425882882081,
+        "btc_share_end_pct": 60.36885192643713,
+        "top10_alt_share_end_pct": 24.3431025543365,
+        "btc_plus_top10_alt_share_end_pct": 84.71195448077363,
+        "method": "current_top10_alt_basket_backfilled; survivorship_bias_disclosed"
+      }
+    },
+    "exchange_daily_panel": {
+      "source": "daily secondary-market reports front_exchanges_24h.csv",
+      "snapshot_days": 27,
+      "venue_rows": 270,
+      "venue_count_per_day": 10,
+      "sample_daily_volume_avg_usd": 138308675604.98857,
+      "sample_daily_volume_median_usd": 125077303897.24006,
+      "sample_daily_volume_max_usd": 331099375941.9616,
+      "sample_daily_volume_max_date": "2026-08-20",
+      "aggregate_derivatives_share_pct": 86.38406256632689,
+      "binance_share_avg_pct": 43.77477707253518,
+      "top3_share_avg_pct": 71.53062368068595,
+      "venue_change_mean_pct": 16.19260094722222,
+      "venue_change_median_pct": 1.1226302750000001,
+      "venue_change_up_cells": 139,
+      "venue_change_down_cells": 131,
+      "interpretation_boundary": "24h rolling snapshots; structural panel only, not natural-month exchange turnover"
+    },
+    "research_framework": {
+      "mode": "hypothesis_led_monthly_exoskeleton",
+      "reference": {
+        "title": "前 Citadel PM：如何用 AI 重构投研流程",
+        "url": "https://mp.weixin.qq.com/s/iwBhXEbqiWP02rZVTWfjiA",
+        "published_date": "2026-07-20"
+      },
+      "applied_principles": [
+        "facts -> relative_confirmation -> falsifiable_hypothesis -> next_month_check",
+        "separate source_coverage_and_uncertainty from directional interpretation",
+        "use anomalies to create a research queue rather than direct trade conclusions",
+        "keep data validation and human review focused on decision_critical variables"
+      ],
+      "decision_critical_variables": [
+        "market_cap_phase_and_peak_to_end_drawdown",
+        "btc_dominance_and_top10_alt_outside_share",
+        "spot_derivatives_mix_and_venue_concentration",
+        "defi_growth_relative_to_market_cap_and_ethereum_share",
+        "rwa_crypto_ratio_and_tokenized_stock_execution_observability",
+        "funding_open_interest_and_dvol_together",
+        "fear_and_greed_phase_shift"
+      ],
+      "hypotheses": [
+        {
+          "id": "H1",
+          "claim": "August was core_asset_repair_not_broad_risk_expansion",
+          "status": "forward_validation_next_month",
+          "invalidation": "top10_alt_outside_share_recovers_with_broader_positive_breadth_and_btc_dominance_falls"
+        },
+        {
+          "id": "H2",
+          "claim": "The impulse had real participation_but_structure_is_still_derivatives_heavy",
+          "status": "forward_validation_next_month",
+          "invalidation": "spot_share_and_market_depth_improve_while_top3_venue_concentration_falls"
+        },
+        {
+          "id": "H3",
+          "claim": "Volatility_repriced_before_leverage_became_crowded",
+          "status": "forward_validation_next_month",
+          "invalidation": "price_funding_open_interest_and_dvol_rise_together"
+        },
+        {
+          "id": "H4",
+          "claim": "Onchain_expansion_remains_ethereum_anchored",
+          "status": "forward_validation_next_month",
+          "invalidation": "defi_growth_catches_or_exceeds_market_cap_growth_and_non_ethereum_share_rises"
+        },
+        {
+          "id": "H5",
+          "claim": "Rwa_scale_growth_has_not_yet_become_verifiable_secondary_liquidity",
+          "status": "forward_validation_next_month",
+          "invalidation": "rwa_ratio_stabilizes_and_tokenized_stock_volume_premium_and_return_breadth_become_verifiable"
+        }
+      ],
+      "validation_layers": {
+        "machine": "recalculate_ranges_ratios_and_source_coverage_before_release",
+        "human": "review_the_logic_behind_the_five_hypotheses_and_their_invalidation_conditions",
+        "release_boundary": "partial_if_calendar_month_exchange_history_or_full_month_end_rwa_categories_are_unavailable"
+      }
+    },
+    "rwa": {
+      "source_dates": 24,
+      "first_source_date": "2026-08-01",
+      "last_source_date": "2026-08-29",
+      "first_as_of": "2026-07-31",
+      "last_as_of": "2026-08-28",
+      "aggregate_start_usd": 30431992828.808144,
+      "aggregate_end_usd": 30968129308.209698,
+      "aggregate_change_pct": 1.7617527791148335,
+      "net_change_usd": 536136479.4015541,
+      "rwa_crypto_ratio_start_pct": 1.4101840889948705,
+      "rwa_crypto_ratio_end_pct": 1.1852804551859055,
+      "rwa_crypto_ratio_relative_change_pct": -15.948530093632552,
+      "path_anomaly_count": 1,
+      "path_anomaly": "Credit 2026-08-22 read as 21865307305440.5 USD and excluded from normalized path",
+      "asset_class_chart": "charts/chart_rwa_asset_class_monthly.png",
+      "asset_class_index_chart": "charts/chart_rwa_asset_class_index.png",
+      "interpretation_boundary": "2026-08-30 and 2026-08-31 RWA category snapshots were incomplete; no full-category month-end conclusion"
+    }
+  },
+  "files": {
+    "charts/chart_deribit_dvol.png": {
+      "size": 65174,
+      "sha256": "134e4de0c95bdb1323156e7c31f7a4a252330f2db57315a6002731f9f451cd4b"
+    },
+    "charts/chart_deribit_funding.png": {
+      "size": 49161,
+      "sha256": "49be1e2571a41a1ba3812f096abfe8a544e7afb3574cefc65c20961c4979e7c2"
+    },
+    "charts/chart_deribit_oi.png": {
+      "size": 65128,
+      "sha256": "f2dc43524ad0559b5ffba0d8860c9e8587db975af2288a20594a60c21489f849"
+    },
+    "charts/core_chart_1_marketcap.png": {
+      "size": 45074,
+      "sha256": "cc20568a63db3597372a197899dfb32b0a86bc36bbafabe93d2a1b7fa600a736"
+    },
+    "charts/core_chart_2_btc_dom.png": {
+      "size": 62292,
+      "sha256": "f542c4738df8e79f0180cdf264b882a469b09efa3f1b8039fdb727758b567d8c"
+    },
+    "charts/core_chart_4_fng.png": {
+      "size": 51710,
+      "sha256": "7238b486ad933239e2d4d6f1c9f842bfa08b93cf00e3828658863f5cf7d14886"
+    },
+    "charts/core_chart_5_realized_vol.png": {
+      "size": 73352,
+      "sha256": "8b5ca97cd80cb4b37842dfa011eac05670f9a2ee1148efc8faa0158576601585"
+    },
+    "charts/fig2_top10_monthly_performance.png": {
+      "size": 54302,
+      "sha256": "c327396a97547ede802db8d484c9416d3b90112caaabddd59b41318d4f50ce2b"
+    },
+    "charts/fig3_defi_tvl_share.png": {
+      "size": 44323,
+      "sha256": "2ad2cf46b0293f3ff6b7e1bdb9a54f96c0463ac88d17abfe03e3e661f15264d3"
+    },
+    "charts/fig4_monthly_nft_volume.png": {
+      "size": 56317,
+      "sha256": "2fcb45150531503c00ae0eca2247d5220ffa2cb758b5a1a0d57438aa6f73f9ee"
+    },
+    "charts/fig6_altcoin_outside_top10_share.png": {
+      "size": 70054,
+      "sha256": "c98efcd36c9745530627b0f4f1926de57859999f913f682478cbe8daa5c1fbdb"
+    },
+    "charts/chart_rwa_asset_class_monthly.png": {
+      "size": 105040,
+      "sha256": "7033fa6519dca350f319f6f4e16a4dbae3d30fed61083f68c5de99c92ea27855"
+    },
+    "charts/chart_rwa_asset_class_index.png": {
+      "size": 213475,
+      "sha256": "8ef066e96e8cfeaaaf3c1238bf7bd96891bca579efa5f3313f46724fcf598e32"
+    },
+    "orchestrated_secondary_report.md": {
+      "size": 14442,
+      "sha256": "78b3c8604bc487cba5618c728568bfdb94e4239cf7e4b91a5bfa7130f06c3d97"
+    },
+    "orchestrator_manifest.csv": {
+      "size": 507,
+      "sha256": "da38dd9837c505f42fd73014752b7ed9a4ceddfce39339f314f4d82dc740c3a3"
+    },
+    "packages/core_report/charts/chart_1_marketcap.png": {
+      "size": 45074,
+      "sha256": "cc20568a63db3597372a197899dfb32b0a86bc36bbafabe93d2a1b7fa600a736"
+    },
+    "packages/core_report/charts/chart_2_btc_dom.png": {
+      "size": 62292,
+      "sha256": "f542c4738df8e79f0180cdf264b882a469b09efa3f1b8039fdb727758b567d8c"
+    },
+    "packages/core_report/charts/chart_3_exchange_30d_change.png": {
+      "size": 45320,
+      "sha256": "b7fdf6115b20fdebaf74b9595a363b90b0f89d0544d88e4757ef7a0fefe22692"
+    },
+    "packages/core_report/charts/chart_4_fng.png": {
+      "size": 51710,
+      "sha256": "7238b486ad933239e2d4d6f1c9f842bfa08b93cf00e3828658863f5cf7d14886"
+    },
+    "packages/core_report/charts/chart_5_realized_vol.png": {
+      "size": 73352,
+      "sha256": "8b5ca97cd80cb4b37842dfa011eac05670f9a2ee1148efc8faa0158576601585"
+    },
+    "packages/core_report/run.log": {
+      "size": 847,
+      "sha256": "c769b8ab137c4a2c6b1e7a14f8ddcbabed1a422864286f6c9e72e31981bd60fa"
+    },
+    "packages/core_report/yuque_style_exchange_data.csv": {
+      "size": 1219,
+      "sha256": "79fec199501dbef2a513226cd272abdbf8c80bba8e9fc4bc3cd6ec99eb65d2ee"
+    },
+    "packages/core_report/yuque_style_report.md": {
+      "size": 5062,
+      "sha256": "628b3802519faf9ba1f697de1012d0f1cca266263110758e71e407799bcb428b"
+    },
+    "packages/deribit/chart_deribit_dvol.png": {
+      "size": 65174,
+      "sha256": "134e4de0c95bdb1323156e7c31f7a4a252330f2db57315a6002731f9f451cd4b"
+    },
+    "packages/deribit/chart_deribit_funding.png": {
+      "size": 49161,
+      "sha256": "49be1e2571a41a1ba3812f096abfe8a544e7afb3574cefc65c20961c4979e7c2"
+    },
+    "packages/deribit/chart_deribit_oi.png": {
+      "size": 65128,
+      "sha256": "f2dc43524ad0559b5ffba0d8860c9e8587db975af2288a20594a60c21489f849"
+    },
+    "packages/rwa/rwa_asset_class_monthly.csv": {
+      "size": 789,
+      "sha256": "6742633167f1da045ad101b403cfdca994a6440cdf9b664bc3daed84de1ca44a"
+    },
+    "packages/rwa/rwa_asset_class_series.csv": {
+      "size": 17701,
+      "sha256": "c81cdec42564bf28aad602b821809d75407bb3fa875996dfbbb7d409edd7ff30"
+    },
+    "packages/rwa/rwa_deep_analysis.json": {
+      "size": 797,
+      "sha256": "72e336f22ccdbc1927845f3ec0aae56128e4d868b3bba5677332c9157884e095"
+    },
+    "packages/deribit/deribit_dvol_daily.csv": {
+      "size": 775,
+      "sha256": "0ff5b21b5a163753d5815efc79495ef6b2087df950a1b3671889be9b20e45601"
+    },
+    "packages/deribit/deribit_funding_monthly.csv": {
+      "size": 477,
+      "sha256": "00cdd0173347331c6e289b6f88356dd6788bce5c493a7e75dec2c5fba9af7542"
+    },
+    "packages/deribit/deribit_funding_snapshot.csv": {
+      "size": 251,
+      "sha256": "101b5cba71a995335c3105b85d24e2d28a5bb55b2189eb8fcb833f8c688b532b"
+    },
+    "packages/deribit/deribit_manifest.json": {
+      "size": 1420,
+      "sha256": "6bf60fdcc5589c21a46e493b32d28605dd0216d88802ba3102f85c6bf64da251"
+    },
+    "packages/deribit/deribit_monthly_summary.md": {
+      "size": 570,
+      "sha256": "b75aca8040e72fee4f16dada46ffa0dae0dbe37b08e4edd59e93dcefa5343f53"
+    },
+    "packages/deribit/deribit_oi_volume_snapshot.csv": {
+      "size": 242,
+      "sha256": "f8d85da658385f3c940b155a1648734671593e8b4eb109e743df1fe8a5b3e477"
+    },
+    "packages/deribit/run.log": {
+      "size": 138,
+      "sha256": "e7409d43af5e56275e9d09443eb1fcf12b5681476580a9c1cf52ae17d4ba0882"
+    },
+    "packages/fig2/fig2_top10_monthly_performance.csv": {
+      "size": 1701,
+      "sha256": "c34f7b345602236dc5422df5767762389bbcb93aa222ca21833e026ec467be83"
+    },
+    "packages/fig2/fig2_top10_monthly_performance.png": {
+      "size": 54302,
+      "sha256": "c327396a97547ede802db8d484c9416d3b90112caaabddd59b41318d4f50ce2b"
+    },
+    "packages/fig2/run.log": {
+      "size": 397,
+      "sha256": "e0677d99a3264a888006de3a0f5058fa6a4e76fd935eb444e07d9ace43ff9508"
+    },
+    "packages/fig3/fig3_defi_tvl_share.csv": {
+      "size": 635,
+      "sha256": "c0f48609ef3d5fb3ec8125126a4abd1ebd344f09fe4dcb084fe00645102ff1f0"
+    },
+    "packages/fig3/fig3_defi_tvl_share.png": {
+      "size": 44323,
+      "sha256": "2ad2cf46b0293f3ff6b7e1bdb9a54f96c0463ac88d17abfe03e3e661f15264d3"
+    },
+    "packages/fig3/run.log": {
+      "size": 328,
+      "sha256": "22af4e0b0a3ed3aaecfe1286f8ea2390c2a6db7f2fef2ce5de984461420e734f"
+    },
+    "packages/fig4/fig4_monthly_nft_volume.csv": {
+      "size": 133,
+      "sha256": "f75478e8e170b19ea643114aa0a4f4b4e35ba3dc64d48f5104230ee25d604677"
+    },
+    "packages/fig4/fig4_monthly_nft_volume.png": {
+      "size": 56317,
+      "sha256": "2fcb45150531503c00ae0eca2247d5220ffa2cb758b5a1a0d57438aa6f73f9ee"
+    },
+    "packages/fig4/run.log": {
+      "size": 293,
+      "sha256": "746f2a517c7a9d8d5b25781f543bbdaa1cca5508a5d09e5bd7f1fece82749bc2"
+    },
+    "packages/fig6/fig6_altcoin_outside_top10_share.csv": {
+      "size": 322,
+      "sha256": "dbaef20d452379629d3c99bf6eddc970370921497ee7a9257733168f66e22d02"
+    },
+    "packages/fig6/fig6_altcoin_outside_top10_share.png": {
+      "size": 70054,
+      "sha256": "c98efcd36c9745530627b0f4f1926de57859999f913f682478cbe8daa5c1fbdb"
+    },
+    "packages/fig6/run.log": {
+      "size": 582,
+      "sha256": "fc95e78c2ed04d4000c95d140536a704b484c96b8ae00c768e44c8bce3da3833"
+    }
+  }
+}
